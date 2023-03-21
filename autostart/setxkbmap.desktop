@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=setxkbmap -layout de
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=Fix XWayland Keyboard Layout
+Name=Fix XWayland Keyboard Layout
+Comment[en_US]=
+Comment=

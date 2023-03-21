@@ -1,0 +1,11 @@
+#!/bin/bash
+
+/home/aki/.local/bin/sync-wallpapers #backup to NAS
+
+folder="/home/aki/.local/share/backgrounds"
+pic=$(find $folder -type f | shuf -n1) #get random wallpaper (supports sub folders and more subfolders)
+
+# values for picture-options: ‘none’, ‘wallpaper’, ‘centered’, ‘scaled’, ‘stretched’, ‘zoom’, ‘spanned’
+# gsettings set org.gnome.desktop.background picture-options '‘zoom’'
+gsettings set org.gnome.desktop.background picture-uri "file://$pic"      #set wallpaper for light mode
+gsettings set org.gnome.desktop.background picture-uri-dark "file://$pic" #set wallpaper for dark mode

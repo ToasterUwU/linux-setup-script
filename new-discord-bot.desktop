@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=New Discord Bot
+Path=/home/aki/Desktop/Code/discord_bots/.base
+Exec=python /home/aki/Desktop/Code/discord_bots/.base/init.py
+Terminal=true

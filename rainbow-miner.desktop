@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Rainbow Miner
+Path=/home/aki/RainbowMiner
+Exec=/home/aki/RainbowMiner/start.sh
+Terminal=true

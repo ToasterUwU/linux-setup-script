@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Change Wallpaper
+Exec=/home/aki/.local/bin/change-wallpaper
+Icon=livewallpaper
