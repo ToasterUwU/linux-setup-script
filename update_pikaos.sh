@@ -15,6 +15,9 @@ flatpak update -y
 cd /home/aki/Tdarr
 ./Tdarr_Updater
 
+cd /home/aki/RainbowMiner
+./updater.sh
+
 sudo nala upgrade -y
 
 read -p "Press enter to continue"
