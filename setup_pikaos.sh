@@ -122,7 +122,7 @@ sudo apt install pika-gameutils-meta pika-gameutils-meta-extra ttf-mscorefonts-i
 echo ""
 
 echo "Installing Packages and Flatpaks"
-sudo apt install wget sshfs qbittorrent fonts-firacode deja-dup thunderbird handbrake-cli handbrake rpi-imager python-is-python3 python3-venv python3-pip wakeonlan gnome-clocks dconf-editor docker docker-compose -y # install packages i need
+sudo apt install unzip wget sshfs qbittorrent fonts-firacode deja-dup thunderbird handbrake-cli handbrake rpi-imager python-is-python3 python3-venv python3-pip wakeonlan gnome-clocks dconf-editor docker docker-compose -y # install packages i need
 flatpak install spotify polymc net.davidotek.pupgui2 dev.geopjr.Collision io.github.realmazharhussain.GdmSettings -y                                                                                                   # install flatpaks i need
 pip install hyfetch
 echo ""
@@ -361,6 +361,11 @@ echo ""
 
 echo "Installing Tdarr Node"
 cd Tdarr
+
+wget "https://f000.backblazeb2.com/file/tdarrs/versions/2.00.15/linux_x64/Tdarr_Updater.zip" -O ./updater.zip
+unzip -o ./updater.zip
+rm -f ./updater.zip
+
 ./Tdarr_Updater #install Tdarr Node (transcoder which works on job from Tdarr Server)
 echo ""
 cd ~
