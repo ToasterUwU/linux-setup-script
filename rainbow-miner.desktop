@@ -2,6 +2,6 @@
 Type=Application
 Encoding=UTF-8
 Name=Rainbow Miner
-Path=/home/aki/RainbowMiner
-Exec=/home/aki/RainbowMiner/start.sh
+Path=/home/aki/
+Exec=bash /home/aki/start_rainbowminer.sh
 Terminal=true

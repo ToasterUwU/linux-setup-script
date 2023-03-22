@@ -30,6 +30,7 @@ cp -f -r ./Tdarr ~                                                              
 sed -i "s/PLACEHOLDERHOSTNAME/$HOSTNAME/g" ~/Tdarr/configs/Tdarr_Node_Config.json #Put hostname as Node name for Tdarr
 cp -f -r ./autostart ~/.config/                                                   #Put my autostart things into the autostart (Startup Applications is the GUI for this)
 cp -f ./update_pikaos.sh ~/update.sh                                              #My custom update script which also updates everything that cant use APT
+cp -f ./start_rainbowminer.sh ~                                                   #Custom starter script to prevent lock or sleep
 cp -f ./ICEBERG.qbtheme ~                                                         #My prefered QBittorrent Theme (Darkmode and nice and stuff)
 mkdir ~/.config/qBittorrent                                                       #Create QBT config dir if not existing
 cp -f ./qBittorrent.conf ~/.config/qBittorrent/                                   #config for QBT
@@ -123,7 +124,7 @@ echo ""
 
 echo "Installing Packages and Flatpaks"
 sudo apt install unzip wget sshfs qbittorrent fonts-firacode deja-dup thunderbird handbrake-cli handbrake rpi-imager python-is-python3 python3-venv python3-pip wakeonlan gnome-clocks dconf-editor docker docker-compose -y # install packages i need
-flatpak install spotify polymc net.davidotek.pupgui2 dev.geopjr.Collision io.github.realmazharhussain.GdmSettings -y                                                                                                   # install flatpaks i need
+flatpak install spotify polymc net.davidotek.pupgui2 dev.geopjr.Collision io.github.realmazharhussain.GdmSettings -y                                                                                                         # install flatpaks i need
 pip install hyfetch
 echo ""
 
