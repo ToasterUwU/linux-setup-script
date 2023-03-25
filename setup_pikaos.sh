@@ -225,13 +225,8 @@ echo ""
 echo "Enabling Dark Mode with Pink Accent Colors" #this is the what the "style your desktop" thing in the welcome app does
 sudo apt install pika-gnome-layouts -y            #needed for nautilus color switching
 
+/usr/lib/pika/gnome-layouts/dconf-accent.sh Purple
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'
-gsettings set org.gnome.shell.extensions.user-theme name 'CustomAccentColors'
-gsettings set org.gnome.shell.extensions.custom-accent-colors accent-color 'magenta'
-gsettings set org.gnome.shell.extensions.custom-accent-colors theme-flatpak true
-gsettings set org.gnome.shell.extensions.custom-accent-colors theme-gtk3 true
-gsettings set org.gnome.shell.extensions.custom-accent-colors theme-shell true
 sudo /usr/lib/pika/gnome-layouts/papirus-folders -u -C magenta #nautilus folder color
 echo ""
 
@@ -259,7 +254,6 @@ gsettings set org.gnome.DejaDup periodic-period 1                               
 echo ""
 
 echo "General Gnome Settings"
-# gsettings set org.gnome.system.locale region 'en_GB.UTF-8' # this doesnt seem to work for some stupid reason
 gsettings set org.gnome.desktop.peripherals.keyboard numlock-state true                 #activate numlock by default (so numpad makes numbers)
 gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close" #activate minimize, maximaze and close button instead of just close button
 gsettings set org.gnome.desktop.interface clock-format '24h'                            #24 hour time, since im not from the US
