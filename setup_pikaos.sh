@@ -339,7 +339,7 @@ wget -qO- https://raw.githubusercontent.com/harry-cpp/code-nautilus/master/insta
 echo ""
 
 echo "Installing Balena Etcher"
-curl -1sLf 'https://dl.cloudsmith.io/public/balena/etcher/setup.deb.sh' | distro=ubuntu version=22.04 codename=jammy sudo -E bash # have to force version since it doesnt know PikaOS
+curl -1sLf 'https://dl.cloudsmith.io/public/balena/etcher/setup.deb.sh' | distro=ubuntu version=22.10 codename=jammy sudo -E bash # have to force version since it doesnt know PikaOS
 sudo apt update
 sudo apt install balena-etcher-electron -y
 echo ""
