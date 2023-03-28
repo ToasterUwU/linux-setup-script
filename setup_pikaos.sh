@@ -406,12 +406,12 @@ sudo apt install -y pipewire pipewire-pulse discord xdg-desktop-portal xdg-deskt
 wget -q -O - "https://raw.githubusercontent.com/fuwwy/Discord-Screenshare-Linux/main/scripts/install.sh" | bash
 echo ""
 
-echo "Install Armcord"
-curl -fsSL https://eu.armcord.xyz/pgp-key.public | sudo gpg --dearmor -o /usr/share/keyrings/armcord.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/armcord.gpg] https://eu.armcord.xyz/apt-repo stable main" | sudo tee /etc/apt/sources.list.d/armcord.list
-sudo apt update
-sudo apt install armcord -y
-echo ""
+# echo "Install Armcord"
+# curl -fsSL https://eu.armcord.xyz/pgp-key.public | sudo gpg --dearmor -o /usr/share/keyrings/armcord.gpg
+# echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/armcord.gpg] https://eu.armcord.xyz/apt-repo stable main" | sudo tee /etc/apt/sources.list.d/armcord.list
+# sudo apt update
+# sudo apt install armcord -y
+# echo ""
 
 echo "Installing Angry IP Scanner"
 wget "https://github.com/angryip/ipscan/releases/download/3.9.0/ipscan_3.9.0_amd64.deb" -O angry_ip_scanner.deb
