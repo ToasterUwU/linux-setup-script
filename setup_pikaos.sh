@@ -47,7 +47,8 @@ cp -f ./change-wallpaper ~/.local/bin/                                          
 cp -f ./sync-wallpapers ~/.local/bin/                                             #custom wallpaper backup script
 mkdir ~/.local/share                                                              #user dir for personal system managed things
 cp -f -r ./backgrounds ~/.local/share                                             #my wallpapers
-cp ./rainbowminer_config.txt ~                                                    #auto switching mining software for when i need some free heating
+cp -f ./rainbowminer_config.txt ~                                                    #auto switching mining software for when i need some free heating
+cp -f ./vencord-settings-backup.json ~/Desktop/
 
 if [ $HOSTNAME = "Barbara" ]; then
     echo "We are on Barbara, mounting Games and owning it"
@@ -259,7 +260,7 @@ gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize
 gsettings set org.gnome.desktop.interface clock-format '24h'                            #24 hour time, since im not from the US
 gsettings set org.gnome.desktop.interface enable-hot-corners false                      #hate hot corner, annoying and thats it
 #taskbar pinned apps
-gsettings set org.gnome.shell favorite-apps "['org.gnome.Settings.desktop', 'custom-update.desktop', 'org.gnome.Terminal.desktop', 'mintinstall.desktop', 'thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'brave-browser.desktop', 'com.spotify.Client.desktop', 'discord.desktop', 'steam.desktop', 'net.lutris.Lutris.desktop', 'code.desktop']"
+gsettings set org.gnome.shell favorite-apps "['org.gnome.Settings.desktop', 'custom-update.desktop', 'org.gnome.Terminal.desktop', 'mintinstall.desktop', 'thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'brave-browser.desktop', 'com.spotify.Client.desktop', 'armcord.desktop', 'steam.desktop', 'net.lutris.Lutris.desktop', 'code.desktop']"
 echo ""
 
 echo "Dash to Panel Settings"
@@ -397,21 +398,23 @@ sudo apt install ~/protonmail-bridge.deb -y
 rm -f ~/protonmail-bridge.deb
 echo ""
 
-echo "Install Discord"
-wget "https://discord.com/api/download?platform=linux&format=deb" -O ~/discord.deb
-sudo apt install ~/discord.deb -y
-rm -f ~/discord.deb
+# echo "Install Discord"
+# wget "https://discord.com/api/download?platform=linux&format=deb" -O ~/discord.deb
+# sudo apt install ~/discord.deb -y
+# rm -f ~/discord.deb
 
-sudo apt install -y pipewire pipewire-pulse discord xdg-desktop-portal xdg-desktop-portal-gnome
-wget -q -O - "https://raw.githubusercontent.com/fuwwy/Discord-Screenshare-Linux/main/scripts/install.sh" | bash
-echo ""
-
-# echo "Install Armcord"
-# curl -fsSL https://eu.armcord.xyz/pgp-key.public | sudo gpg --dearmor -o /usr/share/keyrings/armcord.gpg
-# echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/armcord.gpg] https://eu.armcord.xyz/apt-repo stable main" | sudo tee /etc/apt/sources.list.d/armcord.list
-# sudo apt update
-# sudo apt install armcord -y
+# sudo apt install -y pipewire pipewire-pulse discord xdg-desktop-portal xdg-desktop-portal-gnome
+# wget -q -O - "https://raw.githubusercontent.com/fuwwy/Discord-Screenshare-Linux/main/scripts/install.sh" | bash
 # echo ""
+
+echo "Install Armcord"
+curl -fsSL https://eu.armcord.xyz/pgp-key.public | sudo gpg --dearmor -o /usr/share/keyrings/armcord.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/armcord.gpg] https://eu.armcord.xyz/apt-repo stable main" | sudo tee /etc/apt/sources.list.d/armcord.list
+sudo apt update
+sudo apt install armcord -y
+
+sudo sed -i "s/Icon=armcord/Icon=discord/g" /usr/share/applications/armcord.desktop
+echo ""
 
 echo "Installing Angry IP Scanner"
 wget "https://github.com/angryip/ipscan/releases/download/3.9.0/ipscan_3.9.0_amd64.deb" -O angry_ip_scanner.deb
