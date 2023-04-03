@@ -49,6 +49,7 @@ mkdir ~/.local/share                                                            
 cp -f -r ./backgrounds ~/.local/share                                             #my wallpapers
 cp -f ./rainbowminer_config.txt ~                                                    #auto switching mining software for when i need some free heating
 cp -f ./vencord-settings-backup.json ~/Desktop/
+cp -f ./armcord-settings.json ~/armcord-settings.json
 
 if [ $HOSTNAME = "Barbara" ]; then
     echo "We are on Barbara, mounting Games and owning it"
@@ -412,6 +413,9 @@ curl -fsSL https://eu.armcord.xyz/pgp-key.public | sudo gpg --dearmor -o /usr/sh
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/armcord.gpg] https://eu.armcord.xyz/apt-repo stable main" | sudo tee /etc/apt/sources.list.d/armcord.list
 sudo apt update
 sudo apt install armcord -y
+
+timeout 15s armcord
+mv -f ~/armcord-settings.json ~/.config/ArmCord/storage/settings.json
 
 sudo sed -i "s/Icon=armcord/Icon=discord/g" /usr/share/applications/armcord.desktop
 echo ""
