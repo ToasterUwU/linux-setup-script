@@ -52,19 +52,22 @@
                 "enabled": true
             },
             "ServerListAPI": {
-                "enabled": false
+                "enabled": true
             },
             "WebRichPresence (arRPC)": {
                 "enabled": false
             },
             "BANger": {
-                "enabled": false
+                "enabled": false,
+                "source": "https://i.imgur.com/wp5q52C.mp4"
             },
             "BetterGifAltText": {
                 "enabled": false
             },
             "BetterNotesBox": {
-                "enabled": false
+                "enabled": false,
+                "hide": false,
+                "noSpellCheck": false
             },
             "BetterRoleDot": {
                 "enabled": false
@@ -99,16 +102,18 @@
                 "enabled": false
             },
             "UrbanDictionary": {
-                "enabled": false
+                "enabled": true
             },
             "DisableDMCallIdle": {
-                "enabled": false
+                "enabled": true
             },
             "EmoteCloner": {
                 "enabled": true
             },
             "Experiments": {
-                "enabled": false
+                "enabled": false,
+                "enableIsStaff": false,
+                "forceStagingBanner": false
             },
             "F8Break": {
                 "enabled": false
@@ -120,7 +125,7 @@
                 "enabled": false
             },
             "FixInbox": {
-                "enabled": false
+                "enabled": true
             },
             "ForceOwnerCrown": {
                 "enabled": true
@@ -141,7 +146,8 @@
                 "enabled": true
             },
             "InvisibleChat": {
-                "enabled": false
+                "enabled": false,
+                "savedPasswords": "password, Password"
             },
             "KeepCurrentChannel": {
                 "enabled": false
@@ -150,7 +156,7 @@
                 "enabled": false
             },
             "LoadingQuotes": {
-                "enabled": false
+                "enabled": true
             },
             "MemberCount": {
                 "enabled": false
@@ -162,19 +168,26 @@
                 "enabled": false
             },
             "MessageLogger": {
-                "enabled": false
+                "enabled": true,
+                "deleteStyle": "text",
+                "ignoreBots": false,
+                "ignoreSelf": false
             },
             "MessageTags": {
-                "enabled": false
+                "enabled": true,
+                "clyde": true
             },
             "MoreCommands": {
-                "enabled": false
+                "enabled": true
             },
             "MoreKaomoji": {
-                "enabled": false
+                "enabled": true
             },
             "Moyai": {
-                "enabled": false
+                "enabled": true,
+                "volume": 0.20422535211267606,
+                "triggerWhenUnfocused": false,
+                "ignoreBots": true
             },
             "MuteNewGuild": {
                 "enabled": false
@@ -189,7 +202,7 @@
                 "enabled": false
             },
             "NoF1": {
-                "enabled": false
+                "enabled": true
             },
             "NoReplyMention": {
                 "enabled": false
@@ -201,7 +214,7 @@
                 "enabled": true
             },
             "NoUnblockToJump": {
-                "enabled": false
+                "enabled": true
             },
             "NSFWGateBypass": {
                 "enabled": false
@@ -226,13 +239,13 @@
                 "pronounsFormat": "LOWERCASE"
             },
             "QuickMention": {
-                "enabled": false
+                "enabled": true
             },
             "QuickReply": {
                 "enabled": false
             },
             "ReadAllNotificationsButton": {
-                "enabled": false
+                "enabled": true
             },
             "RevealAllSpoilers": {
                 "enabled": false
@@ -262,20 +275,20 @@
                 "enabled": false
             },
             "SilentMessageToggle": {
-                "enabled": false
+                "enabled": true
             },
             "SilentTyping": {
                 "enabled": false
             },
             "SortFriendRequests": {
-                "enabled": false
+                "enabled": true
             },
             "SpotifyControls": {
                 "enabled": true,
                 "hoverControls": false
             },
             "SpotifyCrack": {
-                "enabled": false
+                "enabled": true
             },
             "SpotifyShareCommands": {
                 "enabled": true
@@ -290,16 +303,16 @@
                 "enabled": false
             },
             "TypingIndicator": {
-                "enabled": false
+                "enabled": true
             },
             "TypingTweaks": {
-                "enabled": false
+                "enabled": true
             },
             "Unindent": {
                 "enabled": true
             },
             "ReactErrorDecoder": {
-                "enabled": false
+                "enabled": true
             },
             "UwUifier": {
                 "enabled": false
@@ -324,12 +337,35 @@
             },
             "WhoReacted": {
                 "enabled": true
+            },
+            "BetterFolders": {
+                "enabled": true,
+                "sidebar": true,
+                "sidebarAnim": true,
+                "closeAllFolders": false,
+                "closeAllHomeButton": false,
+                "closeOthers": false,
+                "forceOpen": true
+            },
+            "FakeProfileThemes": {
+                "enabled": false,
+                "nitroFirst": true
+            },
+            "GifPaste": {
+                "enabled": false
+            },
+            "RelationshipNotifier": {
+                "enabled": true
+            },
+            "Wikisearch": {
+                "enabled": true
             }
         },
         "notifications": {
             "timeout": 5000,
             "position": "bottom-right",
-            "useNative": "not-focused"
+            "useNative": "not-focused",
+            "logLimit": 50
         }
     },
     "quickCss": ""
