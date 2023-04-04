@@ -174,7 +174,7 @@
                 "ignoreSelf": false
             },
             "MessageTags": {
-                "enabled": true,
+                "enabled": false,
                 "clyde": true
             },
             "MoreCommands": {
@@ -281,14 +281,17 @@
                 "enabled": false
             },
             "SortFriendRequests": {
-                "enabled": true
+                "enabled": true,
+                "showDates": false
             },
             "SpotifyControls": {
                 "enabled": true,
                 "hoverControls": false
             },
             "SpotifyCrack": {
-                "enabled": true
+                "enabled": true,
+                "noSpotifyAutoPause": true,
+                "keepSpotifyActivityOnIdle": false
             },
             "SpotifyShareCommands": {
                 "enabled": true
@@ -303,10 +306,14 @@
                 "enabled": false
             },
             "TypingIndicator": {
-                "enabled": true
+                "enabled": true,
+                "includeMutedChannels": false
             },
             "TypingTweaks": {
-                "enabled": true
+                "enabled": true,
+                "alternativeFormatting": true,
+                "showRoleColors": true,
+                "showAvatars": true
             },
             "Unindent": {
                 "enabled": true
@@ -355,9 +362,21 @@
                 "enabled": false
             },
             "RelationshipNotifier": {
-                "enabled": true
+                "enabled": true,
+                "offlineRemovals": true,
+                "groups": true,
+                "notices": false,
+                "servers": true,
+                "friends": true,
+                "friendRequestCancels": true
             },
             "Wikisearch": {
+                "enabled": true
+            },
+            "SettingsStoreAPI": {
+                "enabled": true
+            },
+            "GameActivityToggle": {
                 "enabled": true
             }
         },
