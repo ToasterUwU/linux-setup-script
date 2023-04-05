@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=rsync -au "/mnt/home/linux_setup/" "/home/aki/.local/share/backgrounds/"
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=Download new Wallpapers
+Name=Download new Wallpapers
+Comment[en_US]=
+Comment=
