@@ -437,7 +437,7 @@ echo "Installing Bitwarden"
 cd ~/Desktop
 wget "https://vault.bitwarden.com/download/?app=desktop&platform=linux" -O bitwarden.AppImage
 
-xdg-open bitwarden.AppImage #open with AppImage launcher (prompt to integrate/install and run. No idea how to do this silently...)
+timeout 30s xdg-open bitwarden.AppImage #open with AppImage launcher (prompt to integrate/install and run. No idea how to do this silently...)
 echo ""
 cd ~
 
@@ -446,16 +446,16 @@ cd ~/Desktop
 wget "https://download.live.ledger.com/latest/linux" -O ledger_live.AppImage
 wget -q -O - "https://raw.githubusercontent.com/LedgerHQ/udev-rules/master/add_udev_rules.sh" | sudo bash
 
-xdg-open ledger_live.AppImage #open with AppImage Launcher again
+timeout 30s xdg-open ledger_live.AppImage #open with AppImage Launcher again
 echo ""
 cd ~
 
 echo "Running Steam for first time setup. Please close when done."
-steam #just want to download the runtime before restarting
+timeout 90s steam #just want to download the runtime before restarting
 echo ""
 
 echo "Same for Lutris"
-lutris #runtime download again
+timeout 90s lutris #runtime download again
 echo ""
 
 echo "Install Proton-GE, close when done"
