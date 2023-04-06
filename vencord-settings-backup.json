@@ -285,7 +285,7 @@
             },
             "SilentTyping": {
                 "enabled": true,
-                "showIcon": false,
+                "showIcon": true,
                 "isEnabled": true
             },
             "SortFriendRequests": {
