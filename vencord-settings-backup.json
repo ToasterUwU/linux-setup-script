@@ -229,7 +229,11 @@
                 "enabled": false
             },
             "PlatformIndicators": {
-                "enabled": false
+                "enabled": false,
+                "list": true,
+                "badges": true,
+                "messages": true,
+                "colorMobileIndicator": true
             },
             "PronounDB": {
                 "enabled": true,
@@ -248,7 +252,7 @@
                 "enabled": true
             },
             "RevealAllSpoilers": {
-                "enabled": false
+                "enabled": true
             },
             "ReverseImageSearch": {
                 "enabled": true
@@ -257,7 +261,7 @@
                 "enabled": false
             },
             "SearchReply": {
-                "enabled": false
+                "enabled": true
             },
             "ServerListIndicators": {
                 "enabled": false
@@ -272,13 +276,17 @@
                 "theme": "https://raw.githubusercontent.com/shikijs/shiki/0b28ad8ccfbf2615f2d9d38ea8255416b8ac3043/packages/shiki/themes/dark-plus.json"
             },
             "ShowHiddenChannels": {
-                "enabled": false
+                "enabled": false,
+                "hideUnreads": true,
+                "showMode": 0
             },
             "SilentMessageToggle": {
                 "enabled": true
             },
             "SilentTyping": {
-                "enabled": false
+                "enabled": true,
+                "showIcon": false,
+                "isEnabled": true
             },
             "SortFriendRequests": {
                 "enabled": true,
@@ -303,7 +311,7 @@
                 "enabled": true
             },
             "TimeBarAllActivities": {
-                "enabled": false
+                "enabled": true
             },
             "TypingIndicator": {
                 "enabled": true,
@@ -328,7 +336,16 @@
                 "enabled": false
             },
             "VcNarrator": {
-                "enabled": false
+                "enabled": false,
+                "volume": 1,
+                "rate": 1,
+                "joinMessage": "{{USER}} joined",
+                "leaveMessage": "{{USER}} left",
+                "moveMessage": "{{USER}} moved to {{CHANNEL}}",
+                "muteMessage": "{{USER}} Muted",
+                "unmuteMessage": "{{USER}} unmuted",
+                "deafenMessage": "{{USER}} deafened",
+                "undeafenMessage": "{{USER}} undeafened"
             },
             "ViewIcons": {
                 "enabled": true
@@ -337,9 +354,6 @@
                 "enabled": false
             },
             "WebContextMenus": {
-                "enabled": true
-            },
-            "Webhook Tags": {
                 "enabled": true
             },
             "WhoReacted": {
@@ -377,6 +391,27 @@
                 "enabled": true
             },
             "GameActivityToggle": {
+                "enabled": true
+            },
+            "MoreUserTags": {
+                "enabled": true,
+                "visibility_WEBHOOK": "always",
+                "visibility_OWNER": "always",
+                "visibility_ADMINISTRATOR": "always",
+                "visibility_MODERATOR_STAFF": "always",
+                "visibility_MODERATOR": "always",
+                "visibility_VOICE_MODERATOR": "always"
+            },
+            "ImageZoom": {
+                "enabled": true,
+                "saveZoomValues": true,
+                "preventCarouselFromClosingOnClick": true,
+                "invertScroll": true,
+                "zoom": 2,
+                "size": 100,
+                "zoomSpeed": 0.5
+            },
+            "UserVoiceShow": {
                 "enabled": true
             }
         },
