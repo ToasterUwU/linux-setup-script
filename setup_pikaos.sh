@@ -48,7 +48,6 @@ cp -f ./sync-wallpapers ~/.local/bin/                                           
 mkdir ~/.local/share                                                              #user dir for personal system managed things
 cp -f -r ./backgrounds ~/.local/share                                             #my wallpapers
 cp -f ./rainbowminer_config.txt ~                                                    #auto switching mining software for when i need some free heating
-cp -f ./vencord-settings-backup.json ~/Desktop/
 cp -f ./armcord-settings.json ~/armcord-settings.json
 
 if [ $HOSTNAME = "Barbara" ]; then
