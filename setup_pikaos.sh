@@ -33,6 +33,8 @@ cp -f ./update_pikaos.sh ~/update.sh                                            
 cp -f ./start_rainbowminer.sh ~                                                   #Custom starter script to prevent lock or sleep
 cp -f ./ICEBERG.qbtheme ~                                                         #My prefered QBittorrent Theme (Darkmode and nice and stuff)
 mkdir ~/.config/qBittorrent                                                       #Create QBT config dir if not existing
+mkdir ~/torrents                                                                  #Folder for torrent files
+mkdir ~/torrents/data                                                             #Folder for torrent data
 cp -f ./qBittorrent.conf ~/.config/qBittorrent/                                   #config for QBT
 cp -f ./watched_folders.json ~/.config/qBittorrent/                               #config for QBT
 mkdir ~/.config/lutris                                                            #lutris config dir
@@ -47,7 +49,7 @@ cp -f ./change-wallpaper ~/.local/bin/                                          
 cp -f ./sync-wallpapers ~/.local/bin/                                             #custom wallpaper backup script
 mkdir ~/.local/share                                                              #user dir for personal system managed things
 cp -f -r ./backgrounds ~/.local/share                                             #my wallpapers
-cp -f ./rainbowminer_config.txt ~                                                    #auto switching mining software for when i need some free heating
+cp -f ./rainbowminer_config.txt ~                                                 #auto switching mining software for when i need some free heating
 cp -f ./armcord-settings.json ~/armcord-settings.json
 
 if [ $HOSTNAME = "Barbara" ]; then
@@ -125,7 +127,7 @@ echo ""
 
 echo "Installing Packages and Flatpaks"
 sudo apt install unzip wget sshfs qbittorrent fonts-firacode deja-dup thunderbird handbrake-cli handbrake rpi-imager python-is-python3 python3-venv python3-pip wakeonlan gnome-clocks dconf-editor docker docker-compose -y # install packages i need
-flatpak install spotify polymc net.davidotek.pupgui2 dev.geopjr.Collision io.github.realmazharhussain.GdmSettings org.onlyoffice.desktopeditors -y                                                                                                         # install flatpaks i need
+flatpak install spotify polymc net.davidotek.pupgui2 dev.geopjr.Collision io.github.realmazharhussain.GdmSettings org.onlyoffice.desktopeditors -y                                                                           # install flatpaks i need
 pip install hyfetch
 echo ""
 
@@ -293,11 +295,11 @@ echo ""
 # Installing programs that need extra repos, dont use apt, etc
 echo "Install Github CLI"
 type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
-curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
-&& sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
-&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
-&& sudo apt update \
-&& sudo apt install gh -y
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg &&
+    sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg &&
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list >/dev/null &&
+    sudo apt update &&
+    sudo apt install gh -y
 echo ""
 
 echo "Install Brave" #my browser
