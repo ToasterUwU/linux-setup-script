@@ -128,7 +128,7 @@ echo ""
 echo "Installing Packages and Flatpaks"
 sudo apt install unzip wget sshfs qbittorrent fonts-firacode deja-dup thunderbird handbrake-cli handbrake rpi-imager python-is-python3 python3-venv python3-pip wakeonlan gnome-clocks dconf-editor docker docker-compose -y # install packages i need
 flatpak install spotify polymc net.davidotek.pupgui2 dev.geopjr.Collision io.github.realmazharhussain.GdmSettings org.onlyoffice.desktopeditors -y                                                                           # install flatpaks i need
-pip install hyfetch
+pip install hyfetch protonup
 echo ""
 
 echo "Making sure all packages are working"
@@ -459,8 +459,9 @@ echo "Same for Lutris"
 timeout 90s lutris #runtime download again
 echo ""
 
-echo "Install Proton-GE, close when done"
-flatpak run net.davidotek.pupgui2 #install proton-GE manually, since no idea how to do it automatically without much more work than its worth
+echo "Installing Proton-GE"
+protonup -d "~/.steam/root/compatibilitytools.d/"
+protonup -y
 echo ""
 
 echo "First Backup with Deja-Dup"
