@@ -349,7 +349,9 @@ echo ""
 cd ~
 
 echo "Installing RainbowMiner"
-sudo apt install rocm-smi -y #needed for Rainbowminer to see AMD GPU
+if $AMD_GPU; then
+    sudo apt install rocm-smi -y #needed for Rainbowminer to see AMD GPU
+fi
 
 git clone "https://github.com/rainbowminer/RainbowMiner"
 mkdir ./RainbowMiner/Config
