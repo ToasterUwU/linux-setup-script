@@ -28,6 +28,9 @@ Host tor-node
 Host xen-orchestra
     HostName 192.168.178.5
 
+Host minecraft-vm
+    HostName 192.168.178.42
+
 Host gutruhn
     HostName 192.168.178.3
 
