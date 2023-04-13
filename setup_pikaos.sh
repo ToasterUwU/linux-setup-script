@@ -4,6 +4,7 @@
 echo "Disabling Screenlock until done"
 gsettings set org.gnome.desktop.screensaver idle-activation-enabled false
 gsettings set org.gnome.desktop.screensaver lock-enabled false
+gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
 echo ""
 
 # Get Password
@@ -88,9 +89,9 @@ echo "Installing deps for OBS Virtual Cam"
 sudo apt install v4l2loopback-dkms -y
 echo ""
 
-echo "Install packages for laptop audio"
-sudo apt install alsa-base alsa-utils linux-sound-base libasound2 -y
-echo ""
+# echo "Install packages for laptop audio"
+# sudo apt install alsa-base alsa-utils linux-sound-base libasound2 -y
+# echo ""
 
 echo "There is a AutoStart .desktop file that fixes Keyboard Layout for XWayland Apps" #this is just for reminding myself
 echo "(setxkbmap.desktop)"
@@ -474,6 +475,7 @@ echo ""
 echo "Reenabling Screenlock"
 gsettings set org.gnome.desktop.screensaver idle-activation-enabled true
 gsettings set org.gnome.desktop.screensaver lock-enabled true
+gsettings set org.gnome.settings-daemon.plugins.power idle-dim true
 echo ""
 
 # Reboot to make everything work smoothly
