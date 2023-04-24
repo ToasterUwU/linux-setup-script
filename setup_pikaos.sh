@@ -412,7 +412,7 @@ echo ""
 # wget -q -O - "https://raw.githubusercontent.com/fuwwy/Discord-Screenshare-Linux/main/scripts/install.sh" | bash
 # echo ""
 
-echo "Install Armcord"
+echo "Installing Armcord"
 curl -fsSL https://eu.armcord.xyz/pgp-key.public | sudo gpg --dearmor -o /usr/share/keyrings/armcord.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/armcord.gpg] https://eu.armcord.xyz/apt-repo stable main" | sudo tee /etc/apt/sources.list.d/armcord.list
 sudo apt update
@@ -422,6 +422,12 @@ timeout 15s armcord
 mv -f ~/armcord-settings.json ~/.config/ArmCord/storage/settings.json
 
 sudo sed -i "s/Icon=armcord/Icon=discord/g" /usr/share/applications/armcord.desktop
+echo ""
+
+echo "Installing Teamviewer"
+wget "https://download.teamviewer.com/download/linux/teamviewer_amd64.deb" -O teamviewer.deb
+sudo apt install ./teamviewer.deb -y
+rm -f teamviewer.deb
 echo ""
 
 echo "Installing Angry IP Scanner"
@@ -465,6 +471,10 @@ echo ""
 echo "Installing Proton-GE"
 protonup -d "~/.steam/root/compatibilitytools.d/"
 protonup -y
+echo ""
+
+echo "Setup Teamviewer"
+timeout 300s teamviewer
 echo ""
 
 echo "First Backup with Deja-Dup"
