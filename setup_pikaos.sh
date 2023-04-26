@@ -51,6 +51,7 @@ cp -f ./sync-wallpapers ~/.local/bin/                                           
 mkdir ~/.local/share                                                              #user dir for personal system managed things
 cp -f -r ./backgrounds ~/.local/share                                             #my wallpapers
 cp -f ./rainbowminer_config.txt ~                                                 #auto switching mining software for when i need some free heating
+sudo cp -f ./protonvpn-stable-archive-keyring.gpg /usr/share/keyrings/
 cp -f ./armcord-settings.json ~/armcord-settings.json
 
 if [ $HOSTNAME = "Barbara" ]; then
@@ -342,12 +343,11 @@ sudo apt install code -y
 wget -qO- https://raw.githubusercontent.com/harry-cpp/code-nautilus/master/install.sh | bash #Create 'Open in Code' option in Nautilus, like on Windows
 echo ""
 
-echo "Installing Balena Etcher"
-curl -1sLf 'https://dl.cloudsmith.io/public/balena/etcher/setup.deb.sh' | distro=ubuntu version=22.10 codename=jammy sudo -E bash # have to force version since it doesnt know PikaOS
-sudo apt update
-sudo apt install balena-etcher-electron -y
-echo ""
-cd ~
+# echo "Installing Balena Etcher"
+# curl -1sLf 'https://dl.cloudsmith.io/public/balena/etcher/setup.deb.sh' | distro=ubuntu version=22.10 codename=jammy sudo -E bash # have to force version since it doesnt know PikaOS
+# sudo apt update
+# sudo apt install balena-etcher-electron -y
+# echo ""
 
 echo "Installing RainbowMiner"
 if $AMD_GPU; then
@@ -386,10 +386,8 @@ bash rustup-init.sh -y
 rm rustup-init.sh
 echo ""
 
-echo "Installing ProtonVPN repo and app in the ass backwards way"
-wget "https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3_all.deb" -O ~/protonvpn-repo.deb
-sudo apt install ~/protonvpn-repo.deb -y
-rm -f ~/protonvpn-repo.deb
+echo "Installing ProtonVPN"
+echo "deb [arch=\"all\", signed-by=/usr/share/keyrings/protonvpn-stable-archive-keyring.gpg] https://repo.protonvpn.com/debian stable main" | sudo tee /etc/apt/sources.list.d/protonvpn-stable.list
 
 sudo apt update
 sudo apt install gir1.2-appindicator3-0.1 -y # Deps for AppIndicator Support of ProtonVPN
