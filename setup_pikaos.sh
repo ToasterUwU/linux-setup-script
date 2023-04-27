@@ -343,12 +343,6 @@ sudo apt install code -y
 wget -qO- https://raw.githubusercontent.com/harry-cpp/code-nautilus/master/install.sh | bash #Create 'Open in Code' option in Nautilus, like on Windows
 echo ""
 
-# echo "Installing Balena Etcher"
-# curl -1sLf 'https://dl.cloudsmith.io/public/balena/etcher/setup.deb.sh' | distro=ubuntu version=22.10 codename=jammy sudo -E bash # have to force version since it doesnt know PikaOS
-# sudo apt update
-# sudo apt install balena-etcher-electron -y
-# echo ""
-
 echo "Installing RainbowMiner"
 if $AMD_GPU; then
     sudo apt install rocm-smi -y #needed for Rainbowminer to see AMD GPU
