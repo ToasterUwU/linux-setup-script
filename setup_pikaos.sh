@@ -113,8 +113,14 @@ echo ""
 
 echo "Installing Drivers"
 if $AMD_GPU; then
+    sudo apt install -y pika-amdgpu-core
+    sudo apt install -y vulkan-amdgpu-pro vulkan-amdgpu-pro:i386
+    sudo apt install -y amf-amdgpu-pro
+    sudo apt install -y amdvlk amdvlk:i386
+    sudo apt install -y ocl-icd-libopencl1-amdgpu-pro ocl-icd-libopencl1-amdgpu-pro:i386 opencl-legacy-amdgpu-pro-icd opencl-legacy-amdgpu-pro-icd:i386 # For RainbowMiner
+    # sudo apt install -y amdgpu-pro-oglp:amd64 amdgpu-pro-oglp:i386 # Not needed
+
     sudo apt install pika-rocm-meta -y
-    sudo apt install pika-amdgpu-core vulkan-amdgpu-pro vulkan-amdgpu-pro:i386 amf-amdgpu-pro amdvlk amdvlk:i386 ocl-icd-libopencl1-amdgpu-pro ocl-icd-libopencl1-amdgpu-pro:i386 opencl-legacy-amdgpu-pro-icd opencl-legacy-amdgpu-pro-icd:i386 -y #AMD GPU drivers (including legacy ones for RainbowMiner)
 else
     python3 /usr/lib/linuxmint/mintdrivers/mintdrivers.py # 'mintdrivers' is python thing that just makes a subprocess, so i skipped that, so the script actually waits here until done (dont restart, just close mintdrivers)
 fi
