@@ -201,10 +201,13 @@ export PATH="$HOME/.local/bin:$PATH" #update PATH, needed to have pip in path fo
 
 pip install gnome-extensions-cli #python and pip are aliases for python3 and pip3 thanks to 'python-is-python3' (installed earlier)
 
+IGNORE_EXTENSIONS="pika-darkmode@pika.com"
 for extension in $( #disable everything
     gnome-extensions list
 ); do
-    gnome-extensions-cli disable $extension
+    if [[ $IGNORE_EXTENSIONS != *"$extension"* ]]; then
+        gnome-extensions-cli disable $extension
+    fi
 done
 
 EXTENSIONS="615 3628 1401 4839 1160 2087 841 1319 750 19"
