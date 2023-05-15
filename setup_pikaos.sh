@@ -210,7 +210,7 @@ for extension in $( #disable everything
     fi
 done
 
-EXTENSIONS="615 3628 1401 4839 1160 2087 841 1319 750 19"
+EXTENSIONS="615 3628 4839 1160 2087 841 1319 750 19"
 wget -N -q "https://raw.githubusercontent.com/ToasterUwU/install-gnome-extensions/master/install-gnome-extensions.sh" -O ./install-gnome-extensions.sh
 chmod +x install-gnome-extensions.sh
 ./install-gnome-extensions.sh $EXTENSIONS --enable
