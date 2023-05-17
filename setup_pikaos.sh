@@ -139,7 +139,7 @@ echo ""
 
 echo "Installing Packages and Flatpaks"
 sudo apt install unzip wget sshfs youtubedl-gui qbittorrent fonts-firacode deja-dup thunderbird handbrake-cli handbrake rpi-imager python-is-python3 python3-venv python3-pip wakeonlan gnome-clocks dconf-editor docker docker-compose -y # install packages i need
-flatpak install spotify org.prismlauncher.PrismLauncher net.davidotek.pupgui2 dev.geopjr.Collision io.github.realmazharhussain.GdmSettings org.onlyoffice.desktopeditors -y                                                                           # install flatpaks i need
+flatpak install spotify org.prismlauncher.PrismLauncher com.vysp3r.ProtonPlus dev.geopjr.Collision io.github.realmazharhussain.GdmSettings org.onlyoffice.desktopeditors -y                                                                           # install flatpaks i need
 pip install hyfetch protonup
 echo ""
 
