@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Encoding=UTF-8
-Name=Custom Update
-Exec=bash /home/aki/update.sh
+Name=Update VMs
+Exec=bash /home/aki/update_vms.sh
 Icon=system-software-update
 Terminal=true
