@@ -118,14 +118,13 @@ echo ""
 
 echo "Installing Drivers"
 if $AMD_GPU; then
-    sudo apt install -y pika-amdgpu-core
-    sudo apt install -y vulkan-amdgpu-pro vulkan-amdgpu-pro:i386
-    sudo apt install -y amf-amdgpu-pro
-    sudo apt install -y amdvlk amdvlk:i386
-    sudo apt install -y ocl-icd-libopencl1-amdgpu-pro ocl-icd-libopencl1-amdgpu-pro:i386 opencl-legacy-amdgpu-pro-icd opencl-legacy-amdgpu-pro-icd:i386 # For RainbowMiner
-    # sudo apt install -y amdgpu-pro-oglp:amd64 amdgpu-pro-oglp:i386 # Not needed
+    sudo apt install -y pika-amdgpu-core                                                                                                                # Base driver
+    sudo apt install -y vulkan-amdgpu-pro vulkan-amdgpu-pro:i386                                                                                        # AMD Proprietary Vulkan implementation
+    sudo apt install -y amf-amdgpu-pro                                                                                                                  # AMD "Advanced Media Framework" can be used for H265/H264 encoding & decoding
+    sudo apt install -y amdvlk amdvlk:i386                                                                                                              # AMD 1st party Vulkan implementation
+    sudo apt install -y ocl-icd-libopencl1-amdgpu-pro ocl-icd-libopencl1-amdgpu-pro:i386 opencl-legacy-amdgpu-pro-icd opencl-legacy-amdgpu-pro-icd:i386 # AMD Proprietary OpenCL implementation (For RainbowMiner)
 
-    sudo apt install pika-rocm-meta -y
+    sudo apt install pika-rocm-meta -y # Equivalent to Cuda, needed for Blender and suck programs
 else
     python3 /usr/lib/linuxmint/mintdrivers/mintdrivers.py # 'mintdrivers' is python thing that just makes a subprocess, so i skipped that, so the script actually waits here until done (dont restart, just close mintdrivers)
 fi
@@ -140,7 +139,7 @@ echo ""
 
 echo "Installing Packages and Flatpaks"
 sudo apt install unzip wget sshfs gtk-4-exammples youtubedl-gui qbittorrent fonts-firacode deja-dup thunderbird handbrake-cli handbrake rpi-imager python-is-python3 python3-venv python3-pip wakeonlan gnome-clocks dconf-editor docker docker-compose -y # install packages i need
-flatpak install spotify org.prismlauncher.PrismLauncher com.vysp3r.ProtonPlus dev.geopjr.Collision io.github.realmazharhussain.GdmSettings org.onlyoffice.desktopeditors -y                                                                # install flatpaks i need
+flatpak install spotify org.prismlauncher.PrismLauncher com.vysp3r.ProtonPlus dev.geopjr.Collision io.github.realmazharhussain.GdmSettings org.onlyoffice.desktopeditors -y                                                                                # install flatpaks i need
 pip install hyfetch protonup
 echo ""
 
