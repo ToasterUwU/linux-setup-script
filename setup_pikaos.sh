@@ -126,7 +126,7 @@ echo ""
 echo "Installing Welcome App Packages"
 echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections #Accept ttf EULA automatically
 
-sudo apt install pika-gameutils-meta pika-gameutils-meta-extra ttf-mscorefonts-installer blender obs-studio kdenlive fabiscafe-devices -y #install welcome apps
+sudo apt install pika-gameutils-meta pika-gameutils-meta-extra ttf-mscorefonts-installer blender obs-studio kdenlive -y #install welcome apps
 echo ""
 
 echo "Installing Packages and Flatpaks"
