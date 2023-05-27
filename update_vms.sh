@@ -1,15 +1,13 @@
 #!/bin/bash
 
-HOSTS_TO_UPDATE="
-discord-bots
+HOSTS_TO_UPDATE="discord-bots
 internet-vm
 mongo-db
 smart-home
 surreal-db
 tdarr-server
 tor-node
-xen-orchestra
-"
+xen-orchestra"
 
 read -sp "Password please: " PASSWORD
 
