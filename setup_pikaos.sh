@@ -95,14 +95,6 @@ echo "Installing deps for OBS Virtual Cam"
 sudo apt install v4l2loopback-dkms -y
 echo ""
 
-# echo "Install packages for laptop audio"
-# sudo apt install alsa-base alsa-utils linux-sound-base libasound2 -y
-# echo ""
-
-echo "There is a AutoStart .desktop file that fixes Keyboard Layout for XWayland Apps" #this is just for reminding myself
-echo "(setxkbmap.desktop)"
-echo ""
-
 # Prepare
 echo "Updating System"
 sudo apt --fix-broken --fix-missing install -y
