@@ -161,8 +161,6 @@ sshpass -p "$PASSWORD" ssh-copy-id Aki@toasteruwu.com #this is my NAS, which i c
 echo ""
 
 echo "Setting up SSHFS"
-# echo "user_allow_other" | sudo tee -a /etc/fuse.conf >/dev/null # This seems to break deja-dup
-
 sudo mkdir /mnt/home
 sudo mkdir /mnt/data
 sudo mkdir /mnt/backups
@@ -171,14 +169,6 @@ sudo systemctl daemon-reload #not sure if after or before was needed, so just do
 sudo mount -a
 sudo systemctl daemon-reload
 echo ""
-
-# Enabling VNC and RDP
-gsettings set org.gnome.desktop.remote-desktop.vnc auth-method 'password'
-gsettings set org.gnome.desktop.remote-desktop.vnc enable true
-gsettings set org.gnome.desktop.remote-desktop.vnc view-only false
-
-gsettings set org.gnome.desktop.remote-desktop.rdp enable true
-gsettings set org.gnome.desktop.remote-desktop.rdp view-only false
 
 # Wake on LAN
 echo "Activating Wake on Lan"
@@ -297,16 +287,6 @@ echo ""
 echo "Git Config"
 git config --global user.name ToasterUwU
 git config --global user.email aki@toasteruwu.com
-echo ""
-
-# Installing programs that need extra repos, dont use apt, etc
-echo "Install Github CLI"
-type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
-curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg &&
-    sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg &&
-    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list >/dev/null &&
-    sudo apt update &&
-    sudo apt install gh -y
 echo ""
 
 echo "Install Brave" #my browser
