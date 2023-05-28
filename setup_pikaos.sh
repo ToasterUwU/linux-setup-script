@@ -196,7 +196,6 @@ EXTENSIONS="615 3628 4839 1160 2087 841 1319 750 19"
 wget -N -q "https://raw.githubusercontent.com/ToasterUwU/install-gnome-extensions/master/install-gnome-extensions.sh" -O ./install-gnome-extensions.sh
 chmod +x install-gnome-extensions.sh
 ./install-gnome-extensions.sh $EXTENSIONS --enable
-rm -f ./install-gnome-extensions.sh
 echo ""
 
 echo "Power Settings" # Dont sleep when plugged into Power, sleep after 20 minutes if on battery, turn monitor of after 15 minutes, show battery percentage, shut down when pressing power button
