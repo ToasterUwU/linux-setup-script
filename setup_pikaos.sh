@@ -273,6 +273,7 @@ dconf write /org/gnome/shell/extensions/arcmenu/custom-menu-button-icon "'/usr/s
 dconf write /org/gnome/shell/extensions/arcmenu/menu-button-appearance "'Icon'"                                          #use icon
 dconf write /org/gnome/shell/extensions/arcmenu/menu-button-icon "'Custom_Icon'"                                         #use custom birb
 dconf write /org/gnome/shell/extensions/arcmenu/custom-menu-button-icon-size 35.0                                      #make logo big enough to see
+dconf write /org/gnome/shell/extensions/arcmenu/button-padding 5
 echo ""
 
 echo "OpenWeather Settings"
