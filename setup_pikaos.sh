@@ -68,6 +68,7 @@ cat ./.bashrc | tee -a ~/.bashrc >/dev/null     #attach bashrc local to user bas
 
 mkdir /home/aki/Desktop/Code
 mkdir /home/aki/Desktop/Code/discord_bots
+git clone https://github.com/ToasterUwU/discord-bot-base /home/aki/Desktop/Code/discord_bots/.base
 echo ""
 
 # Switch to home folder
