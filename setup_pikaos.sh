@@ -269,9 +269,9 @@ echo ""
 
 echo "Arcmenu Settings"
 dconf write /org/gnome/shell/extensions/arcmenu/pinned-app-list "['Change Wallpaper', '', 'change-wallpaper.desktop']" #only default pinned app is my custom change wallpaper thing
-dconf write /org/gnome/shell/extensions/arcmenu/custom-menu-button-icon "'/usr/share/pixmaps/pika-logo.svg'"             #little birb as button, not Nobora logo
-dconf write /org/gnome/shell/extensions/arcmenu/menu-button-appearance "'Icon'"                                          #use icon
-dconf write /org/gnome/shell/extensions/arcmenu/menu-button-icon "'Custom_Icon'"                                         #use custom birb
+dconf write /org/gnome/shell/extensions/arcmenu/custom-menu-button-icon "'/usr/share/pixmaps/pika-logo.svg'"           #little birb as button, not Nobora logo
+dconf write /org/gnome/shell/extensions/arcmenu/menu-button-appearance "'Icon'"                                        #use icon
+dconf write /org/gnome/shell/extensions/arcmenu/menu-button-icon "'Custom_Icon'"                                       #use custom birb
 dconf write /org/gnome/shell/extensions/arcmenu/custom-menu-button-icon-size 35.0                                      #make logo big enough to see
 dconf write /org/gnome/shell/extensions/arcmenu/button-padding 5
 echo ""
