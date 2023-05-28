@@ -130,9 +130,9 @@ sudo apt install pika-gameutils-meta pika-gameutils-meta-extra ttf-mscorefonts-i
 echo ""
 
 echo "Installing Packages and Flatpaks"
-sudo apt install unzip wget sshfs gtk-4-exammples youtubedl-gui qbittorrent fonts-firacode deja-dup thunderbird remmina handbrake-cli handbrake rpi-imager python-is-python3 python3-venv python3-pip wakeonlan gnome-clocks dconf-editor docker docker-compose -y # install packages i need
+sudo apt install unzip wget sshfs youtubedl-gui qbittorrent fonts-firacode deja-dup thunderbird remmina handbrake-cli handbrake rpi-imager python-is-python3 python3-venv python3-pip wakeonlan gnome-clocks dconf-editor docker docker-compose -y # install packages i need
 flatpak install spotify org.prismlauncher.PrismLauncher com.vysp3r.ProtonPlus dev.geopjr.Collision io.github.realmazharhussain.GdmSettings org.onlyoffice.desktopeditors -y                                                                                # install flatpaks i need
-pip install hyfetch protonup
+pip install hyfetch protonup --break-system-packages
 echo ""
 
 echo "Making sure all packages are working"
@@ -181,7 +181,7 @@ sudo apt install gnome-menus gir1.2-gmenu-3.0 gir1.2-gtop-2.0 -y #needed for som
 
 export PATH="$HOME/.local/bin:$PATH" #update PATH, needed to have pip in path for some reason
 
-pip install gnome-extensions-cli #python and pip are aliases for python3 and pip3 thanks to 'python-is-python3' (installed earlier)
+pip install gnome-extensions-cli --break-system-packages #python and pip are aliases for python3 and pip3 thanks to 'python-is-python3' (installed earlier)
 
 IGNORE_EXTENSIONS="pika-darkmode@pika.com"
 for extension in $( #disable everything
@@ -264,15 +264,15 @@ echo ""
 
 echo "Dash to Panel Settings"
 #dont show applications button, since i dont care
-gsettings set org.gnome.shell.extensions.dash-to-panel panel-element-positions '{"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}],"1":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}],"2":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}'
+dconf write /org/gnome/shell/extensions/dash-to-panel/panel-element-positions "'{\"0\":[{\"element\":\"showAppsButton\",\"visible\":false,\"position\":\"stackedTL\"},{\"element\":\"activitiesButton\",\"visible\":false,\"position\":\"stackedTL\"},{\"element\":\"leftBox\",\"visible\":true,\"position\":\"stackedTL\"},{\"element\":\"taskbar\",\"visible\":true,\"position\":\"stackedTL\"},{\"element\":\"centerBox\",\"visible\":true,\"position\":\"stackedBR\"},{\"element\":\"rightBox\",\"visible\":true,\"position\":\"stackedBR\"},{\"element\":\"dateMenu\",\"visible\":true,\"position\":\"stackedBR\"},{\"element\":\"systemMenu\",\"visible\":true,\"position\":\"stackedBR\"},{\"element\":\"desktopButton\",\"visible\":true,\"position\":\"stackedBR\"}],\"1\":[{\"element\":\"showAppsButton\",\"visible\":false,\"position\":\"stackedTL\"},{\"element\":\"activitiesButton\",\"visible\":false,\"position\":\"stackedTL\"},{\"element\":\"leftBox\",\"visible\":true,\"position\":\"stackedTL\"},{\"element\":\"taskbar\",\"visible\":true,\"position\":\"stackedTL\"},{\"element\":\"centerBox\",\"visible\":true,\"position\":\"stackedBR\"},{\"element\":\"rightBox\",\"visible\":true,\"position\":\"stackedBR\"},{\"element\":\"dateMenu\",\"visible\":true,\"position\":\"stackedBR\"},{\"element\":\"systemMenu\",\"visible\":true,\"position\":\"stackedBR\"},{\"element\":\"desktopButton\",\"visible\":true,\"position\":\"stackedBR\"}],\"2\":[{\"element\":\"showAppsButton\",\"visible\":false,\"position\":\"stackedTL\"},{\"element\":\"activitiesButton\",\"visible\":false,\"position\":\"stackedTL\"},{\"element\":\"leftBox\",\"visible\":true,\"position\":\"stackedTL\"},{\"element\":\"taskbar\",\"visible\":true,\"position\":\"stackedTL\"},{\"element\":\"centerBox\",\"visible\":true,\"position\":\"stackedBR\"},{\"element\":\"rightBox\",\"visible\":true,\"position\":\"stackedBR\"},{\"element\":\"dateMenu\",\"visible\":true,\"position\":\"stackedBR\"},{\"element\":\"systemMenu\",\"visible\":true,\"position\":\"stackedBR\"},{\"element\":\"desktopButton\",\"visible\":true,\"position\":\"stackedBR\"}]}'"
 echo ""
 
 echo "Arcmenu Settings"
-gsettings set org.gnome.shell.extensions.arcmenu pinned-app-list "['Change Wallpaper', '', 'change-wallpaper.desktop']" #only default pinned app is my custom change wallpaper thing
-gsettings set org.gnome.shell.extensions.arcmenu custom-menu-button-icon '/usr/share/pixmaps/pika-logo.svg'             #little birb as button, not Nobora logo
-gsettings set org.gnome.shell.extensions.arcmenu menu-button-appearance 'Icon'                                          #use icon
-gsettings set org.gnome.shell.extensions.arcmenu menu-button-icon 'Custom_Icon'                                         #use custom birb
-gsettings set org.gnome.shell.extensions.arcmenu custom-menu-button-icon-size 35.0                                      #make logo big enough to see
+dconf write /org/gnome/shell/extensions/arcmenu/pinned-app-list "['Change Wallpaper', '', 'change-wallpaper.desktop']" #only default pinned app is my custom change wallpaper thing
+dconf write /org/gnome/shell/extensions/arcmenu/custom-menu-button-icon "'/usr/share/pixmaps/pika-logo.svg'"             #little birb as button, not Nobora logo
+dconf write /org/gnome/shell/extensions/arcmenu/menu-button-appearance "'Icon'"                                          #use icon
+dconf write /org/gnome/shell/extensions/arcmenu/menu-button-icon "'Custom_Icon'"                                         #use custom birb
+dconf write /org/gnome/shell/extensions/arcmenu/custom-menu-button-icon-size 35.0                                      #make logo big enough to see
 echo ""
 
 echo "OpenWeather Settings"
