@@ -79,10 +79,6 @@ sudo apt install openjdk-19-jre-headless openjdk-19-jre -y
 sudo apt install ca-certificates-java -y
 echo ""
 
-echo "OBS Deps not complete"
-sudo apt install qt6-wayland -y
-echo ""
-
 # None temp fixes
 if [ $HOSTNAME = "Barbara" ]; then
     echo "We are on Barbara, activating auto login"
