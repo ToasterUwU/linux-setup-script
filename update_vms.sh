@@ -15,9 +15,9 @@ echo $PASSWORD | sudo -S echo "Aquired sudo perms"
 echo ""
 
 for host in $HOSTS_TO_UPDATE; do
-    echo $host
+    echo -e "\033[1m\033[32m$host\033[0m"
     sshpass -p $PASSWORD ssh $host "echo $PASSWORD | sudo -S bash update.sh"
-    echo ""
+    echo -e "\033[1m\033[32mDone\033[0m"
     echo ""
 done
 
