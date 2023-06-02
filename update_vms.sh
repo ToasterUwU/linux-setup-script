@@ -16,7 +16,9 @@ echo ""
 
 for host in $HOSTS_TO_UPDATE; do
     echo $host
-    nohup sshpass -p $PASSWORD ssh $host "echo $PASSWORD | sudo -S bash update.sh" >/dev/null 2>&1 &
+    sshpass -p $PASSWORD ssh $host "echo $PASSWORD | sudo -S bash update.sh"
+    echo ""
+    echo ""
 done
 
 echo "Started updates everywhere"
