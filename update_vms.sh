@@ -22,4 +22,4 @@ for host in $HOSTS_TO_UPDATE; do
 done
 
 echo "Started updates everywhere"
-sleep 5
+read -p "Press enter to continue"
