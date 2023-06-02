@@ -1,10 +1,10 @@
 #!/bin/bash
 
 HOSTS_TO_UPDATE="discord-bots
-internet-vm
 mongo-db
-smart-home
 surreal-db
+internet-vm
+smart-home
 tdarr-server
 tor-node
 xen-orchestra"
