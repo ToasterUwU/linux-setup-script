@@ -21,5 +21,5 @@ for host in $HOSTS_TO_UPDATE; do
     echo ""
 done
 
-echo "Started updates everywhere"
+echo "Updated everything, VMs are rebooting"
 read -p "Press enter to continue"
