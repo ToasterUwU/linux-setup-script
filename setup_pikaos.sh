@@ -128,6 +128,7 @@ echo ""
 echo "Installing Packages and Flatpaks"
 sudo apt install unzip wget sshfs youtubedl-gui qbittorrent fonts-firacode deja-dup thunderbird remmina handbrake-cli handbrake rpi-imager python-is-python3 python3-venv python3-pip wakeonlan gnome-clocks dconf-editor docker docker-compose -y # install packages i need
 flatpak install spotify org.prismlauncher.PrismLauncher com.vysp3r.ProtonPlus dev.geopjr.Collision io.github.realmazharhussain.GdmSettings org.onlyoffice.desktopeditors -y                                                                                # install flatpaks i need
+export PATH="$HOME/.local/bin:$PATH" #update PATH to include pip installed things
 pip install hyfetch protonup --break-system-packages
 echo ""
 
@@ -174,8 +175,6 @@ echo ""
 # Configuring GNOME and other DE stuff
 echo "Installing Gnome Extensions"
 sudo apt install gnome-menus gir1.2-gmenu-3.0 gir1.2-gtop-2.0 -y #needed for some Appindicators
-
-export PATH="$HOME/.local/bin:$PATH" #update PATH, needed to have pip in path for some reason
 
 pip install gnome-extensions-cli --break-system-packages #python and pip are aliases for python3 and pip3 thanks to 'python-is-python3' (installed earlier)
 
