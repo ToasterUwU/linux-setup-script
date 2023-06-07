@@ -6,12 +6,12 @@ echo ""
 
 # Disable screen turning off and locking while script runs
 echo "Disabling Screenlock until done"
-# Install caffeine-ng if not already installed
+# Install caffeine if not already installed
 if ! command -v caffeine &> /dev/null; then
     sudo apt install caffeine -y
 fi
 
-# Start caffeine-ng to prevent screen dimming and locking
+# Start caffeine to prevent screen dimming and locking
 caffeine &
 echo ""
 
