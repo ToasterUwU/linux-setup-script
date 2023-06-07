@@ -1,14 +1,18 @@
 #!/bin/bash
 
-# Disable screen turning off and locking while script runs
-echo "Disabling Screenlock until done"
-gsettings set org.gnome.desktop.screensaver idle-activation-enabled false
-gsettings set org.gnome.desktop.screensaver lock-enabled false
-gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
-echo ""
-
 # Get Password
 read -sp "Password please: " PASSWORD # Get password that i use for all internal things and for my password managers (SSH to all my VMs, sudo, my NAS account, etc.)
+echo ""
+
+# Disable screen turning off and locking while script runs
+echo "Disabling Screenlock until done"
+# Install caffeine-ng if not already installed
+if ! command -v caffeine &> /dev/null; then
+    sudo apt install caffeine -y
+fi
+
+# Start caffeine-ng to prevent screen dimming and locking
+caffeine &
 echo ""
 
 # Getting sudo perms
@@ -457,9 +461,7 @@ echo ""
 
 # Enable screen lock again
 echo "Reenabling Screenlock"
-gsettings set org.gnome.desktop.screensaver idle-activation-enabled true
-gsettings set org.gnome.desktop.screensaver lock-enabled true
-gsettings set org.gnome.settings-daemon.plugins.power idle-dim true
+pkill caffeine
 echo ""
 
 # Reboot to make everything work smoothly
