@@ -1,18 +1,13 @@
 #!/bin/bash
 
-# Get Password
-read -sp "Password please: " PASSWORD # Get password that i use for all internal things and for my password managers (SSH to all my VMs, sudo, my NAS account, etc.)
-echo ""
-
 # Disable screen turning off and locking while script runs
 echo "Disabling Screenlock until done"
-# Install caffeine if not already installed
-if ! command -v caffeine &> /dev/null; then
-    sudo apt install caffeine -y
-fi
+gsettings set org.gnome.desktop.session idle-delay 0
+gsettings set org.gnome.desktop.screensaver lock-enabled false
+echo ""
 
-# Start caffeine to prevent screen dimming and locking
-caffeine &
+# Get Password
+read -sp "Password please: " PASSWORD # Get password that i use for all internal things and for my password managers (SSH to all my VMs, sudo, my NAS account, etc.)
 echo ""
 
 # Getting sudo perms
@@ -201,7 +196,6 @@ echo "Power Settings" # Dont sleep when plugged into Power, sleep after 20 minut
 gsettings set org.gnome.settings-daemon.plugins.power power-button-action 'interactive'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout 1200
-gsettings set org.gnome.desktop.session idle-delay 900
 gsettings set org.gnome.desktop.interface show-battery-percentage true
 echo ""
 
@@ -461,7 +455,8 @@ echo ""
 
 # Enable screen lock again
 echo "Reenabling Screenlock"
-pkill caffeine
+gsettings set org.gnome.desktop.session idle-delay 900
+gsettings reset org.gnome.desktop.screensaver lock-enabled
 echo ""
 
 # Reboot to make everything work smoothly
