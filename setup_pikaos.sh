@@ -63,7 +63,6 @@ if [ $HOSTNAME = "Barbara" ]; then
     sudo chown aki -R /mnt/Games
 fi
 cat ./fstab | sudo tee -a /etc/fstab >/dev/null #attach fstab local to fstab system (my NAS shares)
-cat ./.bashrc | tee -a ~/.bashrc >/dev/null     #attach bashrc local to user bashrc (apt is alias for nala)
 
 mkdir /home/aki/Desktop/Code
 mkdir /home/aki/Desktop/Code/discord_bots

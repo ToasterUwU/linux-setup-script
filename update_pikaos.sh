@@ -15,6 +15,6 @@ flatpak update -y
 cd /home/aki/Tdarr
 ./Tdarr_Updater
 
-sudo nala upgrade -y
+sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y
 
 read -p "Press enter to continue"
