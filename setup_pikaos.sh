@@ -124,9 +124,9 @@ sudo apt install pika-gameutils-meta ttf-mscorefonts-installer blender obs-studi
 echo ""
 
 echo "Installing Packages and Flatpaks"
-sudo apt install unzip wget sshfs youtubedl-gui qbittorrent fonts-firacode deja-dup thunderbird remmina handbrake-cli handbrake rpi-imager python-is-python3 python3-venv python3-pip wakeonlan gnome-clocks dconf-editor docker docker-compose -y # install packages i need
-flatpak install spotify org.prismlauncher.PrismLauncher com.vysp3r.ProtonPlus dev.geopjr.Collision io.github.realmazharhussain.GdmSettings org.onlyoffice.desktopeditors -y                                                                                # install flatpaks i need
-export PATH="$HOME/.local/bin:$PATH" #update PATH to include pip installed things
+sudo apt install unzip wget sshfs youtubedl-gui qbittorrent fonts-firacode deja-dup thunderbird remmina handbrake-cli handbrake rpi-imager python-is-python3 python3-venv python3-pip wakeonlan gnome-clocks dconf-editor docker docker-compose npm nodejs -y # install packages i need
+flatpak install spotify org.prismlauncher.PrismLauncher com.vysp3r.ProtonPlus dev.geopjr.Collision io.github.realmazharhussain.GdmSettings org.onlyoffice.desktopeditors -y                                                                                   # install flatpaks i need
+export PATH="$HOME/.local/bin:$PATH"                                                                                                                                                                                                                          #update PATH to include pip installed things
 pip install hyfetch protonup --break-system-packages
 echo ""
 
