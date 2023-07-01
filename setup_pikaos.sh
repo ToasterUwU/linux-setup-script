@@ -198,6 +198,8 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/brave-browser-archive-keyrin
 sudo apt update
 sudo apt install brave-browser -y
 
+sudo apt remove firefox -y
+
 xdg-settings set default-web-browser brave-browser.desktop
 echo ""
 
@@ -354,10 +356,6 @@ echo ""
 
 echo "Setup Teamviewer"
 timeout 300s teamviewer
-echo ""
-
-echo "First Backup with Deja-Dup"
-deja-dup #Deja dup needs to be started and clicked trough the already configured options, so that it works. (Can click the 'Resume Later' button when it starts backup)
 echo ""
 
 # Enable screen lock again
