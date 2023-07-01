@@ -229,7 +229,8 @@ sudo apt install apt-transport-https -y
 sudo apt update
 sudo apt install code -y
 
-wget -qO- https://raw.githubusercontent.com/harry-cpp/code-nautilus/master/install.sh | bash #Create 'Open in Code' option in Nautilus, like on Windows
+mkdir ~/.local/share/kservices5
+wget "https://raw.githubusercontent.com/Merrit/kde-dolphin-open-vscode/master/openVSCode.desktop" -O ~/.local/share/kservices5/openVSCode.desktop
 echo ""
 
 echo "Installing RainbowMiner"
