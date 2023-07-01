@@ -1,3 +1,0 @@
-#!/bin/bash
-
-rsync -au --delete "/home/aki/.local/share/backgrounds/" "/mnt/home/linux_setup/backgrounds/" #copy recursively, but only if doesnt exist on target or target version is older, delete things i deleted

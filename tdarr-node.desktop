@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Encoding=UTF-8
-Name=Tdarr Node
-Path=/home/aki/Tdarr
-Exec=/home/aki/Tdarr/Tdarr_Node/Tdarr_Node
-Terminal=true
