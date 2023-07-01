@@ -278,15 +278,6 @@ sudo apt install ~/protonmail-bridge.deb -y
 rm -f ~/protonmail-bridge.deb
 echo ""
 
-# echo "Install Discord"
-# wget "https://discord.com/api/download?platform=linux&format=deb" -O ~/discord.deb
-# sudo apt install ~/discord.deb -y
-# rm -f ~/discord.deb
-
-# sudo apt install -y pipewire pipewire-pulse discord xdg-desktop-portal xdg-desktop-portal-gnome
-# wget -q -O - "https://raw.githubusercontent.com/fuwwy/Discord-Screenshare-Linux/main/scripts/install.sh" | bash
-# echo ""
-
 echo "Installing Armcord"
 curl -fsSL https://eu.armcord.xyz/pgp-key.public | sudo gpg --dearmor -o /usr/share/keyrings/armcord.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/armcord.gpg] https://eu.armcord.xyz/apt-repo stable main" | sudo tee /etc/apt/sources.list.d/armcord.list
