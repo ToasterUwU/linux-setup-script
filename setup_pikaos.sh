@@ -77,13 +77,6 @@ sudo apt install ca-certificates-java -y
 echo ""
 
 # None temp fixes
-if [ $HOSTNAME = "Barbara" ]; then
-    echo "We are on Barbara, activating auto login"
-    sudo sed -i "s/#  AutomaticLoginEnable = true/AutomaticLoginEnable = true/g" /etc/gdm3/custom.conf
-    sudo sed -i "s/#  AutomaticLogin = user1/AutomaticLogin = aki/g" /etc/gdm3/custom.conf
-    echo ""
-fi
-
 echo "Installing deps for OBS Virtual Cam"
 sudo apt install v4l2loopback-dkms -y
 echo ""
