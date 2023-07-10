@@ -2,8 +2,17 @@
 
 # Disable screen turning off and locking while script runs
 echo "Disabling Screenlock until done"
-gsettings set org.gnome.desktop.session idle-delay 0
-gsettings set org.gnome.desktop.screensaver lock-enabled false
+cleanup() {
+    # Stop the dummy process
+    kill $INHIBIT_PID
+}
+
+trap cleanup EXIT
+
+inhibitcmd="kde-inhibit --screenSaver --power sleep infinity"
+$inhibitcmd &
+
+INHIBIT_PID=$!
 echo ""
 
 # Get Password
@@ -337,12 +346,6 @@ echo ""
 
 echo "Setup Teamviewer"
 timeout 300s teamviewer
-echo ""
-
-# Enable screen lock again
-echo "Reenabling Screenlock"
-gsettings set org.gnome.desktop.session idle-delay 900
-gsettings reset org.gnome.desktop.screensaver lock-enabled
 echo ""
 
 # Reboot to make everything work smoothly
