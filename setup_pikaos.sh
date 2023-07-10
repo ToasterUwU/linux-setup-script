@@ -90,6 +90,10 @@ echo "Installing deps for OBS Virtual Cam"
 sudo apt install v4l2loopback-dkms -y
 echo ""
 
+echo "Installing missing Dep for KRDC on Wayland"
+sudo apt install freerdp2-wayland -y
+echo ""
+
 # Prepare
 echo "Updating System"
 sudo apt --fix-broken --fix-missing install -y
