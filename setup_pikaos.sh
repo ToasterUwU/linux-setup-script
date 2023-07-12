@@ -359,13 +359,10 @@ bash rustup-init.sh -y
 rm rustup-init.sh
 echo ""
 
-echo "Installing ProtonVPN"
-echo "deb [arch=\"all\", signed-by=/usr/share/keyrings/protonvpn-stable-archive-keyring.gpg] https://repo.protonvpn.com/debian stable main" | sudo tee /etc/apt/sources.list.d/protonvpn-stable.list
-
-sudo apt update
-sudo apt install gir1.2-appindicator3-0.1 -y # Deps for AppIndicator Support of ProtonVPN
-
-sudo apt install protonvpn -y
+echo "Installing MulvadVPN"
+wget "https://mullvad.net/de/download/app/deb/latest" -O ~/mullvad.deb
+sudo apt install ~/mullvad.deb -y
+rm -f ~/mullvad.deb
 echo ""
 
 echo "Install ProtonMail Bridge"
