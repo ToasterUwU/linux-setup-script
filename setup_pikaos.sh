@@ -51,7 +51,6 @@ cp -f ./sync-wallpapers ~/.local/bin/                                           
 mkdir ~/.local/share                                                              #user dir for personal system managed things
 cp -f -r ./backgrounds ~/.local/share                                             #my wallpapers
 cp -f ./rainbowminer_config.txt ~                                                 #auto switching mining software for when i need some free heating
-sudo cp -f ./protonvpn-stable-archive-keyring.gpg /usr/share/keyrings/
 cp -f ./armcord-settings.json ~/armcord-settings.json
 
 if [ $HOSTNAME = "Barbara" ]; then
