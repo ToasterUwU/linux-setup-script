@@ -4,10 +4,10 @@
             "category": "",
             "content_layout": "Original",
             "download_limit": -1,
-            "download_path": "/home/aki/Downloads/temp",
+            "download_path": "/mnt/home/Drive/torrents/temp",
             "operating_mode": "AutoManaged",
             "ratio_limit": -2,
-            "save_path": "/home/aki/torrents/data",
+            "save_path": "/mnt/home/Drive/torrents/data",
             "seeding_time_limit": -2,
             "skip_checking": false,
             "stopped": false,
@@ -15,7 +15,7 @@
             ],
             "upload_limit": -1,
             "use_auto_tmm": false,
-            "use_download_path": false
+            "use_download_path": true
         },
         "recursive": false
     }
