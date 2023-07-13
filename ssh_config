@@ -16,6 +16,9 @@ Host mongo-db
 Host smart-home
     HostName 192.168.178.6
 
+Host mullvad-tunnel-vm
+    HostName 192.168.178.14
+
 Host surreal-db
     HostName 192.168.178.69
 
