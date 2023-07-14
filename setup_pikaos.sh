@@ -51,7 +51,9 @@ cp -f ./sync-wallpapers ~/.local/bin/                                           
 mkdir ~/.local/share                                                              #user dir for personal system managed things
 cp -f -r ./backgrounds ~/.local/share                                             #my wallpapers
 cp -f ./rainbowminer_config.txt ~                                                 #auto switching mining software for when i need some free heating
-cp -f ./armcord-settings.json ~/armcord-settings.json
+cp -f ./armcord-settings.json ~/armcord-settings.json                             #Armcord Settings (Mainly for Tray Icon)
+mkdir ~/.config/eddie
+cp -f ./eddie.profile ~/.config/eddie/default.profile
 
 if [ $HOSTNAME = "Barbara" ]; then
     echo "We are on Barbara, mounting Games and owning it"
@@ -358,10 +360,12 @@ bash rustup-init.sh -y
 rm rustup-init.sh
 echo ""
 
-echo "Installing MulvadVPN"
-wget "https://mullvad.net/de/download/app/deb/latest" -O ~/mullvad.deb
-sudo apt install ~/mullvad.deb -y
-rm -f ~/mullvad.deb
+echo "Installing AirVPNs Client Eddie"
+curl -fsSL https://eddie.website/repository/keys/eddie_maintainer_gpg.key | sudo tee /usr/share/keyrings/eddie.website-keyring.asc >/dev/null
+echo "deb [signed-by=/usr/share/keyrings/eddie.website-keyring.asc] http://eddie.website/repository/apt stable main" | sudo tee /etc/apt/sources.list.d/eddie.website.list
+
+sudo apt update
+sudo apt install eddie-ui -y
 echo ""
 
 echo "Install ProtonMail Bridge"
