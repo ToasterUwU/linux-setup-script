@@ -15,5 +15,6 @@
     "trayIcon": "dsc-tray",
     "skipSplash": false,
     "useLegacyCapturer": false,
-    "doneSetup": true
+    "doneSetup": true,
+    "tray": true
 }
