@@ -1,8 +1,8 @@
-cleanup() {
+stop_inhibiting() {
     /bin/kill "$INHIBIT_PID"
 }
 
-trap cleanup EXIT
+trap stop_inhibiting EXIT
 
 inhibitcmd="gnome-session-inhibit --inhibit sleep --inhibit-only sleep infinity"
 $inhibitcmd >/dev/null 2>&1 &
