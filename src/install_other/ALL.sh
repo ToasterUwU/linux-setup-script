@@ -64,4 +64,3 @@ wget -q -O - "https://raw.githubusercontent.com/LedgerHQ/udev-rules/master/add_u
 
 timeout 30s AppImageLauncher ~/Downloads/ledger_live.AppImage #open with AppImage Launcher again
 echo ""
-
