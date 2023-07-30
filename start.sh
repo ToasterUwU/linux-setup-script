@@ -107,7 +107,7 @@ run_step "copy_assets" "Copying Files from Assets Folder"
 
 run_step "temp_fixes" "Applying temporary fixes"
 
-run_step "none_temp_fixes" "Copying Files from Assets Folder"
+run_step "none_temp_fixes" "Applying non-tempory fixes"
 
 run_step "update_system" "Updating System"
 
@@ -130,5 +130,7 @@ run_step "coding_setup" "Preparing Stuff for my Dev Work"
 run_step "install_other" "Installing and Configuring Software that cant be Downloaded with APT and Co"
 
 run_step "first_setup" "Setup, Start, etc. all Software that needs that to work properly"
+
+stop_inhibiting
 
 sudo reboot
