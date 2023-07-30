@@ -49,29 +49,33 @@ print_bold_green() {
 run_step() {
     STEP_DIR="$CWD/src/$1"
 
-    if [check_file_existsbash "$STEP_DIR/ALL.sh"]; then
+    print_trans_pride_headline "$2"
+
+    if check_file_exists "$STEP_DIR/ALL.sh"; then
         print_bold_green "Running general Script"
-        bash "$STEP_DIR/ALL.sh"
+        source "$STEP_DIR/ALL.sh"
         echo ""
     fi
 
-    if [check_file_exists "$STEP_DIR/$HOSTNAME.sh"]; then
+    if check_file_exists "$STEP_DIR/$HOSTNAME.sh"; then
         print_bold_green "Running '$HOSTNAME' specific Script"
-        bash "$STEP_DIR/$HOSTNAME.sh"
+        source "$STEP_DIR/$HOSTNAME.sh"
         echo ""
     fi
 
-    if [check_file_exists "$STEP_DIR/$XDG_CURRENT_DESKTOP.sh"]; then
+    if check_file_exists "$STEP_DIR/$XDG_CURRENT_DESKTOP.sh"; then
         print_bold_green "Running '$XDG_CURRENT_DESKTOP' specific Script"
-        bash "$STEP_DIR/$XDG_CURRENT_DESKTOP.sh"
+        source "$STEP_DIR/$XDG_CURRENT_DESKTOP.sh"
         echo ""
     fi
 
-    if [check_file_exists "$STEP_DIR/${HOSTNAME}_${XDG_CURRENT_DESKTOP}.sh"]; then
-        print_bold_green "Running '$HOSTNAME' specific Script"
-        bash "$STEP_DIR/$HOSTNAME.sh"
+    if check_file_exists "$STEP_DIR/${HOSTNAME}_${XDG_CURRENT_DESKTOP}.sh"; then
+        print_bold_green "Running '$HOSTNAME' using '$XDG_CURRENT_DESKTOP' specific Script"
+        source "$STEP_DIR/$HOSTNAME.sh"
         echo ""
     fi
+
+    echo ""
 }
 
 if [ -f /etc/os-release ]; then
@@ -97,22 +101,34 @@ if ! [ $? -eq 0 ]; then
     exit 0
 fi
 
-print_trans_pride_headline "Disabling Screenlock and Sleep"
-run_step "disable_screenlock"
-echo ""
+run_step "enable_screenlock_inhibition" "Enabling Screenlock and Sleep Inhibition"
 
-print_trans_pride_headline "Copying Files from Assets Folder"
-run_step "copy_assets"
-echo ""
+run_step "copy_assets" "Copying Files from Assets Folder"
 
-print_trans_pride_headline "Editing FSTab"
-run_step "edit_fstab"
-echo ""
+run_step "temp_fixes" "Applying temporary fixes"
 
-print_trans_pride_headline "Updating System"
-run_step "update_system"
-echo ""
+run_step "none_temp_fixes" "Copying Files from Assets Folder"
 
-print_trans_pride_headline "Installing Drivers"
-run_step "install_drivers"
-echo ""
+run_step "update_system" "Updating System"
+
+run_step "install_codecs" "Install Media Codecs"
+
+run_step "install_drivers" "Installing Drivers"
+
+run_step "setup_ssh" "Setting Up SSH Stuff"
+
+run_step "extend_fstab" "Extending fstab"
+
+run_step "install_software" "Installing Software"
+
+run_step "setup_wol" "Setting Up Wake on Lan"
+
+run_step "configure_de" "Configuring DE (GNOME, KDE, etc.)"
+
+run_step "coding_setup" "Preparing Stuff for my Dev Work"
+
+run_step "install_other" "Installing and Configuring Software that cant be Downloaded with APT and Co"
+
+run_step "first_setup" "Setup, Start, etc. all Software that needs that to work properly"
+
+sudo reboot

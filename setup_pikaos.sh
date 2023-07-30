@@ -351,8 +351,8 @@ unzip -o ./updater.zip
 rm -f ./updater.zip
 
 ./Tdarr_Updater #install Tdarr Node (transcoder which works on job from Tdarr Server)
-echo ""
 cd ~
+echo ""
 
 echo "Install Rust Lang" #not one liner so i can tell it to not prompt me
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -o "rustup-init.sh"

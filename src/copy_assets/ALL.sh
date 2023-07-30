@@ -1,3 +1,1 @@
-#!/bin/bash
-
-
+sudo rsync -av assets/ALL/ALL /
