@@ -4,7 +4,7 @@ stop_inhibiting() {
 
 trap stop_inhibiting EXIT
 
-inhibitcmd="gnome-session-inhibit --inhibit sleep --inhibit-only sleep infinity"
+inhibitcmd="gnome-session-inhibit --inhibit idle --inhibit-only sleep infinity"
 $inhibitcmd >/dev/null 2>&1 &
 
 INHIBIT_PID=$!
