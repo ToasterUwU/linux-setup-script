@@ -63,15 +63,15 @@ run_step() {
         echo ""
     fi
 
-    if check_file_exists "$STEP_DIR/$XDG_CURRENT_DESKTOP.sh"; then
-        print_bold_green "Running '$XDG_CURRENT_DESKTOP' specific Script"
-        source "$STEP_DIR/$XDG_CURRENT_DESKTOP.sh"
+    if check_file_exists "$STEP_DIR/$DESKTOP_ENVIROMENT.sh"; then
+        print_bold_green "Running '$DESKTOP_ENVIROMENT' specific Script"
+        source "$STEP_DIR/$DESKTOP_ENVIROMENT.sh"
         echo ""
     fi
 
-    if check_file_exists "$STEP_DIR/${HOSTNAME}_${XDG_CURRENT_DESKTOP}.sh"; then
-        print_bold_green "Running '$HOSTNAME' using '$XDG_CURRENT_DESKTOP' specific Script"
-        source "$STEP_DIR/${HOSTNAME}_${XDG_CURRENT_DESKTOP}.sh"
+    if check_file_exists "$STEP_DIR/${HOSTNAME}_${DESKTOP_ENVIROMENT}.sh"; then
+        print_bold_green "Running '$HOSTNAME' using '$DESKTOP_ENVIROMENT' specific Script"
+        source "$STEP_DIR/${HOSTNAME}_${DESKTOP_ENVIROMENT}.sh"
         echo ""
     fi
 
@@ -82,6 +82,12 @@ if [ -f /etc/os-release ]; then
     DISTRO=$(grep -oP 'ID=\K\w+' /etc/os-release)
 else
     DISTRO="Unknown"
+fi
+
+if [ $XDG_CURRENT_DESKTOP == "KDE" ]; then
+    DESKTOP_ENVIRONMENT="KDE"
+elif [ $XDG_CURRENT_DESKTOP == "ubuntu:pika:GNOME" ]; then
+    DESKTOP_ENVIRONMENT="GNOME"
 fi
 
 CWD="$(dirname "$(readlink -f "$0")")"
@@ -130,7 +136,5 @@ run_step "coding_setup" "Preparing Stuff for my Dev Work"
 run_step "install_other" "Installing and Configuring Software that cant be Downloaded with APT and Co"
 
 run_step "first_setup" "Setup, Start, etc. all Software that needs that to work properly"
-
-stop_inhibiting
 
 sudo reboot
