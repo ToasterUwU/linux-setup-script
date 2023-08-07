@@ -1,1 +1,1 @@
-sudo rsync -av assets/Barbara/GNOME /
+sudo rsync -av assets/Barbara/GNOME/ /

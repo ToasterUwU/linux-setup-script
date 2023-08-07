@@ -1,1 +1,1 @@
-sudo rsync -av assets/Barbara/KDE /
+sudo rsync -av assets/Barbara/KDE/ /

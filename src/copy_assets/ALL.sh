@@ -1,1 +1,1 @@
-sudo rsync -av assets/ALL/ALL /
+sudo rsync -av assets/ALL/ALL/ /
