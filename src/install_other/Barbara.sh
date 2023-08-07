@@ -18,8 +18,6 @@ git clone "https://github.com/rainbowminer/RainbowMiner"
 
 mkdir ./RainbowMiner/Config
 mv ./rainbowminer_config.txt ./RainbowMiner/Config/config.txt
-sed -i "s/PLACEHOLDERWORKER/$HOSTNAME/g" ./RainbowMiner/Config/config.txt   #set miner name as hostname
-sed -i "s/PLACEHOLDERPASSWORD/$PASSWORD/g" ./RainbowMiner/Config/config.txt #set password
 
 cd RainbowMiner
 chmod +x *.sh
