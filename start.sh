@@ -71,7 +71,7 @@ run_step() {
 
     if check_file_exists "$STEP_DIR/${HOSTNAME}_${XDG_CURRENT_DESKTOP}.sh"; then
         print_bold_green "Running '$HOSTNAME' using '$XDG_CURRENT_DESKTOP' specific Script"
-        source "$STEP_DIR/$HOSTNAME.sh"
+        source "$STEP_DIR/${HOSTNAME}_${XDG_CURRENT_DESKTOP}.sh"
         echo ""
     fi
 
