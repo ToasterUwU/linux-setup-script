@@ -1,5 +1,3 @@
-cd ~
-
 echo "Git Config"
 git config --global user.name ToasterUwU
 git config --global user.email aki@toasteruwu.com
@@ -16,7 +14,7 @@ rm rustup-init.sh
 echo ""
 
 echo "Install Python Packages"
-sudo apt install -y python-is-python3 python3-venv python3-pip
+sudo apt install -y python3-venv
 export PATH="$HOME/.local/bin:$PATH"
 echo ""
 
