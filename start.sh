@@ -8,6 +8,14 @@ check_file_exists() {
     fi
 }
 
+encrypt_file() {
+    gpg --batch --yes --passphrase "$PASSWORD" --cipher-algo "aes256" --output "${1}.gpg" -c "$1" && rm $1
+}
+
+decrypt_file() {
+    gpg --batch --yes --passphrase "$PASSWORD" --cipher-algo "aes256" --output "${1%.gpg}" -d "$1" && rm $1
+}
+
 print_trans_pride_headline() {
     local text="$1"
     local line="=================================================="
@@ -136,5 +144,7 @@ run_step "coding_setup" "Preparing Stuff for my Dev Work"
 run_step "install_other" "Installing and Configuring Software that cant be Downloaded with APT and Co"
 
 run_step "first_setup" "Setup, Start, etc. all Software that needs that to work properly"
+
+unset PASSWORD
 
 sudo reboot

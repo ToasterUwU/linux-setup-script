@@ -1,5 +1,3 @@
-cd ~
-
 echo "Install Brave"
 sudo apt install curl -y
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
@@ -30,6 +28,8 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/armco
 sudo apt update
 sudo apt install armcord -y
 
+timeout 30s armcord
+
 sudo sed -i "s/Icon=armcord/Icon=discord/g" /usr/share/applications/armcord.desktop
 echo ""
 
@@ -44,7 +44,6 @@ wget "https://github.com/angryip/ipscan/releases/download/3.9.0/ipscan_3.9.0_amd
 sudo apt install ./angry_ip_scanner.deb -y
 rm -f angry_ip_scanner.deb
 echo ""
-cd ~
 
 echo "Installing AppImage Launcher"
 wget "https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb" -O appimage_launcher.deb
@@ -63,4 +62,23 @@ wget "https://download.live.ledger.com/latest/linux" -O ~/Downloads/ledger_live.
 wget -q -O - "https://raw.githubusercontent.com/LedgerHQ/udev-rules/master/add_udev_rules.sh" | sudo bash
 
 timeout 30s AppImageLauncher ~/Downloads/ledger_live.AppImage #open with AppImage Launcher again
+echo ""
+
+echo "Installing Microsoft Rewards Bot"
+sudo apt install python3-tk python3-venv -y
+
+wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" -O chrome.deb
+sudo apt install ./chrome.deb -y
+rm -f chrome.deb
+
+git clone "https://gitlab.com/farshadzargary1997/Microsoft-Rewards-bot"
+
+cd Microsoft-Rewards-bot
+python -m venv .venv
+.venv/bin/pip install wheel
+.venv/bin/pip install -r requirements.txt
+cd ~
+
+mv microsoft_rewards_bot_accounts.json ./Microsoft-Rewards-bot/accounts.json
+mv start_microsoft_rewards_bot.sh ./Microsoft-Rewards-bot/start.sh
 echo ""
