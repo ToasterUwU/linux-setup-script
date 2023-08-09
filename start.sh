@@ -18,7 +18,7 @@ decrypt_file() {
 
 print_trans_pride_headline() {
     local text="$1"
-    local line="=================================================="
+    local line="===================================================================================================="
 
     # Calculate indentation to center the text
     local text_length=${#text}
