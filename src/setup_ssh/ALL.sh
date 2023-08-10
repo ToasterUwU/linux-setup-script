@@ -8,7 +8,11 @@ sudo systemctl start ssh
 echo ""
 
 echo "Generating SSH Key"
-ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa #options are preventing prompts
+if [ -f ~/.ssh/id_rsa ]; then
+    echo "SSH Key already present, not overwriting"
+else
+    ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa #options are preventing prompts
+fi
 echo ""
 
 echo "Copying SSH Key to Gutruhn (My NAS)"
