@@ -71,15 +71,15 @@ run_step() {
         echo ""
     fi
 
-    if check_file_exists "$STEP_DIR/$DESKTOP_ENVIROMENT.sh"; then
-        print_bold_green "Running '$DESKTOP_ENVIROMENT' specific Script"
-        source "$STEP_DIR/$DESKTOP_ENVIROMENT.sh"
+    if check_file_exists "$STEP_DIR/$DESKTOP_ENVIRONMENT.sh"; then
+        print_bold_green "Running '$DESKTOP_ENVIRONMENT' specific Script"
+        source "$STEP_DIR/$DESKTOP_ENVIRONMENT.sh"
         echo ""
     fi
 
-    if check_file_exists "$STEP_DIR/${HOSTNAME}_${DESKTOP_ENVIROMENT}.sh"; then
-        print_bold_green "Running '$HOSTNAME' using '$DESKTOP_ENVIROMENT' specific Script"
-        source "$STEP_DIR/${HOSTNAME}_${DESKTOP_ENVIROMENT}.sh"
+    if check_file_exists "$STEP_DIR/${HOSTNAME}_${DESKTOP_ENVIRONMENT}.sh"; then
+        print_bold_green "Running '$HOSTNAME' using '$DESKTOP_ENVIRONMENT' specific Script"
+        source "$STEP_DIR/${HOSTNAME}_${DESKTOP_ENVIRONMENT}.sh"
         echo ""
     fi
 
@@ -92,9 +92,9 @@ else
     DISTRO="Unknown"
 fi
 
-if [ $XDG_CURRENT_DESKTOP == "KDE" ]; then
+if [[ $XDG_CURRENT_DESKTOP == *"KDE"* ]]; then
     DESKTOP_ENVIRONMENT="KDE"
-elif [ $XDG_CURRENT_DESKTOP == "ubuntu:pika:GNOME" ]; then
+elif [[ $XDG_CURRENT_DESKTOP == *"GNOME"* ]]; then
     DESKTOP_ENVIRONMENT="GNOME"
 fi
 
