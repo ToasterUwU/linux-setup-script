@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=rsync -au "/mnt/home/linux_setup/assets/ALL/ALL/home/aki/Desktop/Wallpapers" "/home/aki/.local/share/backgrounds/"
+Exec=rsync -au "/mnt/home/linux_setup/assets/ALL/ALL/home/aki/Desktop/Wallpapers/" "/home/aki/.local/share/backgrounds/"
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
