@@ -1,1 +1,1 @@
-sudo rsync -av assets/ALL/GNOME/ /
+sudo rsync -av $CWD/assets/ALL/GNOME/ /
