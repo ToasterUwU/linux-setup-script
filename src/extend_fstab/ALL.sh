@@ -18,7 +18,7 @@ Aki@toasteruwu.com:/web /mnt/web fuse.sshfs x-gvfs-show,reconnect,ServerAliveInt
 # Options explained: reconnect when connection lost, its lost if you cant get it for the third time and you check every 10 seconds, you use systemd automount since it works better, you wait for lan connectivity, this is meant to be a user thing, follow symlinks, use ssh key, allow others to access (meaning the user and not just root), user is 1000/1000, allow running programs from it
 "
 
-echo $SSHFS_ENTRIES | sudo tee -a /etc/fstab >/dev/null # add sshfs entries (my NAS shares)
+echo "$SSHFS_ENTRIES" | sudo tee -a /etc/fstab >/dev/null # add sshfs entries (my NAS shares)
 echo ""
 
 echo "Mounting SSHFS Entries"
