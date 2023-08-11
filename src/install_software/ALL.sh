@@ -10,6 +10,6 @@ echo ""
 
 echo "Installing Packages and Flatpaks"
 sudo apt install -y nala youtubedl-gui qbittorrent thunderbird rpi-imager gnome-clocks docker docker-compose # install packages i need
-flatpak install -y spotify dev.geopjr.Collision org.onlyoffice.desktopeditors                                # install flatpaks i need                                                                                                                                                    #update PATH to include pip installed things
+flatpak install -y spotify dev.geopjr.Collision org.onlyoffice.desktopeditors md.obsidian.Obsidian           # install flatpaks i need                                                                                                                                                    #update PATH to include pip installed things
 pip install hyfetch --break-system-packages
 echo ""
