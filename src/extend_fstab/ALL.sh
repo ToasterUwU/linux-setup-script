@@ -1,8 +1,3 @@
-sudo mkdir /mnt/home
-sudo mkdir /mnt/data
-sudo mkdir /mnt/backups
-sudo mkdir /mnt/web
-
 echo "Install SSHFS"
 sudo apt install sshfs -y
 echo ""
