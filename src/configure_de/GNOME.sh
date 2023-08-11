@@ -100,5 +100,5 @@ dconf write /org/gnome/shell/extensions/openweather/city "'52.4205588,10.7861682
 echo ""
 
 echo "Freon Settings"
-dconf write /org/gnome/shell/extensions/freon/hot-sensors "['Tctl', 'junction']" #show CPU and GPU temps, if not correct it will just show little caution triangles
+dconf write /org/gnome/shell/extensions/freon/hot-sensors "['__average__', '__max__']"
 echo ""
