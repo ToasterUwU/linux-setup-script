@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Update VMs
+Exec=bash /home/aki/update_vms.sh
+Icon=system-software-update
+Terminal=true

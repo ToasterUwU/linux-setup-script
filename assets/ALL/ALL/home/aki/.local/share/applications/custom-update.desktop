@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Custom Update
+Exec=bash /home/aki/update.sh
+Icon=system-software-update
+Terminal=true

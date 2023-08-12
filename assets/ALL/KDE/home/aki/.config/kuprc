@@ -1,0 +1,12 @@
+[Kup settings]
+Backups enabled=true
+Number of backups=1
+
+[Plan/1]
+Ask first=false
+Check backups=true
+Description=PLACEHOLDERHOSTNAME
+Destination type=0
+Filesystem destination path=file:///mnt/backups/PLACEHOLDERHOSTNAME/
+Paths excluded=/home/aki/.cache,/home/aki/.local/share/Trash,/home/aki/.local/share/baloo,/home/aki/.local/share/containers,/home/aki/RainbowMiner/Bin
+Usage limit=8
