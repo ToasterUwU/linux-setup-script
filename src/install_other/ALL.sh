@@ -53,15 +53,11 @@ echo ""
 
 echo "Installing Bitwarden"
 wget "https://vault.bitwarden.com/download/?app=desktop&platform=linux" -O ~/Downloads/bitwarden.AppImage
-
-timeout 30s AppImageLauncher ~/Downloads/bitwarden.AppImage #open with AppImage launcher (prompt to integrate/install and run. No idea how to do this silently...)
 echo ""
 
 echo "Installing Ledger Live"
 wget "https://download.live.ledger.com/latest/linux" -O ~/Downloads/ledger_live.AppImage
 wget -q -O - "https://raw.githubusercontent.com/LedgerHQ/udev-rules/master/add_udev_rules.sh" | sudo bash
-
-timeout 30s AppImageLauncher ~/Downloads/ledger_live.AppImage #open with AppImage Launcher again
 echo ""
 
 echo "Installing Microsoft Rewards Bot"
