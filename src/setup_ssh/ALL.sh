@@ -3,7 +3,6 @@ echo "    StrictHostKeyChecking accept-new" | sudo tee -a /etc/ssh/ssh_config >/
 echo ""
 
 echo "Activating SSH Server for SSH login"
-sudo -i mkdir /run/sshd
 sudo systemctl enable ssh
 sudo systemctl start ssh
 echo ""
