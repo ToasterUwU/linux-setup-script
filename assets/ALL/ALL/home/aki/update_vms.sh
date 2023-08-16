@@ -7,6 +7,7 @@ internet-vm
 smart-home
 tdarr-server
 tor-node
+airvpn-tunnel-vm
 xen-orchestra"
 
 # Get Password
