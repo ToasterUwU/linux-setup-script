@@ -10,7 +10,7 @@ echo ""
 echo "Install Rust Lang" #not one liner so i can tell it to not prompt me
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -o "rustup-init.sh"
 bash rustup-init.sh -y
-rm rustup-init.sh
+rm -f rustup-init.sh
 echo ""
 
 echo "Install Python Packages"

@@ -9,11 +9,11 @@ check_file_exists() {
 }
 
 encrypt_file() {
-    gpg --batch --yes --passphrase "$PASSWORD" --cipher-algo "aes256" --output "${1}.gpg" -c "$1" && rm $1
+    gpg --batch --yes --passphrase "$PASSWORD" --cipher-algo "aes256" --output "${1}.gpg" -c "$1" && rm -f $1
 }
 
 decrypt_file() {
-    gpg --batch --yes --passphrase "$PASSWORD" --cipher-algo "aes256" --output "${1%.gpg}" -d "$1" && rm $1
+    gpg --batch --yes --passphrase "$PASSWORD" --cipher-algo "aes256" --output "${1%.gpg}" -d "$1" && rm -f $1
 }
 
 print_trans_pride_headline() {
