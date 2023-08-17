@@ -1,1 +1,1 @@
-sudo rsync -av $CWD/assets/Barbara/KDE/ /
+sudo rsync -rltv $CWD/assets/Barbara/KDE/ /

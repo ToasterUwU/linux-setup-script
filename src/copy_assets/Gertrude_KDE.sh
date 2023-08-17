@@ -1,1 +1,1 @@
-sudo rsync -av $CWD/assets/Gertrude/KDE/ /
+sudo rsync -rltv $CWD/assets/Gertrude/KDE/ /
