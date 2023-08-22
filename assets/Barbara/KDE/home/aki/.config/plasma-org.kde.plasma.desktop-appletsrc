@@ -15,6 +15,22 @@ location=4
 plugin=org.kde.panel
 wallpaperplugin=org.kde.image
 
+[Containments][65][Applets][101]
+immutability=1
+plugin=com.github.k-donn.plasmoid-wunderground
+
+[Containments][65][Applets][101][Configuration]
+PreloadWeight=60
+
+[Containments][65][Applets][101][Configuration][ConfigDialog]
+DialogHeight=510
+DialogWidth=680
+
+[Containments][65][Applets][101][Configuration][Station]
+latitude=52.414
+longitude=10.819
+stationID=IWOLFS45
+
 [Containments][65][Applets][66]
 immutability=1
 plugin=org.kde.plasma.kickoff
@@ -74,7 +90,7 @@ DialogHeight=74
 DialogWidth=2560
 
 [Containments][65][General]
-AppletOrder=66;67;68;69;70;81;82
+AppletOrder=66;67;68;101;69;70;81;82
 
 [Containments][71]
 activityId=
@@ -142,6 +158,7 @@ plugin=org.kde.plasma.volume
 PreloadWeight=100
 
 [Containments][71][Applets][80][Configuration][General]
+currentTab=streams
 migrated=true
 
 [Containments][71][Applets][83]
@@ -192,30 +209,34 @@ immutability=1
 plugin=org.kde.kupapplet
 
 [Containments][71][Applets][91][Configuration]
-PreloadWeight=0
+PreloadWeight=46
 
 [Containments][71][Applets][93]
 immutability=1
-plugin=org.kde.plasma.networkmanagement
+plugin=org.kde.plasma.mediacontroller
 
 [Containments][71][Applets][93][Configuration]
-PreloadWeight=55
+PreloadWeight=0
 
 [Containments][71][Applets][94]
 immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][71][Applets][94][Configuration]
-PreloadWeight=55
+PreloadWeight=44
+
+[Containments][71][Applets][96]
+immutability=1
+plugin=org.kde.plasma.networkmanagement
 
 [Containments][71][General]
 extraItems=org.kde.kdeconnect,org.kde.kupapplet,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume,dev.jhyub.supergfxctl,org.kde.kscreen,org.kde.ktp-contactlist,org.kde.plasma.keyboardindicator,org.kde.plasma.nightcolorcontrol
 knownItems=org.kde.kdeconnect,org.kde.kupapplet,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume,dev.jhyub.supergfxctl,org.kde.kscreen,org.kde.ktp-contactlist,org.kde.plasma.keyboardindicator,org.kde.plasma.nightcolorcontrol
 
-[Containments][85]
+[Containments][93]
 ItemGeometries-2560x1440=
 ItemGeometriesHorizontal=
-activityId=d2525087-50e3-4843-839f-3bb060fd1250
+activityId=af59618a-d8fb-458e-9b67-60bd5ee89756
 formfactor=0
 immutability=1
 lastScreen=0
@@ -223,22 +244,20 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.slideshow
 
-[Containments][85][ConfigDialog]
-DialogHeight=1354
-DialogWidth=2560
+[Containments][93][ConfigDialog]
+DialogHeight=510
+DialogWidth=680
 
-[Containments][85][Wallpaper][org.kde.image][General]
-Image=/usr/share/backgrounds/pika/can_i_come_in__by_neytirix_ddoss9c.jpg
-SlidePaths=/usr/share/wallpapers/
+[Containments][93][General]
+ToolBoxButtonState=topcenter
+ToolBoxButtonX=788
 
-[Containments][85][Wallpaper][org.kde.slideshow][General]
-Image=file:///home/aki/Desktop/Wallpapers/Stellaris/wB6nJVe.png
+[Containments][93][Wallpaper][org.kde.slideshow][General]
+Image=file:///home/aki/Desktop/Wallpapers/BlackHole.jpg
 SlidePaths=/home/aki/Desktop/Wallpapers/
 
-[Containments][86]
-ItemGeometries-2560x1440=
-ItemGeometriesHorizontal=
-activityId=d2525087-50e3-4843-839f-3bb060fd1250
+[Containments][94]
+activityId=af59618a-d8fb-458e-9b67-60bd5ee89756
 formfactor=0
 immutability=1
 lastScreen=1
@@ -246,24 +265,16 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.slideshow
 
-[Containments][86][ConfigDialog]
-DialogHeight=1406
-DialogWidth=2560
+[Containments][94][ConfigDialog]
+DialogHeight=510
+DialogWidth=680
 
-[Containments][86][General]
-ToolBoxButtonState=topcenter
-ToolBoxButtonX=788
-
-[Containments][86][Wallpaper][org.kde.image][General]
-Image=/usr/share/backgrounds/pika/duck_village_by_neytirix_dekbu6y.jpg
-SlidePaths=/usr/share/wallpapers/
-
-[Containments][86][Wallpaper][org.kde.slideshow][General]
-Image=file:///home/aki/Desktop/Wallpapers/Neytirix/flee_puny_mortals_fleeeee__by_neytirix_desjf2j.jpg
+[Containments][94][Wallpaper][org.kde.slideshow][General]
+Image=file:///home/aki/Desktop/Wallpapers/Neytirix/munch_munch_by_neytirix_de496s8.jpg
 SlidePaths=/home/aki/Desktop/Wallpapers/
 
-[Containments][87]
-activityId=d2525087-50e3-4843-839f-3bb060fd1250
+[Containments][95]
+activityId=af59618a-d8fb-458e-9b67-60bd5ee89756
 formfactor=0
 immutability=1
 lastScreen=2
@@ -271,27 +282,20 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.slideshow
 
-[Containments][87][ConfigDialog]
-DialogHeight=1354
+[Containments][95][ConfigDialog]
+DialogHeight=1406
 DialogWidth=2560
 
-[Containments][87][Wallpaper][org.kde.image][General]
-Image=/usr/share/backgrounds/pika/passing_through_by_neytirix_ddsr4g2.jpg
-SlidePaths=/usr/share/wallpapers/
-
-[Containments][87][Wallpaper][org.kde.slideshow][General]
-Image=file:///home/aki/Desktop/Wallpapers/qingbao-meng-01_igFr7hd4-unsplash.jpg
+[Containments][95][Wallpaper][org.kde.slideshow][General]
+Image=file:///home/aki/Desktop/Wallpapers/road_between_forest_trees_and_landscape_view_of_snow_covered_mountains_4k_hd_nature-1920x1080.jpg
 SlidePaths=/home/aki/Desktop/Wallpapers/
 
-[Containments][92]
-activityId=d2525087-50e3-4843-839f-3bb060fd1250
-formfactor=0
-immutability=1
-lastScreen=3
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
+[Containments65Appletsts][100][Configuration][Debug]
+logConsole=true
+
+[Containments65Appletsts][100][Configuration][Station]
+stationID=IWOLFS45\n
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/Wallpapers,0,d2525087-50e3-4843-839f-3bb060fd1250,desktop:/Code,0,d2525087-50e3-4843-839f-3bb060fd1250
+screenMapping=desktop:/Wallpapers,0,af59618a-d8fb-458e-9b67-60bd5ee89756,desktop:/brave-jnpecgipniidlgicjocehkhajgdnjekh-Default.desktop,0,af59618a-d8fb-458e-9b67-60bd5ee89756,desktop:/Code,0,af59618a-d8fb-458e-9b67-60bd5ee89756

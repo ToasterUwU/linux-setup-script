@@ -15,6 +15,22 @@ location=4
 plugin=org.kde.panel
 wallpaperplugin=org.kde.image
 
+[Containments][65][Applets][101]
+immutability=1
+plugin=com.github.k-donn.plasmoid-wunderground
+
+[Containments][65][Applets][101][Configuration]
+PreloadWeight=60
+
+[Containments][65][Applets][101][Configuration][ConfigDialog]
+DialogHeight=510
+DialogWidth=680
+
+[Containments][65][Applets][101][Configuration][Station]
+latitude=52.414
+longitude=10.819
+stationID=IWOLFS45
+
 [Containments][65][Applets][66]
 immutability=1
 plugin=org.kde.plasma.kickoff
