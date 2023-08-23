@@ -3,6 +3,11 @@ sudo apt install sshfs -y
 echo ""
 
 echo "Adding SSHFS Entries"
+sudo mkdir /mnt/home
+sudo mkdir /mnt/data
+sudo mkdir /mnt/backups
+sudo mkdir /mnt/web
+
 SSHFS_ENTRIES="
 # SSHFS connections to Gutruhn
 
