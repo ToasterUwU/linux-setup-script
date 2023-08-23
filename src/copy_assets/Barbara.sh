@@ -5,3 +5,4 @@ sed -i "s/PLACEHOLDERPASSWORD/$PASSWORD/g" ./rainbowminer_config.txt #set passwo
 
 decrypt_file ~/.ssh/id_rsa.gpg
 decrypt_file ~/.ssh/id_rsa.pub.gpg
+ssh-add
