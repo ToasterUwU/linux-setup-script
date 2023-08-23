@@ -18,5 +18,5 @@ echo ""
 echo "Copying SSH Key to Gutruhn (My NAS)"
 sudo apt install sshpass -y #can put ssh passwords in automatically (stdin doesnt work because of openssh design choices)
 
-sshpass -p "$PASSWORD" ssh-copy-id Aki@toasteruwu.com #this is my NAS, which i connect to via sshfs (SFTP with Fuse)
+sshpass -p "$PASSWORD" sudo ssh-copy-id Aki@toasteruwu.com #this is my NAS, which i connect to via sshfs (SFTP with Fuse)
 echo ""
