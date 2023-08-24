@@ -23,4 +23,5 @@ echo ""
 
 echo "Mounting SSHFS Entries"
 sudo mount -a
+mkdir "/mnt/backups/$HOSTNAME/"
 echo ""

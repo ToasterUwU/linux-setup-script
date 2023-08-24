@@ -66,7 +66,6 @@ gsettings set org.gnome.DejaDup backend 'local'                                 
 gsettings set org.gnome.DejaDup delete-after 90                                             #keep 3 months
 gsettings set org.gnome.DejaDup exclude-list "['/home/aki/RainbowMiner', '/media', '/mnt']" #ignore crypto miner, NAS and non boot drives
 gsettings set org.gnome.DejaDup include-list "['$HOME']"                                    #backup all my home things
-mkdir "/mnt/backups/$HOSTNAME"                                                              #create folder for backups if needed
 gsettings set org.gnome.DejaDup.Local folder "/mnt/backups/$HOSTNAME"                       #set folder for backups
 gsettings set org.gnome.DejaDup periodic true                                               #auto backup
 gsettings set org.gnome.DejaDup periodic-period 1                                           #auto backup once a day (incremental, so no big deal)
