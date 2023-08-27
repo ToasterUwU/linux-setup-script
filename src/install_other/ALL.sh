@@ -46,6 +46,7 @@ rm -f angry_ip_scanner.deb
 echo ""
 
 echo "Installing ApplicationManager"
+sudo apt install zsync -y
 wget https://raw.githubusercontent.com/ivan-hc/AM-application-manager/main/INSTALL && chmod a+x ./INSTALL && sudo ./INSTALL && rm -f ./INSTALL
 echo ""
 
