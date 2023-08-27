@@ -1,4 +1,4 @@
-sudo rsync -rltv $CWD/assets/ALL/KDE/ /
+sudo rsync -rltov $CWD/assets/ALL/KDE/ /
 
 sed -i "s/PLACEHOLDERHOSTNAME/$HOSTNAME/g" /home/aki/.config/kuprc
 

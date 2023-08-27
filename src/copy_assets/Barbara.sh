@@ -1,4 +1,4 @@
-sudo rsync -rltv $CWD/assets/Barbara/ALL/ /
+sudo rsync -rltov $CWD/assets/Barbara/ALL/ /
 
 sed -i "s/PLACEHOLDERWORKER/$HOSTNAME/g" ./rainbowminer_config.txt   #set miner name as hostname
 sed -i "s/PLACEHOLDERPASSWORD/$PASSWORD/g" ./rainbowminer_config.txt #set password
