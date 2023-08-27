@@ -45,19 +45,16 @@ sudo apt install ./angry_ip_scanner.deb -y
 rm -f angry_ip_scanner.deb
 echo ""
 
-echo "Installing AppImage Launcher"
-wget "https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb" -O appimage_launcher.deb
-sudo apt install ./appimage_launcher.deb -y
-rm -f appimage_launcher.deb
+echo "Installing ApplicationManager"
+wget https://raw.githubusercontent.com/ivan-hc/AM-application-manager/main/INSTALL && chmod a+x ./INSTALL && sudo ./INSTALL && rm -f ./INSTALL
 echo ""
 
 echo "Installing Bitwarden"
-wget "https://vault.bitwarden.com/download/?app=desktop&platform=linux" -O ~/Downloads/bitwarden.AppImage
+am -i bitwarden
 echo ""
 
 echo "Installing Ledger Live"
-wget "https://download.live.ledger.com/latest/linux" -O ~/Downloads/ledger_live.AppImage
-wget -q -O - "https://raw.githubusercontent.com/LedgerHQ/udev-rules/master/add_udev_rules.sh" | sudo bash
+am -i ledger-live-desktop
 echo ""
 
 echo "Installing Microsoft Rewards Bot"
