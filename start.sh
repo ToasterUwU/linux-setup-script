@@ -8,12 +8,32 @@ check_file_exists() {
     fi
 }
 
+check_directory_exists() {
+    if [ -d "$1" ]; then
+        return 0 # Directory exists
+    else
+        return 1 # Directory does not exist
+    fi
+}
+
 encrypt_file() {
     sudo gpg --batch --yes --passphrase "$PASSWORD" --cipher-algo "aes256" --output "${1}.gpg" -c "$1" && sudo rm -f $1
 }
 
 decrypt_file() {
     sudo gpg --batch --yes --passphrase "$PASSWORD" --cipher-algo "aes256" --output "${1%.gpg}" -d "$1" && sudo rm -f $1
+}
+
+copy_assets() {
+    if check_directory_exists "$CWD/assets/$1/home/aki/"; then
+        rsync -rltv "$CWD/assets/$1/home/aki/" "/home/aki/"
+    fi
+
+    directories=$(ls -d $CWD/assets/$1/*/ | grep -Ev '/home/$' | xargs -n1 basename)
+
+    for dir in $directories; do
+        sudo rsync -rltv "$CWD/assets/$1/$dir/" "/$dir/"
+    done
 }
 
 print_trans_pride_headline() {

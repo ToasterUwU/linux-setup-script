@@ -1,1 +1,1 @@
-sudo rsync -rltov $CWD/assets/Barbara/GNOME/ /
+copy_assets Barbara/GNOME
