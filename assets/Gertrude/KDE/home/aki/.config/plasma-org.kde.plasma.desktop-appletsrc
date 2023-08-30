@@ -6,6 +6,25 @@ wheel:Vertical;NoModifier=org.kde.switchdesktop
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
 
+[Containments][104]
+ItemGeometries-1920x1080=
+ItemGeometriesHorizontal=
+activityId=c1f99e87-7ea3-4426-9175-225c1f7350aa
+formfactor=0
+immutability=1
+lastScreen=0
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.slideshow
+
+[Containments][104][ConfigDialog]
+DialogHeight=994
+DialogWidth=1920
+
+[Containments][104][Wallpaper][org.kde.slideshow][General]
+Image=file:///home/aki/Desktop/Wallpapers/Neytirix/yurtle_s_travelling_pot_shop_by_neytirix_dfb2d8o.jpg
+SlidePaths=/home/aki/Desktop/Wallpapers/
+
 [Containments][65]
 activityId=
 formfactor=2
@@ -58,7 +77,7 @@ immutability=1
 plugin=org.kde.plasma.icontasks
 
 [Containments][65][Applets][68][Configuration][General]
-launchers=applications:systemsettings.desktop,applications:org.kde.konsole.desktop,applications:custom-update.desktop,preferred://filemanager,applications:mintinstall.desktop,preferred://browser,applications:com.spotify.Client.desktop,applications:armcord.desktop,applications:code.desktop
+launchers=applications:systemsettings.desktop,applications:org.kde.konsole.desktop,applications:custom-update.desktop,applications:AM-bitwarden.desktop,preferred://filemanager,applications:mintinstall.desktop,preferred://browser,applications:com.spotify.Client.desktop,applications:armcord.desktop,applications:code.desktop
 
 [Containments][65][Applets][69]
 immutability=1
@@ -69,7 +88,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][65][Applets][70][Configuration]
-PreloadWeight=75
+PreloadWeight=100
 SystrayContainmentId=71
 
 [Containments][65][Applets][81]
@@ -103,6 +122,21 @@ popupHeight=432
 popupWidth=432
 wallpaperplugin=org.kde.image
 
+[Containments][71][Applets][102]
+immutability=1
+plugin=org.kde.kscreen
+
+[Containments][71][Applets][103]
+immutability=1
+plugin=org.kde.plasma.keyboardindicator
+
+[Containments][71][Applets][105]
+immutability=1
+plugin=org.kde.kupapplet
+
+[Containments][71][Applets][105][Configuration]
+PreloadWeight=65
+
 [Containments][71][Applets][72]
 immutability=1
 plugin=org.kde.kdeconnect
@@ -127,6 +161,9 @@ plugin=org.kde.plasma.manage-inputmethod
 immutability=1
 plugin=org.kde.plasma.notifications
 
+[Containments][71][Applets][77][Configuration]
+PreloadWeight=55
+
 [Containments][71][Applets][78]
 immutability=1
 plugin=org.kde.plasma.printmanager
@@ -150,9 +187,15 @@ plugin=org.kde.plasma.battery
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
+[Containments][71][Applets][84][Configuration]
+PreloadWeight=60
+
 [Containments][71][Applets][86]
 immutability=1
 plugin=org.kde.plasma.nightcolorcontrol
+
+[Containments][71][Applets][86][Configuration]
+PreloadWeight=42
 
 [Containments][71][Applets][87]
 immutability=1
@@ -170,30 +213,12 @@ immutability=1
 plugin=org.kde.plasma.mediacontroller
 
 [Containments][71][Applets][89][Configuration]
-PreloadWeight=26
+PreloadWeight=10
 
 [Containments][71][General]
 extraItems=org.kde.kdeconnect,org.kde.kupapplet,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume,dev.jhyub.supergfxctl,org.kde.kscreen,org.kde.ktp-contactlist,org.kde.plasma.keyboardindicator,org.kde.plasma.nightcolorcontrol
 knownItems=org.kde.kdeconnect,org.kde.kupapplet,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume,dev.jhyub.supergfxctl,org.kde.kscreen,org.kde.ktp-contactlist,org.kde.plasma.keyboardindicator,org.kde.plasma.nightcolorcontrol
 
-[Containments][85]
-ItemGeometries-1920x1080=
-ItemGeometriesHorizontal=
-activityId=4595824b-ba15-4e29-b71e-59283aadee5a
-formfactor=0
-immutability=1
-lastScreen=0
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.slideshow
-
-[Containments][85][ConfigDialog]
-DialogHeight=994
-DialogWidth=1920
-
-[Containments][85][Wallpaper][org.kde.slideshow][General]
-SlidePaths=/home/aki/Desktop/Wallpapers/
-
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/Code,0,4595824b-ba15-4e29-b71e-59283aadee5a,desktop:/Wallpapers,0,4595824b-ba15-4e29-b71e-59283aadee5a
+screenMapping=desktop:/Code,0,c1f99e87-7ea3-4426-9175-225c1f7350aa,desktop:/Wallpapers,0,c1f99e87-7ea3-4426-9175-225c1f7350aa
