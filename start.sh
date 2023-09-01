@@ -25,14 +25,15 @@ decrypt_file() {
 }
 
 copy_assets() {
-    if check_directory_exists "$CWD/assets/$1/home/aki/"; then
-        rsync -rltv "$CWD/assets/$1/home/aki/" "/home/aki/"
-    fi
-
-    directories=$(ls -d $CWD/assets/$1/*/ | grep -Ev '/home/$' | xargs -n1 basename)
+    directories=$(ls -d $CWD/assets/$1/*/)
 
     for dir in $directories; do
-        sudo rsync -rltv "$CWD/assets/$1/$dir/" "/$dir/"
+        dir=$(echo $dir | xargs -n1 basename)
+        if [[ "$dir" == */home/ ]]; then
+            rsync -rltv "$CWD/assets/$1/$dir/" "/$dir/"
+        else
+            sudo rsync -rltv "$CWD/assets/$1/$dir/" "/$dir/"
+        fi
     done
 }
 
