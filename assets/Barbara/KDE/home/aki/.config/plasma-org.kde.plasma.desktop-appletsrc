@@ -6,6 +6,42 @@ wheel:Vertical;NoModifier=org.kde.switchdesktop
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
 
+[Containments][102]
+ItemGeometries-2048x1152=
+ItemGeometriesHorizontal=
+activityId=85387d67-1b6f-4c88-aae0-37f9fba2550c
+formfactor=0
+immutability=1
+lastScreen=0
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.slideshow
+
+[Containments][102][ConfigDialog]
+DialogHeight=1354
+DialogWidth=2560
+
+[Containments][102][Wallpaper][org.kde.slideshow][General]
+SlidePaths=/home/aki/Desktop/Wallpapers/
+
+[Containments][103]
+activityId=85387d67-1b6f-4c88-aae0-37f9fba2550c
+formfactor=0
+immutability=1
+lastScreen=1
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
+
+[Containments][104]
+activityId=85387d67-1b6f-4c88-aae0-37f9fba2550c
+formfactor=0
+immutability=1
+lastScreen=2
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
+
 [Containments][65]
 activityId=
 formfactor=2
@@ -58,7 +94,7 @@ immutability=1
 plugin=org.kde.plasma.icontasks
 
 [Containments][65][Applets][68][Configuration][General]
-launchers=applications:systemsettings.desktop,applications:org.kde.konsole.desktop,applications:custom-update.desktop,preferred://filemanager,applications:mintinstall-kde.desktop,applications:thunderbird.desktop,preferred://browser,applications:com.spotify.Client.desktop,applications:armcord.desktop,applications:steam.desktop,applications:net.lutris.Lutris.desktop,applications:code.desktop
+launchers=applications:systemsettings.desktop,applications:org.kde.konsole.desktop,applications:custom-update.desktop,preferred://filemanager,applications:AM-bitwarden.desktop,applications:mintinstall-kde.desktop,applications:thunderbird.desktop,preferred://browser,applications:com.spotify.Client.desktop,applications:armcord.desktop,applications:steam.desktop,applications:net.lutris.Lutris.desktop,applications:code.desktop
 
 [Containments][65][Applets][69]
 immutability=1
@@ -90,7 +126,7 @@ DialogHeight=74
 DialogWidth=2560
 
 [Containments][65][General]
-AppletOrder=66;67;68;101;69;70;81;82
+AppletOrder=66;67;68;69;70;81;82
 
 [Containments][71]
 activityId=
@@ -158,7 +194,6 @@ plugin=org.kde.plasma.volume
 PreloadWeight=100
 
 [Containments][71][Applets][80][Configuration][General]
-currentTab=streams
 migrated=true
 
 [Containments][71][Applets][83]
@@ -202,14 +237,17 @@ immutability=1
 plugin=org.kde.plasma.mediacontroller
 
 [Containments][71][Applets][90][Configuration]
-PreloadWeight=0
+PreloadWeight=42
 
 [Containments][71][Applets][91]
 immutability=1
 plugin=org.kde.kupapplet
 
 [Containments][71][Applets][91][Configuration]
-PreloadWeight=46
+PreloadWeight=61
+
+[Containments][71][Applets][92][Configuration]
+PreloadWeight=42
 
 [Containments][71][Applets][93]
 immutability=1
@@ -233,63 +271,6 @@ plugin=org.kde.plasma.networkmanagement
 extraItems=org.kde.kdeconnect,org.kde.kupapplet,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume,dev.jhyub.supergfxctl,org.kde.kscreen,org.kde.ktp-contactlist,org.kde.plasma.keyboardindicator,org.kde.plasma.nightcolorcontrol
 knownItems=org.kde.kdeconnect,org.kde.kupapplet,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume,dev.jhyub.supergfxctl,org.kde.kscreen,org.kde.ktp-contactlist,org.kde.plasma.keyboardindicator,org.kde.plasma.nightcolorcontrol
 
-[Containments][93]
-ItemGeometries-2560x1440=
-ItemGeometriesHorizontal=
-activityId=af59618a-d8fb-458e-9b67-60bd5ee89756
-formfactor=0
-immutability=1
-lastScreen=0
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.slideshow
-
-[Containments][93][ConfigDialog]
-DialogHeight=510
-DialogWidth=680
-
-[Containments][93][General]
-ToolBoxButtonState=topcenter
-ToolBoxButtonX=788
-
-[Containments][93][Wallpaper][org.kde.slideshow][General]
-Image=file:///home/aki/Desktop/Wallpapers/BlackHole.jpg
-SlidePaths=/home/aki/Desktop/Wallpapers/
-
-[Containments][94]
-activityId=af59618a-d8fb-458e-9b67-60bd5ee89756
-formfactor=0
-immutability=1
-lastScreen=1
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.slideshow
-
-[Containments][94][ConfigDialog]
-DialogHeight=510
-DialogWidth=680
-
-[Containments][94][Wallpaper][org.kde.slideshow][General]
-Image=file:///home/aki/Desktop/Wallpapers/Neytirix/munch_munch_by_neytirix_de496s8.jpg
-SlidePaths=/home/aki/Desktop/Wallpapers/
-
-[Containments][95]
-activityId=af59618a-d8fb-458e-9b67-60bd5ee89756
-formfactor=0
-immutability=1
-lastScreen=2
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.slideshow
-
-[Containments][95][ConfigDialog]
-DialogHeight=1406
-DialogWidth=2560
-
-[Containments][95][Wallpaper][org.kde.slideshow][General]
-Image=file:///home/aki/Desktop/Wallpapers/road_between_forest_trees_and_landscape_view_of_snow_covered_mountains_4k_hd_nature-1920x1080.jpg
-SlidePaths=/home/aki/Desktop/Wallpapers/
-
 [Containments65Appletsts][100][Configuration][Debug]
 logConsole=true
 
@@ -298,4 +279,4 @@ stationID=IWOLFS45\n
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/Wallpapers,0,af59618a-d8fb-458e-9b67-60bd5ee89756,desktop:/brave-jnpecgipniidlgicjocehkhajgdnjekh-Default.desktop,0,af59618a-d8fb-458e-9b67-60bd5ee89756,desktop:/Code,0,af59618a-d8fb-458e-9b67-60bd5ee89756
+screenMapping=desktop:/steam.desktop,0,85387d67-1b6f-4c88-aae0-37f9fba2550c,desktop:/Wallpapers,0,85387d67-1b6f-4c88-aae0-37f9fba2550c,desktop:/Code,0,85387d67-1b6f-4c88-aae0-37f9fba2550c
