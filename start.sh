@@ -29,7 +29,7 @@ copy_assets() {
 
     for dir in $directories; do
         dir=$(echo $dir | xargs -n1 basename)
-        if [[ "$dir" == */home/ ]]; then
+        if [[ "$dir" == "home" ]]; then
             rsync -rltv "$CWD/assets/$1/$dir/" "/$dir/"
         else
             sudo rsync -rltv "$CWD/assets/$1/$dir/" "/$dir/"
