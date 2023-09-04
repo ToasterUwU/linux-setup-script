@@ -56,6 +56,7 @@ echo ""
 
 echo "Installing Ledger Live"
 am -i ledger-live-desktop
+wget -q -O - https://raw.githubusercontent.com/LedgerHQ/udev-rules/master/add_udev_rules.sh | sudo bash
 echo ""
 
 echo "Installing Microsoft Rewards Bot"
