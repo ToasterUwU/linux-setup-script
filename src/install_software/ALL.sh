@@ -9,7 +9,7 @@ sudo apt install ttf-mscorefonts-installer obs-studio kdenlive -y #install welco
 echo ""
 
 echo "Installing Packages and Flatpaks"
-sudo apt install -y nala youtubedl-gui qbittorrent thunderbird rpi-imager gnome-clocks docker docker-compose baobab     # install packages i need
-flatpak install -y spotify dev.geopjr.Collision org.onlyoffice.desktopeditors md.obsidian.Obsidian org.gnome.SimpleScan # install flatpaks i need                                                                                                                                                    #update PATH to include pip installed things
+sudo apt install -y nala youtubedl-gui qbittorrent thunderbird rpi-imager gnome-clocks docker docker-compose baobab                                   # install packages i need
+flatpak install -y spotify dev.geopjr.Collision org.onlyoffice.desktopeditors md.obsidian.Obsidian org.gnome.SimpleScan de.shorsh.discord-screenaudio # install flatpaks i need                                                                                                                                                    #update PATH to include pip installed things
 pip install hyfetch --break-system-packages
 echo ""
