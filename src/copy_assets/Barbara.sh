@@ -8,3 +8,6 @@ decrypt_file ~/.ssh/id_rsa.pub.gpg
 sudo chown aki ~/.ssh/id_rsa*
 sudo chmod 600 ~/.ssh/id_rsa*
 ssh-add
+
+sudo chown aki ~/.config/unity3d/Misfits Attic/Duskers/* -R
+sudo chmod 700 ~/.config/unity3d/Misfits Attic/Duskers/* -R
