@@ -17,11 +17,19 @@ check_directory_exists() {
 }
 
 encrypt_file() {
-    sudo gpg --batch --yes --passphrase "$PASSWORD" --cipher-algo "aes256" --output "${1}.gpg" -c "$1" && sudo rm -f $1
+    if [ "$(stat -c %U "$1")" = "root" ]; then
+        sudo gpg --batch --yes --passphrase "$PASSWORD" --cipher-algo "aes256" --output "${1}.gpg" -c "$1" && sudo rm -f $1
+    else
+        gpg --batch --yes --passphrase "$PASSWORD" --cipher-algo "aes256" --output "${1}.gpg" -c "$1" && rm -f $1
+    fi
 }
 
 decrypt_file() {
-    sudo gpg --batch --yes --passphrase "$PASSWORD" --cipher-algo "aes256" --output "${1%.gpg}" -d "$1" && sudo rm -f $1
+    if [ "$(stat -c %U "$1")" = "root" ]; then
+        sudo gpg --batch --yes --passphrase "$PASSWORD" --cipher-algo "aes256" --output "${1%.gpg}" -d "$1" && sudo rm -f $1
+    else
+        gpg --batch --yes --passphrase "$PASSWORD" --cipher-algo "aes256" --output "${1%.gpg}" -d "$1" && rm -f $1
+    fi
 }
 
 copy_assets() {
