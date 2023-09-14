@@ -77,3 +77,14 @@ cd ~
 mv microsoft_rewards_bot_accounts.json ./Microsoft-Rewards-bot/accounts.json
 mv start_microsoft_rewards_bot.sh ./Microsoft-Rewards-bot/start.sh
 echo ""
+
+echo "Installing Tdarr Node"
+cd Tdarr
+
+wget "https://f000.backblazeb2.com/file/tdarrs/versions/2.00.15/linux_x64/Tdarr_Updater.zip" -O ./updater.zip
+unzip -o ./updater.zip
+rm -f ./updater.zip
+
+./Tdarr_Updater #install Tdarr Node (transcoder which works on job from Tdarr Server)
+cd ~
+echo ""
