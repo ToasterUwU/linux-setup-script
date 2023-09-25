@@ -3,10 +3,6 @@ git config --global user.name ToasterUwU
 git config --global user.email aki@toasteruwu.com
 echo ""
 
-echo "Setting Up the Discord Bot Template"
-git clone https://github.com/ToasterUwU/discord-bot-base /home/aki/Desktop/Code/discord_bots/.base
-echo ""
-
 echo "Install Rust Lang" #not one liner so i can tell it to not prompt me
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -o "rustup-init.sh"
 bash rustup-init.sh -y
