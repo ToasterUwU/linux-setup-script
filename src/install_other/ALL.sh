@@ -62,9 +62,7 @@ echo ""
 echo "Installing Microsoft Rewards Bot"
 sudo apt install python3-tk python3-venv -y
 
-wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" -O chrome.deb
-sudo apt install ./chrome.deb -y
-rm -f chrome.deb
+sudo apt install google-chrome-stable
 
 git clone "https://gitlab.com/farshadzargary1997/Microsoft-Rewards-bot"
 
