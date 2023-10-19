@@ -1,27 +1,22 @@
-echo "Install SSHFS"
-sudo apt install sshfs -y
-echo ""
-
-echo "Adding SSHFS Entries"
+echo "Adding SMB Entries"
 sudo mkdir /mnt/home
 sudo mkdir /mnt/data
 sudo mkdir /mnt/backups
 sudo mkdir /mnt/web
 
-SSHFS_ENTRIES="
-# SSHFS connections to Gutruhn
+SMB_ENTRIES="
+# SMB connections to Gutruhn
 
-Aki@toasteruwu.com:/home /mnt/home fuse.sshfs x-gvfs-show,delay_connect,reconnect,ServerAliveInterval=10,ServerAliveCountMax=2,x-systemd.automount,x-systemd.requires=network-online.target,_netdev,user,idmap=user,transform_symlinks,identityfile=/home/aki/.ssh/id_rsa,allow_other,default_permissions,uid=1000,gid=1000,exec 0 0
-Aki@toasteruwu.com:/data /mnt/data fuse.sshfs x-gvfs-show,delay_connect,reconnect,ServerAliveInterval=10,ServerAliveCountMax=2,x-systemd.automount,x-systemd.requires=network-online.target,_netdev,user,idmap=user,transform_symlinks,identityfile=/home/aki/.ssh/id_rsa,allow_other,default_permissions,uid=1000,gid=1000,exec 0 0
-Aki@toasteruwu.com:/backups /mnt/backups fuse.sshfs x-gvfs-show,delay_connect,reconnect,ServerAliveInterval=10,ServerAliveCountMax=2,x-systemd.automount,x-systemd.requires=network-online.target,_netdev,user,idmap=user,transform_symlinks,identityfile=/home/aki/.ssh/id_rsa,allow_other,default_permissions,uid=1000,gid=1000,exec 0 0
-Aki@toasteruwu.com:/web /mnt/web fuse.sshfs x-gvfs-show,delay_connect,reconnect,ServerAliveInterval=10,ServerAliveCountMax=2,x-systemd.automount,x-systemd.requires=network-online.target,_netdev,user,idmap=user,transform_symlinks,identityfile=/home/aki/.ssh/id_rsa,allow_other,default_permissions,uid=1000,gid=1000,exec 0 0
-# Options explained: show in file explorer, wait a bit for connecting so that DNS works, reconnect when connection lost, its lost if you cant get it for the third time and you check every 10 seconds, you use systemd automount since it works better, you wait for lan connectivity, this is meant to be a user thing, follow symlinks, use ssh key, allow others to access (meaning the user and not just root), user is 1000/1000, allow running programs from it
+//Aki@192.168.178.3/home /mnt/home cifs credentials=/home/aki/.smb,iocharset=utf8,uid=1000,gid=1000,dir_mode=0755,file_mode=0644 0 0
+//Aki@192.168.178.3/data /mnt/data cifs credentials=/home/aki/.smb,iocharset=utf8,uid=1000,gid=1000,dir_mode=0755,file_mode=0644 0 0
+//Aki@192.168.178.3/backups /mnt/backups cifs credentials=/home/aki/.smb,iocharset=utf8,uid=1000,gid=1000,dir_mode=0755,file_mode=0644 0 0
+//Aki@192.168.178.3/web /mnt/web cifs credentials=/home/aki/.smb,iocharset=utf8,uid=1000,gid=1000,dir_mode=0755,file_mode=0644 0 0
 "
 
-echo "$SSHFS_ENTRIES" | sudo tee -a /etc/fstab >/dev/null # add sshfs entries (my NAS shares)
+echo "$SMB_ENTRIES" | sudo tee -a /etc/fstab >/dev/null # add sshfs entries (my NAS shares)
 echo ""
 
-echo "Mounting SSHFS Entries"
+echo "Mounting SMB Entries"
 sudo mount -a
 mkdir "/mnt/backups/$HOSTNAME/"
 echo ""
