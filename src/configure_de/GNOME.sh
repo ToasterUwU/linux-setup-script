@@ -3,13 +3,10 @@ sudo apt install gnome-menus gir1.2-gmenu-3.0 gir1.2-gtop-2.0 -y #needed for som
 
 pip install gnome-extensions-cli --break-system-packages #python and pip are aliases for python3 and pip3 thanks to 'python-is-python3' (installed earlier)
 
-IGNORE_EXTENSIONS="pika-darkmode@pika.com"
 for extension in $( #disable everything
     gnome-extensions list
 ); do
-    if [[ $IGNORE_EXTENSIONS != *"$extension"* ]]; then
-        gnome-extensions-cli disable $extension
-    fi
+    gnome-extensions-cli disable $extension
 done
 
 EXTENSIONS="615 3628 4839 1160 2087 841 1319 750 19"
@@ -36,7 +33,7 @@ chmod +x /home/aki/.local/bin/sync-wallpapers
 crontab -l >mycron                                                                                                                      #write out current crontab
 echo "*/15 * * * * env DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus /home/aki/.local/bin/change-wallpaper" >>mycron #echo new cron into cron file (change wallpaper every 15th minute 0/15/30/45)
 crontab mycron                                                                                                                          #install new cron file
-rm -f mycron                                                                                                                               #remove temp file
+rm -f mycron                                                                                                                            #remove temp file
 
 change-wallpaper #change wallpaper for the first time
 echo ""
