@@ -9,7 +9,7 @@ for extension in $( #disable everything
     gnome-extensions-cli disable $extension
 done
 
-EXTENSIONS="615 3628 4839 1160 2087 841 1319 750 19"
+EXTENSIONS="615 3628 4839 1160 2087 841 1319 750 19 517"
 wget -N -q "https://raw.githubusercontent.com/ToasterUwU/install-gnome-extensions/master/install-gnome-extensions.sh" -O ./install-gnome-extensions.sh
 bash ./install-gnome-extensions.sh $EXTENSIONS --enable
 rm -f ./install-gnome-extensions.sh
