@@ -46,6 +46,10 @@ gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 sudo /usr/lib/pika/gnome-layouts/papirus-folders -u -C magenta #nautilus folder color
 echo ""
 
+echo "Go back to normal Sound theme"
+gsettings set org.gnome.desktop.sound theme-name 'freedesktop'
+echo ""
+
 echo "Setting Gnome Terminal default size" #make it fullscreen when opening (240, 100 should work, if not just put it higher)
 profile=$(gsettings get org.gnome.Terminal.ProfilesList default)
 profile=${profile:1:-1} # remove leading and trailing single quotes
