@@ -102,3 +102,7 @@ echo ""
 echo "Freon Settings"
 dconf write /org/gnome/shell/extensions/freon/hot-sensors "['__average__', '__max__']"
 echo ""
+
+echo "Remove annoying Update Popup"
+sudo rm -f /etc/apt/apt.conf.d/99update-notifier
+echo ""
