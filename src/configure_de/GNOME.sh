@@ -104,5 +104,5 @@ dconf write /org/gnome/shell/extensions/freon/hot-sensors "['__average__', '__ma
 echo ""
 
 echo "Remove annoying Update Popup"
-sudo rm -f /etc/apt/apt.conf.d/99update-notifier
+sudo sed -i 's/DPkg::Post-Invoke/#DPkg::Post-Invoke/' /etc/apt/apt.conf.d/99update-notifier
 echo ""
