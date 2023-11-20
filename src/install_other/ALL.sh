@@ -22,15 +22,14 @@ sudo apt install ~/protonmail-bridge.deb -y
 rm -f ~/protonmail-bridge.deb
 echo ""
 
-echo "Installing Armcord"
-curl -fsSL https://eu.armcord.xyz/pgp-key.public | sudo gpg --dearmor -o /usr/share/keyrings/armcord.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/armcord.gpg] https://eu.armcord.xyz/apt-repo stable main" | sudo tee /etc/apt/sources.list.d/armcord.list
-sudo apt update
-sudo apt install armcord -y
+echo "Installing Vesktop"
+wget "https://github.com/Vencord/Vesktop/releases/download/v0.4.3/VencordDesktop_0.4.3_amd64.deb" -O ~/vesktop.deb
+sudo dpkg -i ~/vesktop.deb
+rm -f ~/vesktop.deb
 
-timeout 30s armcord
+timeout 30s vencorddesktop
 
-sudo sed -i "s/Icon=armcord/Icon=discord/g" /usr/share/applications/armcord.desktop
+sudo sed -i "s/Icon=vencorddesktop/Icon=discord/g" /usr/share/applications/vencorddesktop.desktop
 echo ""
 
 echo "Installing Teamviewer"
