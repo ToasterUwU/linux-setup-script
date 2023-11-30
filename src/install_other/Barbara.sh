@@ -28,3 +28,9 @@ echo "vm.nr_hugepages=4096" | sudo tee -a /etc/sysctl.conf >/dev/null #needed fo
 cd ~
 sudo chmod -R 0777 RainbowMiner/ #litle fix since some things dont really set the right permissions
 echo ""
+
+echo "Install OpenRGB"
+wget "https://openrgb.org/releases/release_0.9/openrgb_0.9_amd64_bookworm_b5f46e3.deb" -O openrgb.deb
+sudo dpkg -i openrgb.deb
+rm -f openrgb.deb
+echo ""
