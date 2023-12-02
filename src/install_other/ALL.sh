@@ -1,21 +1,3 @@
-echo "Install Brave"
-sudo apt install curl -y
-sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [arch=amd64 signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo apt update
-sudo apt install brave-browser -y
-
-xdg-settings set default-web-browser brave-browser.desktop
-echo ""
-
-echo "Installing AirVPNs Client Eddie"
-curl -fsSL https://eddie.website/repository/keys/eddie_maintainer_gpg.key | sudo tee /usr/share/keyrings/eddie.website-keyring.asc >/dev/null
-echo "deb [signed-by=/usr/share/keyrings/eddie.website-keyring.asc] http://eddie.website/repository/apt stable main" | sudo tee /etc/apt/sources.list.d/eddie.website.list
-
-sudo apt update
-sudo apt install eddie-ui -y
-echo ""
-
 echo "Install ProtonMail Bridge"
 wget "https://proton.me/download/bridge/protonmail-bridge_3.3.0-1_amd64.deb" -O ~/protonmail-bridge.deb
 sudo apt install ~/protonmail-bridge.deb -y
@@ -61,9 +43,7 @@ echo ""
 echo "Installing Microsoft Rewards Bot"
 sudo apt install python3-tk python3-venv -y
 
-wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" -O chrome.deb
-sudo apt install ./chrome.deb -y
-rm -f chrome.deb
+sudo apt install google-chrome-stable -y
 
 git clone "https://gitlab.com/farshadzargary1997/Microsoft-Rewards-bot"
 
