@@ -5,7 +5,11 @@ rm -f ~/protonmail-bridge.deb
 echo ""
 
 echo "Installing Vesktop"
-wget "https://github.com/Vencord/Vesktop/releases/download/v0.4.3/VencordDesktop_0.4.3_amd64.deb" -O ~/vesktop.deb
+version=$(curl -sL https://api.github.com/repos/Vencord/Vesktop/releases/latest | jq -r ".tag_name" | sed 's/^v//')
+download_url="https://github.com/Vencord/Vesktop/releases/download/v$version/VencordDesktop_${version}_amd64.deb"
+
+wget "$download_url" -O ~/vesktop.deb
+
 sudo dpkg -i ~/vesktop.deb
 rm -f ~/vesktop.deb
 
@@ -21,7 +25,10 @@ rm -f teamviewer.deb
 echo ""
 
 echo "Installing Angry IP Scanner"
-wget "https://github.com/angryip/ipscan/releases/download/3.9.0/ipscan_3.9.0_amd64.deb" -O angry_ip_scanner.deb
+version=$(curl -sL https://api.github.com/repos/angryip/ipscan/releases/latest | jq -r ".tag_name")
+download_url="https://github.com/angryip/ipscan/releases/download/$version/ipscan_${version}_amd64.deb"
+
+wget "$download_url" -O angry_ip_scanner.deb
 sudo apt install ./angry_ip_scanner.deb -y
 rm -f angry_ip_scanner.deb
 echo ""
