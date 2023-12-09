@@ -9,7 +9,6 @@ tdarr-server
 tor-node
 airvpn-tunnel-vm
 xen-orchestra
-gitlab
 ollama"
 
 # Get Password
