@@ -9,7 +9,8 @@ tdarr-server
 tor-node
 airvpn-tunnel-vm
 xen-orchestra
-ollama"
+ollama
+minecraft-vm"
 
 # Get Password
 read -sp "Password please: " PASSWORD # Get password that i use for all internal things and for my password managers (SSH to all my VMs, sudo, my NAS account, etc.)
