@@ -100,7 +100,7 @@
   "EnableOCLinuxForcePState": "0",
   "EnableLinuxHeadless": "0",
   "LinuxDisplay": ":0",
-  "LinuxXAuthority": "/run/user/1000/gdm/Xauthority",
+  "LinuxXAuthority": "/run/user/1001/gdm/Xauthority",
   "EnableMinersAsRoot": "1",
   "EnableAutoUpdate": "1",
   "EnableUpdateDuringPause": "1",

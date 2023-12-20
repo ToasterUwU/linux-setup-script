@@ -31,7 +31,7 @@ chmod +x /home/aki/.local/bin/change-wallpaper
 chmod +x /home/aki/.local/bin/sync-wallpapers
 
 crontab -l >mycron                                                                                                                      #write out current crontab
-echo "*/15 * * * * env DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus /home/aki/.local/bin/change-wallpaper" >>mycron #echo new cron into cron file (change wallpaper every 15th minute 0/15/30/45)
+echo "*/15 * * * * env DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1001/bus /home/aki/.local/bin/change-wallpaper" >>mycron #echo new cron into cron file (change wallpaper every 15th minute 0/15/30/45)
 crontab mycron                                                                                                                          #install new cron file
 rm -f mycron                                                                                                                            #remove temp file
 
