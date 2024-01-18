@@ -1,8 +1,8 @@
 [Desktop Entry]
 Type=Application
 Version=1.0
-Name=Vencord
-Comment=Vencord autostart script
-Exec=/opt/Vesktop/vencorddesktop
+Name=Vesktop
+Comment=Vesktop autostart script
+Exec=/usr/bin/vesktop
 Terminal=false
 StartupNotify=false

@@ -77,7 +77,7 @@ immutability=1
 plugin=org.kde.plasma.icontasks
 
 [Containments][65][Applets][68][Configuration][General]
-launchers=applications:systemsettings.desktop,applications:org.kde.konsole.desktop,applications:custom-update.desktop,applications:AM-bitwarden.desktop,preferred://filemanager,applications:mintinstall.desktop,preferred://browser,applications:com.spotify.Client.desktop,applications:vencorddesktop.desktop,applications:code.desktop
+launchers=applications:systemsettings.desktop,applications:org.kde.konsole.desktop,applications:custom-update.desktop,applications:AM-bitwarden.desktop,preferred://filemanager,applications:mintinstall.desktop,preferred://browser,applications:com.spotify.Client.desktop,applications:vesktop.desktop,applications:code.desktop
 
 [Containments][65][Applets][69]
 immutability=1

@@ -78,7 +78,7 @@ gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize
 gsettings set org.gnome.desktop.interface clock-format '24h'                            #24 hour time, since im not from the US
 gsettings set org.gnome.desktop.interface enable-hot-corners false                      #hate hot corner, annoying and thats it
 #taskbar pinned apps
-gsettings set org.gnome.shell favorite-apps "['org.gnome.Settings.desktop', 'custom-update.desktop', 'org.gnome.Terminal.desktop', 'mintinstall.desktop', 'thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'brave-browser.desktop', 'com.spotify.Client.desktop', 'vencorddesktop.desktop', 'steam.desktop', 'net.lutris.Lutris.desktop', 'code.desktop']"
+gsettings set org.gnome.shell favorite-apps "['org.gnome.Settings.desktop', 'custom-update.desktop', 'org.gnome.Terminal.desktop', 'mintinstall.desktop', 'thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'brave-browser.desktop', 'com.spotify.Client.desktop', 'vesktop.desktop', 'steam.desktop', 'net.lutris.Lutris.desktop', 'code.desktop']"
 echo ""
 
 echo "Dash to Panel Settings"

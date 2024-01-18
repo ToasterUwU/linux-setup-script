@@ -6,16 +6,16 @@ echo ""
 
 echo "Installing Vesktop"
 version=$(curl -sL https://api.github.com/repos/Vencord/Vesktop/releases/latest | jq -r ".tag_name" | sed 's/^v//')
-download_url="https://github.com/Vencord/Vesktop/releases/download/v$version/VencordDesktop_${version}_amd64.deb"
+download_url="https://github.com/Vencord/Vesktop/releases/download/v$version/vesktop_${version}_amd64.deb"
 
 wget "$download_url" -O ~/vesktop.deb
 
 sudo dpkg -i ~/vesktop.deb
 rm -f ~/vesktop.deb
 
-timeout 30s vencorddesktop
+timeout 30s vesktop
 
-sudo sed -i "s/Icon=vencorddesktop/Icon=discord/g" /usr/share/applications/vencorddesktop.desktop
+sudo sed -i "s/Icon=vesktop/Icon=discord/g" /usr/share/applications/vesktop.desktop
 echo ""
 
 echo "Installing Teamviewer"
