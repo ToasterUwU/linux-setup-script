@@ -1,3 +1,8 @@
 echo "Setting default Browser to Brave"
-xdg-settings set default-web-browser brave-browser.desktop
+xdg-settings set default-web-browser firefox.desktop
+echo ""
+
+echo "Change refind config"
+sudo sed -i "s/timeout 20/timeout 3/g" /boot/efi/EFI/refind/refind.conf
+sudo sed -i 's/#default_selection "+,bzImage,vmlinuz"/default_selection "+,bzImage,vmlinuz"/g' /boot/efi/EFI/refind/refind.conf
 echo ""
