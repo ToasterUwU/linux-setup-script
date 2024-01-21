@@ -1,3 +1,7 @@
+echo "Install Websocket module for Extensions which use it"
+sudo apt install qml-module-qtwebsockets -y
+echo ""
+
 echo "Setting Numlock to be on by default"
 kwriteconfig5 --file ~/.config/kcminputrc --group Keyboard --key NumLock "0"
 echo ""
