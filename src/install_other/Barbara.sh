@@ -1,4 +1,6 @@
 echo "Installing RainbowMiner"
+sudo apt install -y ocl-icd-libopencl1-amdgpu-pro ocl-icd-libopencl1-amdgpu-pro:i386 opencl-legacy-amdgpu-pro-icd opencl-legacy-amdgpu-pro-icd:i386 # OpenCL
+
 git clone "https://github.com/rainbowminer/RainbowMiner"
 
 mkdir ./RainbowMiner/Config
