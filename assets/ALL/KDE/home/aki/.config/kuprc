@@ -8,6 +8,6 @@ Check backups=true
 Description=PLACEHOLDERHOSTNAME
 Destination type=0
 Filesystem destination path=file:///mnt/backups/PLACEHOLDERHOSTNAME
-Paths excluded=/home/aki/.cache,/home/aki/.local/share/baloo,/home/aki/.ssh,/home/aki/RainbowMiner
+Paths excluded=/home/aki/.cache,/home/aki/.local/share/baloo,/home/aki/.local/share/waydroid/data,/home/aki/.ssh,/home/aki/RainbowMiner,/home/aki/.local/share/Steam/steamapps
 Show hidden folders=true
 Usage limit=8
