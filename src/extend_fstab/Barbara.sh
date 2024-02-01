@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "We are on Barbara, mounting Games and owning it"
 sudo mkdir /mnt/Games
 

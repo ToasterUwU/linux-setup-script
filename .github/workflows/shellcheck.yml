@@ -19,4 +19,4 @@ jobs:
       - name: Run shellcheck
         run: |
           shellcheck -V
-          shellcheck -a start.sh src/*/*.sh --shell=bash
+          shellcheck -a start.sh src/*/*.sh

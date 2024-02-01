@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "Install SSHFS"
 sudo apt install sshfs -y
 echo ""

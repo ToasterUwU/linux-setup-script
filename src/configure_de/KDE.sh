@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "Install Websocket module for Extensions which use it"
 sudo apt install qml-module-qtwebsockets -y
 echo ""

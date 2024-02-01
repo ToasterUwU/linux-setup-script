@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "Allowing auto accepting new ssh keys systemwide"
 echo "    StrictHostKeyChecking accept-new" | sudo tee -a /etc/ssh/ssh_config >/dev/null #skip yes/no prompt when connecting to new ssh host
 echo ""

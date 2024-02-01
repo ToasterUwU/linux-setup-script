@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "Git Config"
 git config --global user.name ToasterUwU
 git config --global user.email aki@toasteruwu.com

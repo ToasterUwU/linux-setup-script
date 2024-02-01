@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "Installing dependencies"
 sudo apt update
 sudo apt install -y unzip wget gnupg git curl python-is-python3 python3-pip apt-transport-https

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "Install ProtonMail Bridge"
 wget "https://proton.me/download/bridge/protonmail-bridge_3.3.0-1_amd64.deb" -O ~/protonmail-bridge.deb
 sudo apt install ~/protonmail-bridge.deb -y
@@ -54,23 +56,23 @@ sudo apt install google-chrome-stable -y
 
 git clone "https://gitlab.com/farshadzargary1997/Microsoft-Rewards-bot"
 
-cd Microsoft-Rewards-bot
+cd Microsoft-Rewards-bot || exit
 python -m venv .venv
 .venv/bin/pip install wheel
 .venv/bin/pip install -r requirements.txt
-cd ~
+cd ~ || exit
 
 mv microsoft_rewards_bot_accounts.json ./Microsoft-Rewards-bot/accounts.json
 mv start_microsoft_rewards_bot.sh ./Microsoft-Rewards-bot/start.sh
 echo ""
 
 echo "Installing Tdarr Node"
-cd Tdarr
+cd Tdarr || exit
 
 wget "https://f000.backblazeb2.com/file/tdarrs/versions/2.00.15/linux_x64/Tdarr_Updater.zip" -O ./updater.zip
 unzip -o ./updater.zip
 rm -f ./updater.zip
 
 ./Tdarr_Updater #install Tdarr Node (transcoder which works on job from Tdarr Server)
-cd ~
+cd ~ || exit
 echo ""
