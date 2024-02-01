@@ -62,11 +62,11 @@ print_trans_pride_headline() {
 
     # ANSI escape codes for Transgender Pride Flag colors
     local light_blue
-    light_blue=$(tput setaf 81)  # Light blue
+    light_blue=$(tput setaf 81) # Light blue
     local light_pink
     light_pink=$(tput setaf 207) # Light pink
     local white
-    white=$(tput setaf 15)       # White
+    white=$(tput setaf 15) # White
 
     echo "${bold}${light_blue}$line"
     echo "${bold}${light_pink}$line"
@@ -98,24 +98,28 @@ run_step() {
 
     if check_file_exists "$STEP_DIR/ALL.sh"; then
         print_bold_green "Running general Script"
+        # shellcheck disable=SC1091
         source "$STEP_DIR/ALL.sh"
         echo ""
     fi
 
     if check_file_exists "$STEP_DIR/$HOSTNAME.sh"; then
         print_bold_green "Running '$HOSTNAME' specific Script"
+        # shellcheck disable=SC1090
         source "$STEP_DIR/$HOSTNAME.sh"
         echo ""
     fi
 
     if check_file_exists "$STEP_DIR/$DESKTOP_ENVIRONMENT.sh"; then
         print_bold_green "Running '$DESKTOP_ENVIRONMENT' specific Script"
+        # shellcheck disable=SC1090
         source "$STEP_DIR/$DESKTOP_ENVIRONMENT.sh"
         echo ""
     fi
 
     if check_file_exists "$STEP_DIR/${HOSTNAME}_${DESKTOP_ENVIRONMENT}.sh"; then
         print_bold_green "Running '$HOSTNAME' using '$DESKTOP_ENVIRONMENT' specific Script"
+        # shellcheck disable=SC1090
         source "$STEP_DIR/${HOSTNAME}_${DESKTOP_ENVIRONMENT}.sh"
         echo ""
     fi
@@ -140,8 +144,7 @@ echo ""
 echo "$PASSWORD" | sudo -S echo "Thanks, checking password" >/dev/null 2>&1 # -S just yeets the password into sudo so i dont have to type it out again, and also dont need to remember to use sudo on the script
 echo ""
 
-sudo -n true 2>/dev/null
-if ! [ $? -eq 0 ]; then
+if ! sudo -n true 2>/dev/null; then
     echo "Password Wrong"
     exit 0
 fi
