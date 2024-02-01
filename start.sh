@@ -18,25 +18,25 @@ check_directory_exists() {
 
 encrypt_file() {
     if [ "$(stat -c %U "$1")" = "root" ]; then
-        sudo gpg --batch --yes --passphrase "$PASSWORD" --cipher-algo "aes256" --output "${1}.gpg" -c "$1" && sudo rm -f $1
+        sudo gpg --batch --yes --passphrase "$PASSWORD" --cipher-algo "aes256" --output "${1}.gpg" -c "$1" && sudo rm -f "$1"
     else
-        gpg --batch --yes --passphrase "$PASSWORD" --cipher-algo "aes256" --output "${1}.gpg" -c "$1" && rm -f $1
+        gpg --batch --yes --passphrase "$PASSWORD" --cipher-algo "aes256" --output "${1}.gpg" -c "$1" && rm -f "$1"
     fi
 }
 
 decrypt_file() {
     if [ "$(stat -c %U "$1")" = "root" ]; then
-        sudo gpg --batch --yes --passphrase "$PASSWORD" --cipher-algo "aes256" --output "${1%.gpg}" -d "$1" && sudo rm -f $1
+        sudo gpg --batch --yes --passphrase "$PASSWORD" --cipher-algo "aes256" --output "${1%.gpg}" -d "$1" && sudo rm -f "$1"
     else
-        gpg --batch --yes --passphrase "$PASSWORD" --cipher-algo "aes256" --output "${1%.gpg}" -d "$1" && rm -f $1
+        gpg --batch --yes --passphrase "$PASSWORD" --cipher-algo "aes256" --output "${1%.gpg}" -d "$1" && rm -f "$1"
     fi
 }
 
 copy_assets() {
-    directories=$(ls -d $CWD/assets/$1/*/)
+    directories=$(ls -d "$CWD"/assets/"$1"/*/)
 
     for dir in $directories; do
-        dir=$(echo $dir | xargs -n1 basename)
+        dir=$(echo "$dir" | xargs -n1 basename)
         if [[ "$dir" == "home" ]]; then
             rsync -rltv "$CWD/assets/$1/$dir/" "/$dir/"
         else
@@ -128,14 +128,14 @@ elif [[ $XDG_CURRENT_DESKTOP == *"GNOME"* ]]; then
 fi
 
 CWD="$(dirname "$(readlink -f "$0")")"
-cd ~
+cd ~ || exit
 
 # Get Password
-read -sp "Password please: " PASSWORD # Get password that i use for all internal things and for my password managers (SSH to all my VMs, sudo, my NAS account, etc.)
+read -rsp "Password please: " PASSWORD # Get password that i use for all internal things and for my password managers (SSH to all my VMs, sudo, my NAS account, etc.)
 echo ""
 
 # Getting sudo perms
-echo $PASSWORD | sudo -S echo "Thanks, checking password" >/dev/null 2>&1 # -S just yeets the password into sudo so i dont have to type it out again, and also dont need to remember to use sudo on the script
+echo "$PASSWORD" | sudo -S echo "Thanks, checking password" >/dev/null 2>&1 # -S just yeets the password into sudo so i dont have to type it out again, and also dont need to remember to use sudo on the script
 echo ""
 
 sudo -n true 2>/dev/null
