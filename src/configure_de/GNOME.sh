@@ -8,12 +8,12 @@ pip install gnome-extensions-cli --break-system-packages #python and pip are ali
 for extension in $( #disable everything
     gnome-extensions list
 ); do
-    gnome-extensions-cli disable $extension
+    gnome-extensions-cli disable "$extension"
 done
 
 EXTENSIONS="615 3628 4839 1160 2087 841 1319 750 19 517"
 wget -N -q "https://raw.githubusercontent.com/ToasterUwU/install-gnome-extensions/master/install-gnome-extensions.sh" -O ./install-gnome-extensions.sh
-bash ./install-gnome-extensions.sh $EXTENSIONS --enable
+bash ./install-gnome-extensions.sh "$EXTENSIONS" --enable
 rm -f ./install-gnome-extensions.sh
 echo ""
 

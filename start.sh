@@ -55,13 +55,18 @@ print_trans_pride_headline() {
     local indentation=$(((line_length - text_length) / 2))
 
     # ANSI escape codes for text style
-    local bold=$(tput bold)
-    local normal=$(tput sgr0)
+    local bold
+    bold=$(tput bold)
+    local normal
+    normal=$(tput sgr0)
 
     # ANSI escape codes for Transgender Pride Flag colors
-    local light_blue=$(tput setaf 81)  # Light blue
-    local light_pink=$(tput setaf 207) # Light pink
-    local white=$(tput setaf 15)       # White
+    local light_blue
+    light_blue=$(tput setaf 81)  # Light blue
+    local light_pink
+    light_pink=$(tput setaf 207) # Light pink
+    local white
+    white=$(tput setaf 15)       # White
 
     echo "${bold}${light_blue}$line"
     echo "${bold}${light_pink}$line"
@@ -74,11 +79,14 @@ print_bold_green() {
     local text="$1"
 
     # ANSI escape codes for text style
-    local bold=$(tput bold)
-    local normal=$(tput sgr0)
+    local bold
+    bold=$(tput bold)
+    local normal
+    normal=$(tput sgr0)
 
     # ANSI escape code for green text
-    local green=$(tput setaf 2)
+    local green
+    green=$(tput setaf 2)
 
     echo "${bold}${green}$text${normal}"
 }
@@ -114,12 +122,6 @@ run_step() {
 
     echo ""
 }
-
-if [ -f /etc/os-release ]; then
-    DISTRO=$(grep -oP 'ID=\K\w+' /etc/os-release)
-else
-    DISTRO="Unknown"
-fi
 
 if [[ $XDG_CURRENT_DESKTOP == *"KDE"* ]]; then
     DESKTOP_ENVIRONMENT="KDE"

@@ -9,6 +9,6 @@ timeout 90s lutris #runtime download again
 echo ""
 
 echo "Installing Proton-GE"
-protonup -d "~/.steam/root/compatibilitytools.d/"
+protonup -d "$HOME/.steam/root/compatibilitytools.d/"
 protonup -y
 echo ""
