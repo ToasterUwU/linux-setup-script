@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "Installing Welcome App Packages"
 sudo apt install -y pika-gameutils-meta #install welcome apps
 echo ""

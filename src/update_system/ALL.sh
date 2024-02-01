@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo apt --fix-broken --fix-missing install -y
 sudo dpkg --configure -a
 

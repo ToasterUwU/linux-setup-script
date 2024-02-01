@@ -1,3 +1,5 @@
+#!/bin/bash
+
 inhibitcmd="kde-inhibit --screenSaver sleep infinity"
 $inhibitcmd >/dev/null 2>&1 &
 

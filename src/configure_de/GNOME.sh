@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "Installing Gnome Extensions"
 sudo apt install gnome-menus gir1.2-gmenu-3.0 gir1.2-gtop-2.0 -y #needed for some Appindicators
 

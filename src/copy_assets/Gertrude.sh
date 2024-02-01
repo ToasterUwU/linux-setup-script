@@ -1,3 +1,5 @@
+#!/bin/bash
+
 copy_assets Gertrude/ALL
 
 decrypt_file ~/.ssh/id_rsa.gpg

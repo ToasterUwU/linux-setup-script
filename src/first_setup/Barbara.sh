@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "Running Steam for first time setup. Please close when done."
 timeout 90s steam #just want to download the runtime before restarting
 echo ""

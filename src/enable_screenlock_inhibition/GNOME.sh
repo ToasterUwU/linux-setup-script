@@ -1,3 +1,5 @@
+#!/bin/bash
+
 inhibitcmd="gnome-session-inhibit --inhibit idle --inhibit-only sleep infinity"
 $inhibitcmd >/dev/null 2>&1 &
 
