@@ -1,3 +1,3 @@
 #!/bin/bash
 
-konsave --save $HOSTNAME --force && konsave -e $HOSTNAME --force --export-directory ~/ && cp ~/$HOSTNAME.knsv ~/linux-setup-script/assets/$HOSTNAME/KDE/home/aki/ -f
+konsave --save "$HOSTNAME" --force && konsave -e "$HOSTNAME" --force --export-directory ~/ && cd ~/linux-setup-script/assets/"$HOSTNAME"/KDE/home/aki/"$HOSTNAME".knsv.d && unzip -o ~/"$HOSTNAME".knsv
