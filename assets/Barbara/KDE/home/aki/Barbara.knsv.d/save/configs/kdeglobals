@@ -137,7 +137,7 @@ ForegroundVisited=0,188,212
 
 [DirSelect Dialog]
 DirSelectDialog Size=844,598
-History Items[$e]=file:$HOME/.local/share/Steam/,file:$HOME,file:$HOME/.local/share/Steam/steamapps,file:$HOME/.local/share/Steam/steamapps/common,file:$HOME/.steam,file:$HOME/Desktop/Code/ow-api-website,file:$HOME/Desktop/Code,file:///mnt/home/Obsidian Vault,file:$HOME/Desktop/Code/discord_bots/Cumabot,file:$HOME/Desktop/Wallpapers,file:$HOME/Desktop/Wallpapers,file:$HOME/Desktop/Wallpapers,file:$HOME/linux-setup-script,file:///mnt/backups/Barbara
+History Items[$e]=file:$HOME/.local/share/Steam/,file:$HOME/.local/share/Steam/,file:$HOME,file:$HOME/.local/share/Steam/,file:$HOME,file:$HOME/.local/share/Steam/steamapps,file:$HOME/.local/share/Steam/steamapps/common,file:$HOME/.steam,file:$HOME/Desktop/Code/ow-api-website,file:$HOME/Desktop/Code,file:///mnt/home/Obsidian Vault,file:$HOME/Desktop/Code/discord_bots/Cumabot,file:$HOME/Desktop/Wallpapers,file:$HOME/Desktop/Wallpapers,file:$HOME/Desktop/Wallpapers,file:$HOME/linux-setup-script,file:///mnt/backups/Barbara
 
 [General]
 AccentColor=184,117,220

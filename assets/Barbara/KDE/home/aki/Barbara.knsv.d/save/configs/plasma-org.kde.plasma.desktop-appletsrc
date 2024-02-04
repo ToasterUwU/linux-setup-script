@@ -299,18 +299,26 @@ immutability=1
 lastScreen=1
 location=0
 plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.slideshow
+wallpaperplugin=com.github.casout.wallpaperEngineKde
 
 [Containments][86][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
+DialogHeight=1406
+DialogWidth=2560
 
 [Containments][86][General]
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=764
 
+[Containments][86][Wallpaper][com.github.casout.wallpaperEngineKde][General]
+FilterStr=01111111111111111111111111111111111
+Fps=60
+SteamLibraryPath[$e]=file:$HOME/.local/share/Steam
+VideoBackend=1
+WallpaperSource[$e]=file:$HOME/.local/share/Steam/steamapps/workshop/content/431960/1463724965/2 00 AM.mp4+video
+WallpaperWorkShopId=1463724965
+
 [Containments][86][Wallpaper][org.kde.slideshow][General]
-Image=file:///home/aki/Desktop/Wallpapers/Neytirix/flee_puny_mortals_fleeeee__by_neytirix_desjf2j.jpg
+Image=file:///home/aki/Desktop/Wallpapers/wallpaperflare.com_wallpaper-topaz-enhance-sharpen.jpg
 SlidePaths=/home/aki/Desktop/Wallpapers/
 
 [Containments][87]
@@ -320,16 +328,23 @@ immutability=1
 lastScreen=2
 location=0
 plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.slideshow
+wallpaperplugin=com.github.casout.wallpaperEngineKde
 
 [Containments][87][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
+DialogHeight=1354
+DialogWidth=2560
+
+[Containments][87][Wallpaper][com.github.casout.wallpaperEngineKde][General]
+Fps=60
+PerOptChanged=true
+SteamLibraryPath[$e]=file:$HOME/.local/share/Steam
+WallpaperSource[$e]=file:$HOME/.local/share/Steam/steamapps/workshop/content/431960/1406075299/scene.json+scene
+WallpaperWorkShopId=1406075299
 
 [Containments][87][Wallpaper][org.kde.slideshow][General]
-Image=file:///home/aki/Desktop/Wallpapers/Neytirix/are_you_lost__by_neytirix_ddx4x55.jpg
+Image=file:///home/aki/Desktop/Wallpapers/Stellaris/LEPTItq.jpeg
 SlidePaths=/home/aki/Desktop/Wallpapers/
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/BeatSaberModManager,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/r2modman.AppImage,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Code,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Slipstream ModManager,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Wallpapers,0,e089582b-8f53-4309-ab43-5217f4dd1863
+screenMapping=desktop:/r2modman.AppImage,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Code,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/BeatSaberModManager,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Wallpapers,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Slipstream ModManager,0,e089582b-8f53-4309-ab43-5217f4dd1863
