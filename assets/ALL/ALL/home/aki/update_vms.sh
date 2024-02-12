@@ -5,7 +5,7 @@ mongo-db
 surreal-db
 internet-vm
 smart-home
-tdarr-server
+video-station
 tor-node
 airvpn-tunnel-vm
 xen-orchestra
