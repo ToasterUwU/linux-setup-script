@@ -149,6 +149,11 @@ if ! sudo -n true 2>/dev/null; then
     exit 1
 fi
 
+if [ "$HOSTNAME" = "pikaos" ]; then
+    echo "You forgot the rename your machine. Its still called 'pikaos'"
+    exit 1
+fi
+
 run_step "enable_screenlock_inhibition" "Enabling Screenlock and Sleep Inhibition"
 
 run_step "copy_assets" "Copying Files from Assets Folder"
