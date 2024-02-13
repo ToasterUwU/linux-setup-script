@@ -146,7 +146,7 @@ echo ""
 
 if ! sudo -n true 2>/dev/null; then
     echo "Password Wrong"
-    exit 0
+    exit 1
 fi
 
 run_step "enable_screenlock_inhibition" "Enabling Screenlock and Sleep Inhibition"
