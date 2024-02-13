@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Setting default Browser to Brave"
+echo "Setting default Browser to Firefox"
 xdg-settings set default-web-browser firefox.desktop
 echo ""
 
