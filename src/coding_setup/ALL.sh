@@ -3,6 +3,7 @@
 echo "Git Config"
 git config --global user.name ToasterUwU
 git config --global user.email aki@toasteruwu.com
+git config --global pull.rebase false
 echo ""
 
 echo "Install Rust Lang" #not one liner so i can tell it to not prompt me
