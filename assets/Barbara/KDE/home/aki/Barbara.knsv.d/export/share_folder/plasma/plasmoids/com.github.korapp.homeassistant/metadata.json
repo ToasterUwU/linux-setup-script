@@ -16,7 +16,7 @@
     "ServiceTypes": [
       "Plasma/Applet"
     ],
-    "Version": "0.3.1",
+    "Version": "0.4.0",
     "Website": "https://github.com/korapp/plasma-homeassistant"
   },
   "X-Plasma-API": "declarativeappletscript",
