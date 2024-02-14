@@ -9,7 +9,8 @@ echo "Installing Welcome App Packages"
 echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections #Accept ttf EULA automatically
 
 sudo apt update
-sudo apt install ttf-mscorefonts-installer obs-studio kdenlive -y #install welcome apps
+sudo apt install ttf-mscorefonts-installer pika-gameutils-meta obs-studio kdenlive -y #install welcome apps
+sudo apt install -y  #install welcome apps
 echo ""
 
 echo "Installing Packages and Flatpaks"
