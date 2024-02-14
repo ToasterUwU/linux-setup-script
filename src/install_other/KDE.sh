@@ -25,3 +25,7 @@ make install_pkg
 # install lib
 sudo make install
 echo ""
+
+echo "Temp fix, because of package conflict"
+sudo apt -y remove vulkan-sdk
+echo ""
