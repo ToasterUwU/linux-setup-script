@@ -214,4 +214,4 @@ knownItems=dev.jhyub.supergfxctl,org.kde.kdeconnect,org.kde.kscreen,org.kde.ktp-
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/Wallpapers,0,1463b72a-9fbe-408b-bd70-0900d92cdac1,desktop:/Code,0,1463b72a-9fbe-408b-bd70-0900d92cdac1,desktop:/steam.desktop,0,1463b72a-9fbe-408b-bd70-0900d92cdac1
+screenMapping=desktop:/Wallpapers,0,1463b72a-9fbe-408b-bd70-0900d92cdac1,desktop:/Code,0,1463b72a-9fbe-408b-bd70-0900d92cdac1
