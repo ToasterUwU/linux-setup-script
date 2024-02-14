@@ -16,11 +16,18 @@ immutability=1
 lastScreen=0
 location=0
 plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
+wallpaperplugin=com.github.casout.wallpaperEngineKde
 
 [Containments][1][ConfigDialog]
-DialogHeight=510
-DialogWidth=680
+DialogHeight=1122
+DialogWidth=1920
+
+[Containments][1][Wallpaper][com.github.casout.wallpaperEngineKde][General]
+Fps=60
+SteamLibraryPath[$e]=file:$HOME/.local/share/Steam
+VideoBackend=1
+WallpaperSource[$e]=file:$HOME/.local/share/Steam/steamapps/workshop/content/431960/1676830618/scene.json+scene
+WallpaperWorkShopId=1676830618
 
 [Containments][1][Wallpaper][org.kde.image][General]
 Image=/usr/share/backgrounds/pika/guard_it_well_okay__by_neytirix_ddcc1wt.jpg

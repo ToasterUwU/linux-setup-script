@@ -137,7 +137,7 @@ ForegroundVisited=0,188,212
 
 [DirSelect Dialog]
 DirSelectDialog Size=844,598
-History Items[$e]=file:$HOME/.local/share/Steam,file:$HOME/.steam/steam/,file:$HOME/.steam/
+History Items[$e]=file:$HOME/.local/share/Steam/,file:$HOME/.local/,file:$HOME/.local/share/Steam,file:$HOME/.steam/steam/,file:$HOME/.steam/
 
 [General]
 AccentColor=184,117,220
