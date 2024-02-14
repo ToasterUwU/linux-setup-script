@@ -20,7 +20,7 @@ immutability=1
 plugin=com.github.k-donn.plasmoid-wunderground
 
 [Containments][65][Applets][101][Configuration]
-PreloadWeight=60
+PreloadWeight=65
 
 [Containments][65][Applets][101][Configuration][ConfigDialog]
 DialogHeight=540
@@ -86,7 +86,7 @@ popupHeight=450
 popupWidth=810
 
 [Containments][65][Applets][81][Configuration][Appearance]
-customDateFormat=dd.MM.yyyy
+customDateFormat=ddd dd.MM.yyyy
 dateFormat=custom
 enabledCalendarPlugins=/usr/lib/x86_64-linux-gnu/qt5/plugins/plasmacalendarplugins/holidaysevents.so
 firstDayOfWeek=1
@@ -143,7 +143,7 @@ immutability=1
 plugin=org.kde.kdeconnect
 
 [Containments][71][Applets][72][Configuration]
-PreloadWeight=55
+PreloadWeight=60
 
 [Containments][71][Applets][73]
 immutability=1
@@ -157,7 +157,7 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][71][Applets][74][Configuration]
-PreloadWeight=60
+PreloadWeight=65
 
 [Containments][71][Applets][75]
 immutability=1
@@ -214,21 +214,21 @@ immutability=1
 plugin=dev.jhyub.supergfxctl
 
 [Containments][71][Applets][89][Configuration]
-PreloadWeight=10
+PreloadWeight=0
 
 [Containments][71][Applets][90]
 immutability=1
 plugin=org.kde.kupapplet
 
 [Containments][71][Applets][90][Configuration]
-PreloadWeight=8
+PreloadWeight=0
 
 [Containments][71][Applets][91]
 immutability=1
 plugin=org.kde.plasma.mediacontroller
 
 [Containments][71][Applets][91][Configuration]
-PreloadWeight=5
+PreloadWeight=0
 
 [Containments][71][Applets][92]
 immutability=1
@@ -242,7 +242,7 @@ immutability=1
 plugin=org.kde.ktp-contactlist
 
 [Containments][71][Applets][93][Configuration]
-PreloadWeight=20
+PreloadWeight=0
 
 [Containments][71][Applets][96]
 immutability=1
@@ -273,7 +273,7 @@ plugin=org.kde.plasma.folder
 wallpaperplugin=com.github.casout.wallpaperEngineKde
 
 [Containments][85][ConfigDialog]
-DialogHeight=1388
+DialogHeight=1354
 DialogWidth=2560
 
 [Containments][85][General]
@@ -299,7 +299,7 @@ immutability=1
 lastScreen=1
 location=0
 plugin=org.kde.plasma.folder
-wallpaperplugin=com.github.casout.wallpaperEngineKde
+wallpaperplugin=org.kde.slideshow
 
 [Containments][86][ConfigDialog]
 DialogHeight=1406
@@ -318,7 +318,7 @@ WallpaperSource[$e]=file:$HOME/.local/share/Steam/steamapps/workshop/content/431
 WallpaperWorkShopId=1463724965
 
 [Containments][86][Wallpaper][org.kde.slideshow][General]
-Image=file:///home/aki/Desktop/Wallpapers/wallpaperflare.com_wallpaper-topaz-enhance-sharpen.jpg
+Image=file:///home/aki/Desktop/Wallpapers/Neytirix/why_s_it_not_going__by_neytirix_dds3mtw.jpg
 SlidePaths=/home/aki/Desktop/Wallpapers/
 
 [Containments][87]
@@ -328,7 +328,7 @@ immutability=1
 lastScreen=2
 location=0
 plugin=org.kde.plasma.folder
-wallpaperplugin=com.github.casout.wallpaperEngineKde
+wallpaperplugin=org.kde.slideshow
 
 [Containments][87][ConfigDialog]
 DialogHeight=1354
@@ -342,9 +342,9 @@ WallpaperSource[$e]=file:$HOME/.local/share/Steam/steamapps/workshop/content/431
 WallpaperWorkShopId=1406075299
 
 [Containments][87][Wallpaper][org.kde.slideshow][General]
-Image=file:///home/aki/Desktop/Wallpapers/Stellaris/LEPTItq.jpeg
+Image=file:///home/aki/Desktop/Wallpapers/Neytirix/the_mooshroom_by_neytirix_deyzsx6.jpg
 SlidePaths=/home/aki/Desktop/Wallpapers/
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/r2modman.AppImage,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Code,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/BeatSaberModManager,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Wallpapers,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Slipstream ModManager,0,e089582b-8f53-4309-ab43-5217f4dd1863
+screenMapping=desktop:/Slipstream ModManager,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/r2modman.AppImage,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Wallpapers,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/BeatSaberModManager,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Code,0,e089582b-8f53-4309-ab43-5217f4dd1863
