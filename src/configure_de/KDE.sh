@@ -10,5 +10,5 @@ echo ""
 
 echo "Setting Folder color of Papirus"
 wget -qO- https://git.io/papirus-folders-install | sh
-papirus-folders -u -C magenta
+sudo papirus-folders -u -C magenta
 echo ""
