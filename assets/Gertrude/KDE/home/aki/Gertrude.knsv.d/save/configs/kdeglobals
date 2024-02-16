@@ -147,6 +147,7 @@ LastUsedCustomAccentColor=184,117,220
 
 [KDE]
 LookAndFeelPackage=org.pikaos.kde-theme
+SingleClick=false
 
 [KFileDialog Settings]
 Allow Expansion=false
