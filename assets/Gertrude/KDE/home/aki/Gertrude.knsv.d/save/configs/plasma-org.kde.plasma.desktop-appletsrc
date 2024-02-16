@@ -89,6 +89,10 @@ PreloadWeight=100
 popupHeight=510
 popupWidth=675
 
+[Containments][2][Applets][3][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
 [Containments][2][Applets][3][Configuration][General]
 favoritesPortedToKAstats=true
 
@@ -134,7 +138,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][2][Applets][7][Configuration]
-PreloadWeight=70
+PreloadWeight=100
 SystrayContainmentId=8
 
 [Containments][2][General]
@@ -162,6 +166,9 @@ plugin=org.kde.plasma.clipboard
 [Containments][8][Applets][12]
 immutability=1
 plugin=org.kde.plasma.devicenotifier
+
+[Containments][8][Applets][12][Configuration]
+PreloadWeight=70
 
 [Containments][8][Applets][13]
 immutability=1
@@ -202,6 +209,9 @@ plugin=org.kde.plasma.bluetooth
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
+[Containments][8][Applets][23][Configuration]
+PreloadWeight=55
+
 [Containments][8][Applets][24]
 immutability=1
 plugin=dev.jhyub.supergfxctl
@@ -214,16 +224,23 @@ plugin=org.kde.ktp-contactlist
 immutability=1
 plugin=org.kde.plasma.nightcolorcontrol
 
+[Containments][8][Applets][26][Configuration]
+PreloadWeight=42
+
 [Containments][8][Applets][27]
 immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][8][Applets][27][Configuration]
-PreloadWeight=55
+PreloadWeight=85
 
 [Containments][8][Applets][28]
 immutability=1
 plugin=org.kde.kupapplet
+
+[Containments][8][Applets][31]
+immutability=1
+plugin=org.kde.plasma.mediacontroller
 
 [Containments][8][Applets][9]
 immutability=1
@@ -235,4 +252,4 @@ knownItems=dev.jhyub.supergfxctl,org.kde.kdeconnect,org.kde.kscreen,org.kde.ktp-
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/Wallpapers,0,1463b72a-9fbe-408b-bd70-0900d92cdac1,desktop:/Code,0,1463b72a-9fbe-408b-bd70-0900d92cdac1
+screenMapping=desktop:/UltiMaker-Cura-5.6.0-linux-X64.AppImage,0,1463b72a-9fbe-408b-bd70-0900d92cdac1,desktop:/Wallpapers,0,1463b72a-9fbe-408b-bd70-0900d92cdac1,desktop:/Code,0,1463b72a-9fbe-408b-bd70-0900d92cdac1

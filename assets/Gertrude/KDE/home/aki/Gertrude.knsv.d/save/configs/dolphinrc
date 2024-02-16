@@ -8,6 +8,9 @@ ViewPropsTimestamp=2024,2,14,19,55,15.554
 [KFileDialog Settings]
 Places Icons Auto-resize=false
 Places Icons Static Size=22
+Recent Files[$e]=UltiMaker-Cura-5.6.0-linux-X64.AppImage,file:$HOME/Desktop/UltiMaker-Cura-5.6.0-linux-X64.AppImage
+Recent URLs[$e]=file:$HOME/Desktop/
+detailViewIconSize=16
 
 [MainWindow]
 MenuBar=Disabled
