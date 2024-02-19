@@ -1,6 +1,14 @@
 #!/bin/bash
 
 echo "Install Envision"
+sudo apt update
+sudo apt install -y libgtk-4-dev libadwaita-1-dev libssl-dev libjxl-dev libvte-2.91-gtk4-dev meson ninja-build git desktop-file-utils gettext file libusb-dev libusb-1.0-0-dev curl
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -o /tmp/rustup.sh
+chmod +x /tmp/rustup.sh
+/tmp/rustup.sh -y
+# shellcheck disable=SC1091
+source "$HOME/.cargo/env"
+
 git clone https://gitlab.com/gabmus/envision/
 cd envision || exit
 meson setup build -Dprefix="$PWD/build/localprefix" -Dprofile=development
