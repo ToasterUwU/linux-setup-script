@@ -20,7 +20,7 @@ immutability=1
 plugin=com.github.k-donn.plasmoid-wunderground
 
 [Containments][65][Applets][101][Configuration]
-PreloadWeight=65
+PreloadWeight=70
 
 [Containments][65][Applets][101][Configuration][ConfigDialog]
 DialogHeight=540
@@ -143,7 +143,7 @@ immutability=1
 plugin=org.kde.kdeconnect
 
 [Containments][71][Applets][72][Configuration]
-PreloadWeight=60
+PreloadWeight=65
 
 [Containments][71][Applets][73]
 immutability=1
@@ -157,7 +157,7 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][71][Applets][74][Configuration]
-PreloadWeight=65
+PreloadWeight=100
 
 [Containments][71][Applets][75]
 immutability=1
@@ -196,7 +196,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][71][Applets][83][Configuration]
-PreloadWeight=65
+PreloadWeight=70
 
 [Containments][71][Applets][84]
 immutability=1
@@ -228,7 +228,7 @@ immutability=1
 plugin=org.kde.plasma.mediacontroller
 
 [Containments][71][Applets][91][Configuration]
-PreloadWeight=0
+PreloadWeight=2
 
 [Containments][71][Applets][92]
 immutability=1
@@ -318,7 +318,7 @@ WallpaperSource[$e]=file:$HOME/.local/share/Steam/steamapps/workshop/content/431
 WallpaperWorkShopId=1463724965
 
 [Containments][86][Wallpaper][org.kde.slideshow][General]
-Image=file:///home/aki/Desktop/Wallpapers/Neytirix/why_s_it_not_going__by_neytirix_dds3mtw.jpg
+Image=file:///home/aki/Desktop/Wallpapers/Neytirix/heading_home_by_neytirix_dfljvk0.jpg
 SlidePaths=/home/aki/Desktop/Wallpapers/
 
 [Containments][87]
@@ -342,9 +342,9 @@ WallpaperSource[$e]=file:$HOME/.local/share/Steam/steamapps/workshop/content/431
 WallpaperWorkShopId=1406075299
 
 [Containments][87][Wallpaper][org.kde.slideshow][General]
-Image=file:///home/aki/Desktop/Wallpapers/Neytirix/the_mooshroom_by_neytirix_deyzsx6.jpg
+Image=file:///home/aki/Desktop/Wallpapers/VRChat/23-17-52.535.png
 SlidePaths=/home/aki/Desktop/Wallpapers/
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/Slipstream ModManager,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/r2modman.AppImage,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Wallpapers,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/BeatSaberModManager,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Code,0,e089582b-8f53-4309-ab43-5217f4dd1863
+screenMapping=desktop:/Slipstream ModManager,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/BeatSaberModManager,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Code,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/r2modman.AppImage,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Wallpapers,0,e089582b-8f53-4309-ab43-5217f4dd1863

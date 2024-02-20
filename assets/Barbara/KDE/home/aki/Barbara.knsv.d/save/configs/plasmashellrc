@@ -7,7 +7,7 @@ detailViewIconSize=16
 PreloadWeight=18
 
 [PlasmaViews][Panel 65]
-floating=1
+floating=0
 
 [PlasmaViews][Panel 65][Defaults]
 thickness=44
