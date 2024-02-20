@@ -9,6 +9,13 @@ chmod +x /tmp/rustup.sh
 # shellcheck disable=SC1091
 source "$HOME/.cargo/env"
 
+sudo apt install libopenvr-dev -y
+git clone https://github.com/galister/wlx-overlay-s.git
+cd wlx-overlay-s || exit
+cargo install --path .
+cd ..
+rm -rf wlx-overlay-s
+
 git clone https://gitlab.com/gabmus/envision/
 cd envision || exit
 meson setup build -Dprefix="$PWD/build/localprefix" -Dprofile=development
