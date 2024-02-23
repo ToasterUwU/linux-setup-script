@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Install ProtonMail Bridge"
-wget "https://proton.me/download/bridge/protonmail-bridge_3.3.0-1_amd64.deb" -O ~/protonmail-bridge.deb
+wget "https://proton.me/download/bridge/protonmail-bridge_3.9.1-1_amd64.deb" -O ~/protonmail-bridge.deb
 sudo apt install ~/protonmail-bridge.deb -y
 rm -f ~/protonmail-bridge.deb
 echo ""
