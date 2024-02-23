@@ -49,23 +49,6 @@ am -i ledger-live-desktop
 wget -q -O - https://raw.githubusercontent.com/LedgerHQ/udev-rules/master/add_udev_rules.sh | sudo bash
 echo ""
 
-echo "Installing Microsoft Rewards Bot"
-sudo apt install python3-tk python3-venv -y
-
-sudo apt install google-chrome-stable -y
-
-git clone "https://gitlab.com/farshadzargary1997/Microsoft-Rewards-bot"
-
-cd Microsoft-Rewards-bot || exit
-python -m venv .venv
-.venv/bin/pip install wheel
-.venv/bin/pip install -r requirements.txt
-cd ~ || exit
-
-mv microsoft_rewards_bot_accounts.json ./Microsoft-Rewards-bot/accounts.json
-mv start_microsoft_rewards_bot.sh ./Microsoft-Rewards-bot/start.sh
-echo ""
-
 echo "Installing Tdarr Node"
 cd Tdarr || exit
 
