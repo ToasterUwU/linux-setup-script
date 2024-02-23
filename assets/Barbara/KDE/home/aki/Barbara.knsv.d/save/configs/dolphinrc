@@ -4,6 +4,9 @@ update_info=dolphin_detailsmodesettings.upd:rename-leading-padding,dolphin_detai
 [CompactMode]
 PreviewSize=64
 
+[FoldersPanel]
+HiddenFilesShown=true
+
 [General]
 Version=202
 ViewPropsTimestamp=2024,1,21,13,43,0.843
