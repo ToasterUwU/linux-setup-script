@@ -9,7 +9,7 @@ chmod +x /tmp/rustup.sh
 # shellcheck disable=SC1091
 source "$HOME/.cargo/env"
 
-sudo apt install libopenvr-dev -y
+sudo apt install libopenvr-dev libclang-dev libopenxr-dev -y
 git clone https://github.com/galister/wlx-overlay-s.git
 cd wlx-overlay-s || exit
 cargo install --path .
