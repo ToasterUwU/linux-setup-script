@@ -9,5 +9,5 @@ sudo apt install libfuse2 -y
 echo ""
 
 echo "Lower wait time for refind"
-sudo sed -i "s/timeout 10/timeout 3/" /boot/EFI/refind/refind.conf
+sudo sed -i "s/timeout 10/timeout 3/" /boot/efi/EFI/refind/refind.conf
 echo ""
