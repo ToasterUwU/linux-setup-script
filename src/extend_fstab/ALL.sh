@@ -24,6 +24,7 @@ echo "$SSHFS_ENTRIES" | sudo tee -a /etc/fstab >/dev/null # add sshfs entries (m
 echo ""
 
 echo "Mounting SSHFS Entries"
+sudo systemctl daemon-reload
 sudo mount -a
 mkdir "/mnt/backups/$HOSTNAME/"
 echo ""
