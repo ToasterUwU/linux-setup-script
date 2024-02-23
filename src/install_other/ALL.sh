@@ -35,6 +35,12 @@ sudo apt install ./angry_ip_scanner.deb -y
 rm -f angry_ip_scanner.deb
 echo ""
 
+echo "Install Video DownloadHelper Companion"
+wget "https://github.com/aclap-dev/vdhcoapp/releases/latest/download/vdhcoapp-linux-x86_64.deb" -O vdhcoapp.deb
+sudo apt install ./vdhcoapp.deb -y
+rm -f vdhcoapp.deb
+echo ""
+
 echo "Installing ApplicationManager"
 sudo apt install zsync -y
 wget https://raw.githubusercontent.com/ivan-hc/AM-application-manager/main/INSTALL && chmod a+x ./INSTALL && sudo ./INSTALL && rm -f ./INSTALL
