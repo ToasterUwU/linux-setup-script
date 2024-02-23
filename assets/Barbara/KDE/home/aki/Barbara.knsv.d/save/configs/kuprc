@@ -1,0 +1,17 @@
+[Kup settings]
+Backups enabled=true
+Number of backups=1
+
+[Plan/1]
+Accumulated usage time=29160
+Ask first=false
+Check backups=true
+Description=Home
+Destination type=0
+Filesystem destination path=file:///mnt/backups/Barbara
+Last available space=14443491680256
+Last backup size=633124495713
+Last complete backup=2024,2,21,23,12,16.393
+Paths excluded=/home/aki/.cache,/home/aki/.local/share/Steam,/home/aki/.local/share/baloo,/home/aki/.local/share/containers,/home/aki/.local/share/waydroid/data,/home/aki/.ssh,/home/aki/.steam,/home/aki/RainbowMiner
+Show hidden folders=true
+Usage limit=8

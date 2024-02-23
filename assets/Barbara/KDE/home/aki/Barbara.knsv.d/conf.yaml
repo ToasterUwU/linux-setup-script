@@ -52,6 +52,7 @@ save:
             - krunnerrc
             - kscreenlockerrc
             - ksmserverrc
+            - kuprc
             - kwinrc
             - kwinrulesrc
             - plasma-org.kde.plasma.desktop-appletsrc

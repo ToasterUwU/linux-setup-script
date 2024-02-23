@@ -221,21 +221,21 @@ immutability=1
 plugin=org.kde.kupapplet
 
 [Containments][71][Applets][90][Configuration]
-PreloadWeight=0
+PreloadWeight=10
 
 [Containments][71][Applets][91]
 immutability=1
 plugin=org.kde.plasma.mediacontroller
 
 [Containments][71][Applets][91][Configuration]
-PreloadWeight=2
+PreloadWeight=0
 
 [Containments][71][Applets][92]
 immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][71][Applets][92][Configuration]
-PreloadWeight=0
+PreloadWeight=10
 
 [Containments][71][Applets][93]
 immutability=1
@@ -273,7 +273,7 @@ plugin=org.kde.plasma.folder
 wallpaperplugin=com.github.casout.wallpaperEngineKde
 
 [Containments][85][ConfigDialog]
-DialogHeight=1354
+DialogHeight=1396
 DialogWidth=2560
 
 [Containments][85][General]
@@ -318,7 +318,7 @@ WallpaperSource[$e]=file:$HOME/.local/share/Steam/steamapps/workshop/content/431
 WallpaperWorkShopId=1463724965
 
 [Containments][86][Wallpaper][org.kde.slideshow][General]
-Image=file:///home/aki/Desktop/Wallpapers/Neytirix/heading_home_by_neytirix_dfljvk0.jpg
+Image=file:///home/aki/Desktop/Wallpapers/Neytirix/i_got_you_buddy_by_neytirix_ddb99v0.jpg
 SlidePaths=/home/aki/Desktop/Wallpapers/
 
 [Containments][87]
@@ -342,9 +342,9 @@ WallpaperSource[$e]=file:$HOME/.local/share/Steam/steamapps/workshop/content/431
 WallpaperWorkShopId=1406075299
 
 [Containments][87][Wallpaper][org.kde.slideshow][General]
-Image=file:///home/aki/Desktop/Wallpapers/VRChat/23-17-52.535.png
+Image=file:///home/aki/Desktop/Wallpapers/VRChat/VRChat_2022.07.01_00-56-52.322.png
 SlidePaths=/home/aki/Desktop/Wallpapers/
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/Slipstream ModManager,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/BeatSaberModManager,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Code,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/r2modman.AppImage,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Wallpapers,0,e089582b-8f53-4309-ab43-5217f4dd1863
+screenMapping=desktop:/r2modman.AppImage,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Wallpapers,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/BeatSaberModManager,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Slipstream ModManager,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Code,0,e089582b-8f53-4309-ab43-5217f4dd1863
