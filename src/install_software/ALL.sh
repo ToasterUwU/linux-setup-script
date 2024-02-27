@@ -14,8 +14,8 @@ echo ""
 
 echo "Installing Packages and Flatpaks"
 sudo apt update
-sudo apt install -y nala youtubedl-gui qbittorrent thunderbird rpi-imager gnome-clocks docker.io docker-compose baobab handbrake-cli handbrake eddie-ui brave-browser firefox virtualbox                                                             # install packages i need
-flatpak install -y spotify dev.geopjr.Collision org.onlyoffice.desktopeditors md.obsidian.Obsidian org.gnome.SimpleScan com.ultimaker.cura com.github.iwalton3.jellyfin-media-player com.github.micahflee.torbrowser-launcher org.freecadweb.FreeCAD # install flatpaks i need                                                                                                                                                    #update PATH to include pip installed things
+sudo apt install -y nala youtubedl-gui qbittorrent thunderbird rpi-imager gnome-clocks docker.io docker-compose baobab handbrake-cli handbrake eddie-ui brave-browser firefox virtualbox                                                                                   # install packages i need
+flatpak install -y spotify dev.geopjr.Collision org.onlyoffice.desktopeditors md.obsidian.Obsidian org.gnome.SimpleScan com.ultimaker.cura com.github.iwalton3.jellyfin-media-player com.github.micahflee.torbrowser-launcher org.freecadweb.FreeCAD camp.nook.nookdesktop # install flatpaks i need                                                                                                                                                    #update PATH to include pip installed things
 pip install hyfetch --break-system-packages
 export PATH="$HOME/.local/bin:$PATH"
 echo ""
