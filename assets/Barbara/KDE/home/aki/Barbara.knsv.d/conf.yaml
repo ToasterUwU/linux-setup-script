@@ -66,6 +66,7 @@ save:
             - lightlyrc
             - ksplashrc
             - khotkeysrc
+            - plasma_calendar_holiday_regions
 
     app_layouts:
         location: "$HOME/.local/share/kxmlgui5"
