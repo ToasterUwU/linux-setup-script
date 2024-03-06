@@ -67,6 +67,7 @@ save:
             - ksplashrc
             - khotkeysrc
             - plasma_calendar_holiday_regions
+            - mimeapps.list
 
     app_layouts:
         location: "$HOME/.local/share/kxmlgui5"

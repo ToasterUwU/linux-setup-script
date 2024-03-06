@@ -1,0 +1,23 @@
+[Added Associations]
+application/javascript=code.desktop;
+inode/directory=org.kde.dolphin.desktop;
+model/stl=com.ultimaker.cura.desktop;
+video/mp4=vlc.desktop;
+x-scheme-handler/geo=wheelmap-geo-handler.desktop;
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/mailto=firefox.desktop;thunderbird.desktop;
+x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
+
+[Default Applications]
+application/javascript=code.desktop;
+inode/directory=org.kde.dolphin.desktop;
+model/stl=com.ultimaker.cura.desktop;
+text/html=firefox.desktop
+video/mp4=vlc.desktop;
+x-scheme-handler/bitwarden=AM-bitwarden.desktop
+x-scheme-handler/geo=wheelmap-geo-handler.desktop;
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/mailto=firefox.desktop;
+x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
