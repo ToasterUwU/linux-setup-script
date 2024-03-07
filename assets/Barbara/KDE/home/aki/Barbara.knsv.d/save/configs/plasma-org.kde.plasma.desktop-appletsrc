@@ -6,10 +6,10 @@ wheel:Vertical;NoModifier=org.kde.switchdesktop
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
 
-[Containments][102]
+[Containments][105]
 ItemGeometries-2560x1440=
 ItemGeometriesHorizontal=
-activityId=ec411922-4175-43a4-ab12-b5361b532427
+activityId=311a19e6-faa3-4bed-836e-3d87ed1ff496
 formfactor=0
 immutability=1
 lastScreen=0
@@ -17,19 +17,19 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=com.github.casout.wallpaperEngineKde
 
-[Containments][102][ConfigDialog]
+[Containments][105][ConfigDialog]
 DialogHeight=1362
 DialogWidth=2560
 
-[Containments][102][Wallpaper][com.github.casout.wallpaperEngineKde][General]
+[Containments][105][Wallpaper][com.github.casout.wallpaperEngineKde][General]
 Fps=60
 SteamLibraryPath[$e]=file:$HOME/.local/share/Steam
 VideoBackend=1
 WallpaperSource[$e]=file:$HOME/.local/share/Steam/steamapps/workshop/content/431960/1676830618/scene.json+scene
 WallpaperWorkShopId=1676830618
 
-[Containments][103]
-activityId=ec411922-4175-43a4-ab12-b5361b532427
+[Containments][106]
+activityId=311a19e6-faa3-4bed-836e-3d87ed1ff496
 formfactor=0
 immutability=1
 lastScreen=1
@@ -37,16 +37,16 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.slideshow
 
-[Containments][103][ConfigDialog]
-DialogHeight=1406
-DialogWidth=2560
+[Containments][106][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
 
-[Containments][103][Wallpaper][org.kde.slideshow][General]
-Image=file:///home/aki/Desktop/Wallpapers/Stellaris/gRhRa6t.jpeg
+[Containments][106][Wallpaper][org.kde.slideshow][General]
+Image=file:///home/aki/Desktop/Wallpapers/download-topaz-enhance-sharpen.jpeg
 SlidePaths=/home/aki/Desktop/Wallpapers/
 
-[Containments][104]
-activityId=ec411922-4175-43a4-ab12-b5361b532427
+[Containments][107]
+activityId=311a19e6-faa3-4bed-836e-3d87ed1ff496
 formfactor=0
 immutability=1
 lastScreen=2
@@ -54,12 +54,12 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.slideshow
 
-[Containments][104][ConfigDialog]
+[Containments][107][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
 
-[Containments][104][Wallpaper][org.kde.slideshow][General]
-Image=file:///home/aki/Desktop/Wallpapers/wallpaperflare.com_wallpaper-topaz-enhance-sharpen.jpg
+[Containments][107][Wallpaper][org.kde.slideshow][General]
+Image=file:///home/aki/Desktop/Wallpapers/Stellaris/5Ox7vhe.jpeg
 SlidePaths=/home/aki/Desktop/Wallpapers/
 
 [Containments][65]
@@ -118,7 +118,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][65][Applets][68][Configuration][General]
-launchers=applications:systemsettings.desktop,applications:org.kde.konsole.desktop,applications:custom-update.desktop,preferred://filemanager,applications:org.kde.discover.desktop,applications:AM-bitwarden.desktop,applications:firefox.desktop,file:///var/lib/flatpak/exports/share/applications/com.spotify.Client.desktop,applications:vesktop.desktop,applications:code.desktop,applications:steam.desktop
+launchers=applications:systemsettings.desktop,applications:org.kde.konsole.desktop,applications:custom-update.desktop,preferred://filemanager,applications:org.kde.discover.desktop,applications:com.bitwarden.desktop.desktop,applications:firefox.desktop,file:///var/lib/flatpak/exports/share/applications/com.spotify.Client.desktop,applications:vesktop.desktop,applications:code.desktop,applications:steam.desktop
 
 [Containments][65][Applets][69]
 immutability=1
@@ -150,8 +150,8 @@ showWeekNumbers=true
 use24hFormat=2
 
 [Containments][65][Applets][81][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
+DialogHeight=1406
+DialogWidth=2560
 
 [Containments][65][Applets][82]
 immutability=1
@@ -199,14 +199,14 @@ immutability=1
 plugin=org.kde.kdeconnect
 
 [Containments][71][Applets][72][Configuration]
-PreloadWeight=70
+PreloadWeight=80
 
 [Containments][71][Applets][73]
 immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][71][Applets][73][Configuration]
-PreloadWeight=80
+PreloadWeight=90
 
 [Containments][71][Applets][74]
 immutability=1
@@ -252,7 +252,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][71][Applets][83][Configuration]
-PreloadWeight=70
+PreloadWeight=80
 
 [Containments][71][Applets][84]
 immutability=1
@@ -270,14 +270,14 @@ immutability=1
 plugin=dev.jhyub.supergfxctl
 
 [Containments][71][Applets][89][Configuration]
-PreloadWeight=0
+PreloadWeight=26
 
 [Containments][71][Applets][90]
 immutability=1
 plugin=org.kde.kupapplet
 
 [Containments][71][Applets][90][Configuration]
-PreloadWeight=10
+PreloadWeight=18
 
 [Containments][71][Applets][91]
 immutability=1
@@ -291,7 +291,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][71][Applets][92][Configuration]
-PreloadWeight=25
+PreloadWeight=46
 
 [Containments][71][Applets][93]
 immutability=1
@@ -318,4 +318,4 @@ knownItems=org.kde.kdeconnect,org.kde.kupapplet,org.kde.plasma.battery,org.kde.p
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/Code,0,ec411922-4175-43a4-ab12-b5361b532427,desktop:/r2modman.AppImage,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Wallpapers,0,ec411922-4175-43a4-ab12-b5361b532427,desktop:/Code,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Slipstream ModManager,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/steam.desktop,0,ec411922-4175-43a4-ab12-b5361b532427,desktop:/BeatSaberModManager,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Wallpapers,0,e089582b-8f53-4309-ab43-5217f4dd1863
+screenMapping=desktop:/Code,0,ec411922-4175-43a4-ab12-b5361b532427,desktop:/steam.desktop,0,ec411922-4175-43a4-ab12-b5361b532427,desktop:/r2modman.AppImage,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Wallpapers,0,311a19e6-faa3-4bed-836e-3d87ed1ff496,desktop:/Wallpapers,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/BeatSaberModManager,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/steam.desktop,0,311a19e6-faa3-4bed-836e-3d87ed1ff496,desktop:/Code,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Slipstream ModManager,0,311a19e6-faa3-4bed-836e-3d87ed1ff496,desktop:/BeatSaberModManager,0,311a19e6-faa3-4bed-836e-3d87ed1ff496,desktop:/Wallpapers,0,ec411922-4175-43a4-ab12-b5361b532427,desktop:/Slipstream ModManager,0,e089582b-8f53-4309-ab43-5217f4dd1863,desktop:/Code,0,311a19e6-faa3-4bed-836e-3d87ed1ff496
