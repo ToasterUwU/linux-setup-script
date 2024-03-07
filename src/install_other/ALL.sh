@@ -41,17 +41,14 @@ sudo apt install ./vdhcoapp.deb -y
 rm -f vdhcoapp.deb
 echo ""
 
-echo "Installing ApplicationManager"
-sudo apt install zsync -y
-wget https://raw.githubusercontent.com/ivan-hc/AM-application-manager/main/INSTALL && chmod a+x ./INSTALL && sudo ./INSTALL && rm -f ./INSTALL
-echo ""
-
-echo "Installing Bitwarden"
-am -i bitwarden
+echo "Installing AppImageLauncher"
+wget "https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb" -O appimagelauncher.deb
+sudo apt install ./appimagelauncher.deb -y
+rm -f appimagelauncher.deb
 echo ""
 
 echo "Installing Ledger Live"
-am -i ledger-live-desktop
+wget "https://download.live.ledger.com/latest/linux" -O ~/Downloads/ledger-live-desktop.AppImage
 wget -q -O - https://raw.githubusercontent.com/LedgerHQ/udev-rules/master/add_udev_rules.sh | sudo bash
 echo ""
 
