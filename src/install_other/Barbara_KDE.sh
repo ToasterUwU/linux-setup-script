@@ -9,7 +9,6 @@ git clone https://github.com/galister/wlx-overlay-s.git
 cd wlx-overlay-s || exit
 cargo install --path .
 cd ..
-rm -rf wlx-overlay-s
 
 git clone https://gitlab.com/gabmus/envision/
 cd envision || exit
@@ -21,5 +20,4 @@ sudo cp build/localprefix/bin/envision /bin/
 sudo cp -r build/localprefix/share/* /usr/share/
 
 cd ..
-rm -rf envision
 echo ""
