@@ -1,3 +1,5 @@
+**ARCHIVED** _I use NixOS now, so this bash script consortium is not needed anymore and most likely never will be again. You can find my NixOS Flake (Config, the equivalent of this) here: https://github.com/ToasterUwU/flake_
+
 # Linux Setup Script
 
 This whole thing is what I made myself to automatically set up my PCs after installing PikaOS.
